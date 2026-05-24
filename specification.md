@@ -193,18 +193,18 @@ Progress tracker for implementation. Update **done?** as work completes.
 | ✅ | DB security | RLS enabled, no policies; `anon`/`authenticated` revoked; server uses service role only |
 | ✅ | SQL scripts in repo | `supabase/scripts/` — dump, rename/fix, RLS lockdown |
 | ✅ | `TEAMS` constant | `lib/teams.ts` — 48 teams |
-| 🔴 | Server Supabase client | `createClient` with service role; never expose key to browser |
-| 🔴 | Env setup | `.env.local`: `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` |
-| 🔴 | Points + GD library | Implement rules in § Points derivation / Leaderboard from `game_results` |
-| 🔴 | League setup script | Local script + JSON → insert into `league_info` (hash league password) |
-| 🔴 | API: league login | Verify name/password; rate limit; set league session (`id_league`) |
-| 🔴 | Balanced pair assignment | `lib/` helper implementing § Team assignment (max-count rule) |
-| 🔴 | API: player register | Respect `is_locked`; balanced pair + retry on conflict; hash password |
-| 🔴 | API: player login | Verify `player_name` + password; set player session (`id_player`) |
-| 🔴 | API: leaderboard | Per `id_league`: players, flags, points, combined GD, ranks/ties |
-| 🔴 | UI: league gate | League name + password form; store `id_league` (see session note below) |
-| 🔴 | UI: league table | Leaderboard + nav (login/register); highlight row when player session present |
-| 🔴 | UI: player register/login | Name, password, confirm; post-register team reveal + `goodluck_message` |
+| ✅ | Server Supabase client | `lib/supabase/admin.ts` |
+| ✅ | Env setup | `.env.example`; `.env.local` required locally |
+| ✅ | Points + GD library | `lib/scoring.ts` |
+| ✅ | League setup script | `pnpm setup-league scripts/example-league.json` |
+| ✅ | API: league login | `POST /api/league/login` + rate limit + JWT cookie |
+| ✅ | Balanced pair assignment | `lib/pairs.ts`, `lib/register-player.ts` |
+| ✅ | API: player register | `POST /api/player/register` |
+| ✅ | API: player login | `POST /api/player/login` |
+| ✅ | API: leaderboard | `GET /api/leaderboard` |
+| ✅ | UI: league gate | `/` |
+| ✅ | UI: league table | `/table` |
+| ✅ | UI: player register/login | `/login`, `/register`, `/register/success` (static reveal, no animation) |
 | 🔴 | UI: team reveal animation | Shuffle flags on register (pairs already assigned in DB) |
 | 🔴 | Admin: match results page | CRUD `game_results`; knockout level-score warning per § Admin validation |
 | 🔴 | Admin guard | Server checks `is_admin` on player row for admin routes |
