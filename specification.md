@@ -53,8 +53,10 @@ Database fields named `team_a` / `team_b` / `home_team` / `away_team` store keys
 
 ### Tables
 
+Supabase table names: `league_info`, `player`, `game_results`. Server-only access via `SUPABASE_SERVICE_ROLE_KEY` (RLS enabled, no client policies).
+
 ```
-----League info table----
+----league_info----
 id_league (primary key)
 welcome_message: text
 goodluck_message: text
@@ -63,20 +65,20 @@ league_name: text (unique globally)
 password_hash: text
 is_locked: boolean (when true, new player registration is blocked; anyone with the league name and password can still view the league table)
 
-----Player table----
+----player----
 id_player (primary key)
-id_league (links to league info table)
+id_league (foreign key → league_info)
 player_name: text (unique per league)
 password_hash: text
 team_a: text (eg. 'GER')
 team_b: text (eg. 'BRA')
 normalised_pair: text (eg. 'BRA_GER' — min(team_a, team_b) + '_' + max(team_a, team_b) by team code)
 is_admin: boolean
-datetime_created
+created_at
 
-----Game results----
+----game_results----
 id_result
-datetime (kick off datetime BST)
+kick_off: datetime (kick off datetime BST)
 stage: text (eg. 'Group B' | 'Semi Final')
 home_team: text (eg. GER)
 away_team: text (eg. SCO)
@@ -168,3 +170,38 @@ Admin will have all regular player abilities (has a pair of teams and appears on
 - The leaderboard should show all information: player, team pairs (as flags), points, goal difference.
 
 - Leaderboard lists all players for the current id_league, ranked by points then combined GD.
+
+
+## Next steps
+
+Progress tracker for implementation. Update **done?** as work completes.
+- ✅ = "done"
+- 🟡 = "in progress/partial"
+- 🔴 = "not done"
+
+| done? | Step | Notes |
+| ----- | ---- | ----- |
+| ✅ | Product spec | This document |
+| ✅ | Supabase schema | Tables `league_info`, `player`, `game_results` |
+| ✅ | DB constraints | `player_name` + `normalised_pair` unique per `id_league`; generated `normalised_pair`; `team_a_team_b_different`; FK; `league_name` unique |
+| ✅ | DB defaults | `is_locked` default `false`; `created_at` default `now()` |
+| ✅ | DB security | RLS enabled, no policies; `anon`/`authenticated` revoked; server uses service role only |
+| ✅ | SQL scripts in repo | `supabase/scripts/` — dump, rename/fix, RLS lockdown |
+| 🔴 | `TEAMS` constant | All 48 World Cup teams in code (`lib/teams.ts` or similar) |
+| 🔴 | Server Supabase client | `createClient` with service role; never expose key to browser |
+| 🔴 | Env setup | `.env.local`: `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` |
+| 🔴 | Points + GD library | Implement rules in § Points derivation / Leaderboard from `game_results` |
+| 🔴 | League setup script | Local script + JSON → insert into `league_info` (hash league password) |
+| 🔴 | API: league login | Verify name/password; rate limit; set league session (`id_league`) |
+| 🔴 | API: player register | Respect `is_locked`; random pair + retry on conflict; hash password |
+| 🔴 | API: player login | Verify `player_name` + password; set player session (`id_player`) |
+| 🔴 | API: leaderboard | Per `id_league`: players, flags, points, combined GD, ranks/ties |
+| 🔴 | UI: league gate | League name + password form; store `id_league` (see session note below) |
+| 🔴 | UI: league table | Leaderboard + nav (login/register); highlight row when player session present |
+| 🔴 | UI: player register/login | Name, password, confirm; post-register team reveal + `goodluck_message` |
+| 🔴 | UI: team reveal animation | Shuffle flags on register (pairs already assigned in DB) |
+| 🔴 | Admin: match results page | CRUD `game_results`; knockout level-score warning per § Admin validation |
+| 🔴 | Admin guard | Server checks `is_admin` on player row for admin routes |
+| 🔴 | Session hardening (recommended) | Prefer signed httpOnly cookies over raw `localStorage` IDs for server trust |
+| 🔴 | Optional DB index | `game_results(kick_off)` for matchday ordering |
+| 🔴 | Deploy + smoke test | Vercel/hosting; end-to-end user journey § User journey |

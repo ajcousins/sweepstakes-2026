@@ -1,0 +1,436 @@
+[
+  {
+    "sort": 10,
+    "section": "table",
+    "table_name": "game_results",
+    "object_name": null,
+    "definition": "size=16 kB, rls=true"
+  },
+  {
+    "sort": 10,
+    "section": "table",
+    "table_name": "league_info",
+    "object_name": null,
+    "definition": "size=24 kB, rls=true"
+  },
+  {
+    "sort": 10,
+    "section": "table",
+    "table_name": "player",
+    "object_name": null,
+    "definition": "size=32 kB, rls=true"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "away_penalties_score",
+    "definition": "numeric, pos=10, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "away_score",
+    "definition": "numeric, pos=7, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "away_team",
+    "definition": "text, pos=5, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "home_penalties_score",
+    "definition": "numeric, pos=9, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "home_score",
+    "definition": "numeric, pos=6, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "home_team",
+    "definition": "text, pos=4, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "id_result",
+    "definition": "uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "kick_off",
+    "definition": "timestamp with time zone, pos=2, nullable=NO, default=now(), generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "stage",
+    "definition": "text, pos=3, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "game_results",
+    "object_name": "went_to_extra_time",
+    "definition": "boolean, pos=8, nullable=NO, default=false, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "goodluck_message",
+    "definition": "text, pos=3, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "id_league",
+    "definition": "uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "info_message",
+    "definition": "text, pos=4, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "is_locked",
+    "definition": "boolean, pos=7, nullable=NO, default=false, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "league_name",
+    "definition": "text, pos=5, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "password_hash",
+    "definition": "text, pos=6, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "league_info",
+    "object_name": "welcome_message",
+    "definition": "text, pos=2, nullable=YES, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "created_at",
+    "definition": "timestamp with time zone, pos=9, nullable=NO, default=now(), generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "id_league",
+    "definition": "uuid, pos=2, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "id_player",
+    "definition": "uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "is_admin",
+    "definition": "boolean, pos=8, nullable=NO, default=false, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "normalised_pair",
+    "definition": "text, pos=10, nullable=YES, default=null, generated=ALWAYS, expr=((LEAST(team_a, team_b) || '_'::text) || GREATEST(team_a, team_b))"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "password_hash",
+    "definition": "text, pos=4, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "player_name",
+    "definition": "text, pos=3, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "team_a",
+    "definition": "text, pos=5, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 20,
+    "section": "column",
+    "table_name": "player",
+    "object_name": "team_b",
+    "definition": "text, pos=6, nullable=NO, default=null, generated=NEVER"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_1_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_2_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_4_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_5_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_6_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_7_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "2200_17686_8_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "game_results",
+    "object_name": "game_results_pkey",
+    "definition": "PRIMARY KEY [id_result]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "2200_17622_1_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "2200_17622_5_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "2200_17622_6_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "2200_17622_7_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "league_info_league_name_key",
+    "definition": "UNIQUE [league_name]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "league_info",
+    "object_name": "league_info_pkey",
+    "definition": "PRIMARY KEY [id_league]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_1_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_2_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_3_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_4_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_5_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_6_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_8_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "2200_17638_9_not_null",
+    "definition": null
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "player_id_league_fkey",
+    "definition": "FOREIGN KEY [id_league] -> league_info(id_league)"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "player_name_unique_per_league",
+    "definition": "UNIQUE [id_league, player_name]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "player_pair_unique_per_league",
+    "definition": "UNIQUE [id_league, normalised_pair]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "player_pkey",
+    "definition": "PRIMARY KEY [id_player]"
+  },
+  {
+    "sort": 30,
+    "section": "constraint",
+    "table_name": "player",
+    "object_name": "team_a_team_b_different",
+    "definition": null
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "game_results",
+    "object_name": "game_results_pkey",
+    "definition": "CREATE UNIQUE INDEX game_results_pkey ON public.game_results USING btree (id_result)"
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "league_info",
+    "object_name": "league_info_league_name_key",
+    "definition": "CREATE UNIQUE INDEX league_info_league_name_key ON public.league_info USING btree (league_name)"
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "league_info",
+    "object_name": "league_info_pkey",
+    "definition": "CREATE UNIQUE INDEX league_info_pkey ON public.league_info USING btree (id_league)"
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "player",
+    "object_name": "player_name_unique_per_league",
+    "definition": "CREATE UNIQUE INDEX player_name_unique_per_league ON public.player USING btree (id_league, player_name)"
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "player",
+    "object_name": "player_pair_unique_per_league",
+    "definition": "CREATE UNIQUE INDEX player_pair_unique_per_league ON public.player USING btree (id_league, normalised_pair)"
+  },
+  {
+    "sort": 40,
+    "section": "index",
+    "table_name": "player",
+    "object_name": "player_pkey",
+    "definition": "CREATE UNIQUE INDEX player_pkey ON public.player USING btree (id_player)"
+  }
+]
