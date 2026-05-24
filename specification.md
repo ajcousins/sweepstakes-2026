@@ -36,18 +36,7 @@ A player's score is the sum of both of their teams.
 
 We'll use a Supabase database to store league data, player data and game results. Our application can then derive points allocated to team and players. We can then show a leaderboard summarising total points for every player.
 
-World Cup teams will NOT have their own database table; they will be hardcoded on the server in an object.
-
-```js
-export const TEAMS = {
-  // GROUP A
-  GER: { code: 'GER', name: 'Germany', flag: ':de:' }, // flag = emoji
-  SCO: { code: 'SCO', name: 'Scotland', flag: ':flag-scotland:' },
-  HUN: { code: 'HUN', name: 'Hungary', flag: ':flag-hu:' },
-  SUI: { code: 'SUI', name: 'Switzerland', flag: ':flag-ch:' },
-  // ... etc
-}
-```
+World Cup teams will NOT have their own database table; they will be hardcoded on the server in `lib/teams.ts` (48 teams; keys are codes e.g. `GER`, `BRA`).
 
 Database fields named `team_a` / `team_b` / `home_team` / `away_team` store keys from `TEAMS` (e.g. `GER`), not numeric foreign keys.
 
@@ -102,7 +91,23 @@ I can share the league name and password in a company chat. People can use them 
 
 If users want to participate, they can register their player name and password, after which they will be assigned two different teams from the World Cup. This combination of two teams should be unique to the league. Their `id_player` is stored in local storage, which ensures they don't need to log in again.
 
-To overcome the issue of pair assignment concurrency (if two people finish setting up at the same time) we store `normalised_pair` as min(team_a, team_b) + '_' + max(team_a, team_b) (by team code) and ensure it is unique per `id_league`. On register, pick a random pair in a transaction; on conflict, retry.
+### Team assignment (balanced spread)
+
+Team assignment should spread teams evenly across players. Each team code’s **usage count** is how many times it appears on `team_a` / `team_b` for players in that league. Let **M** = the maximum usage count across all teams (0 if the league has no players yet).
+
+Perfect balance (e.g. each of 48 teams exactly once when there are 24 players, or exactly twice when there are 48) only happens when final player count **N** makes `2N / 48` an integer (i.e. **N** is a multiple of 24). We do **not** require that; player count is not guaranteed to be a multiple of 24.
+
+Instead, on register use a **max-count** rule: do not increase **M** until it is impossible to assign an unused pair without doing so.
+
+1. Build the set of **unused** pairs: valid `(team_a, team_b)` from `TEAMS` with `team_a ≠ team_b`, normalised as `min + '_' + max`, excluding pairs already used in this `id_league`.
+2. If the league has **no players yet**, pick any unused pair.
+3. Else if any unused pair `(a, b)` has `count[a] < M` and `count[b] < M`, pick among those (tie-break: lowest `count[a] + count[b]`, then at random).
+4. Else no unused pair keeps everyone below **M** — pick an unused pair that minimises `max(count[a] + 1, count[b] + 1)` after assignment; tie-break: lowest `count[a] + count[b]`, then at random.
+5. Insert `team_a`, `team_b` in a transaction (`normalised_pair` is generated). On unique `normalised_pair` conflict, recompute counts and retry from step 1.
+
+If there are no unused pairs left, registration fails (league has used all available pair slots for that size).
+
+**Concurrency:** `normalised_pair` is unique per `id_league`. If two players register at once, the transaction + retry on conflict still applies.
 
 Forgotten passwords shouldn't be an issue as users are not able to do anything once they're logged in- their team pair will have already been assigned. Anyone with the league name and password will already be able to view the table. Being logged in will show them their entry in the table highlighted.
 
@@ -187,13 +192,14 @@ Progress tracker for implementation. Update **done?** as work completes.
 | ✅ | DB defaults | `is_locked` default `false`; `created_at` default `now()` |
 | ✅ | DB security | RLS enabled, no policies; `anon`/`authenticated` revoked; server uses service role only |
 | ✅ | SQL scripts in repo | `supabase/scripts/` — dump, rename/fix, RLS lockdown |
-| 🔴 | `TEAMS` constant | All 48 World Cup teams in code (`lib/teams.ts` or similar) |
+| ✅ | `TEAMS` constant | `lib/teams.ts` — 48 teams |
 | 🔴 | Server Supabase client | `createClient` with service role; never expose key to browser |
 | 🔴 | Env setup | `.env.local`: `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` |
 | 🔴 | Points + GD library | Implement rules in § Points derivation / Leaderboard from `game_results` |
 | 🔴 | League setup script | Local script + JSON → insert into `league_info` (hash league password) |
 | 🔴 | API: league login | Verify name/password; rate limit; set league session (`id_league`) |
-| 🔴 | API: player register | Respect `is_locked`; random pair + retry on conflict; hash password |
+| 🔴 | Balanced pair assignment | `lib/` helper implementing § Team assignment (max-count rule) |
+| 🔴 | API: player register | Respect `is_locked`; balanced pair + retry on conflict; hash password |
 | 🔴 | API: player login | Verify `player_name` + password; set player session (`id_player`) |
 | 🔴 | API: leaderboard | Per `id_league`: players, flags, points, combined GD, ranks/ties |
 | 🔴 | UI: league gate | League name + password form; store `id_league` (see session note below) |
