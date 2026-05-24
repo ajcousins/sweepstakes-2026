@@ -1,8 +1,12 @@
 'use client';
 
+import { TeamFlag } from '@/components/TeamFlag';
+
 export type LeaderboardRowView = {
   id_player: string;
   player_name: string;
+  team_a: string;
+  team_b: string;
   team_a_flag: string;
   team_b_flag: string;
   team_a_name: string;
@@ -53,14 +57,10 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
                 <td className="px-4 py-3 tabular-nums">{row.rank}</td>
                 <td className="px-4 py-3 font-medium">{row.player_name}</td>
                 <td className="px-4 py-3">
-                  <span className="inline-flex items-center gap-2">
-                    <span title={row.team_a_name}>
-                      {row.team_a_flag} {row.team_a_name}
-                    </span>
+                  <span className="inline-flex flex-wrap items-center gap-2">
+                    <TeamFlag teamCode={row.team_a} showName size="sm" />
                     <span className="text-zinc-400">+</span>
-                    <span title={row.team_b_name}>
-                      {row.team_b_flag} {row.team_b_name}
-                    </span>
+                    <TeamFlag teamCode={row.team_b} showName size="sm" />
                   </span>
                 </td>
                 <td className="px-4 py-3 text-right tabular-nums font-semibold">

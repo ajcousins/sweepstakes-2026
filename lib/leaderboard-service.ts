@@ -12,6 +12,8 @@ import { allTeamCodes } from '@/lib/pairs';
 import { TEAMS } from '@/lib/teams';
 
 export type LeaderboardEntry = LeaderboardRow & {
+  team_a: string;
+  team_b: string;
   team_a_flag: string;
   team_b_flag: string;
   team_a_name: string;
@@ -64,6 +66,8 @@ export async function fetchLeaderboard(idLeague: string): Promise<{
     const tb = TEAMS[r.team_b as keyof typeof TEAMS];
     return {
       ...r,
+      team_a: r.team_a,
+      team_b: r.team_b,
       team_a_flag: ta?.flag ?? '',
       team_b_flag: tb?.flag ?? '',
       team_a_name: ta?.teamName ?? r.team_a,
