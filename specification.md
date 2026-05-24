@@ -34,7 +34,7 @@ A player's score is the sum of both of their teams.
 
 ## Data
 
-We'll use a Supabase database to store player data and game results. Our application can then derive points allocated to team and players. We can then show a leaderboard summarising total points for every player.
+We'll use a Supabase database to store league data, player data and game results. Our application can then derive points allocated to team and players. We can then show a leaderboard summarising total points for every player.
 
 World Cup teams will NOT have their own database table; they will be hardcoded on the server in an object.
 
@@ -49,56 +49,115 @@ export const TEAMS = {
 }
 ```
 
-Database fields named `*_team_id` store keys from `TEAMS` (e.g. `GER`), not numeric foreign keys.
+Database fields named `team_a` / `team_b` / `home_team` / `away_team` store keys from `TEAMS` (e.g. `GER`), not numeric foreign keys.
+
+### Tables
+
+```
+----League info table----
+id_league (primary key)
+welcome_message: text
+goodluck_message: text
+info_message: text
+league_name: text (unique globally)
+password_hash: text
+is_locked: boolean (when true, new player registration is blocked; anyone with the league name and password can still view the league table)
+
+----Player table----
+id_player (primary key)
+id_league (links to league info table)
+player_name: text (unique per league)
+password_hash: text
+team_a: text (eg. 'GER')
+team_b: text (eg. 'BRA')
+normalised_pair: text (eg. 'BRA_GER' — min(team_a, team_b) + '_' + max(team_a, team_b) by team code)
+is_admin: boolean
+datetime_created
+
+----Game results----
+id_result
+datetime (kick off datetime BST)
+stage: text (eg. 'Group B' | 'Semi Final')
+home_team: text (eg. GER)
+away_team: text (eg. SCO)
+home_score: number
+away_score: number
+went_to_extra_time: boolean
+home_penalties_score: number | null
+away_penalties_score: number | null
+```
+
+- *Game results* are global across all leagues (same World Cup, same teams, league agnostic).
 
 
 ## Player setup
 
 Because this is an internal / private application, we need to limit the number of players somehow.
 
-We can generate unique tokens which I can then dump in a company chat. People can take the tokens which they use when they visit the application. They input a token, their username (must be unique) and a password (which we'll hash in the database). We can use the tokens to key the players in the database. This token is also stored in their local storage so that they don't need to log in again.
+To set up, I should be able to use a script that I can run locally, which sets up the league. From here I can supply data like the league name, password and text content specific to the league (welcome_message, goodluck_message, info_message) in a json file. This also means more than one league can be set up (for smaller non-work leagues and testing).
 
-If someone else uses a token that is taken, then they will be prompted for the password associated with that token to be able to access the application.
+I can share the league name and password in a company chat. People can use them to access the application. They will be able to see the league table from here. Anyone with the league name and password will be able to view the table.
 
-A server-side mint script generates unique tokens with pre-assigned team pairs and writes uninitialised rows to the database (see Game updates).
+If users want to participate, they can register their player name and password, after which they will be assigned two different teams from the World Cup. This combination of two teams should be unique to the league. Their `id_player` is stored in local storage, which ensures they don't need to log in again.
 
-The player, once they have set up their user and have access to the application, will see the pair of teams they have been assigned. The pair of teams will be a different combination to any other player's pair.
+To overcome the issue of pair assignment concurrency (if two people finish setting up at the same time) we store `normalised_pair` as min(team_a, team_b) + '_' + max(team_a, team_b) (by team code) and ensure it is unique per `id_league`. On register, pick a random pair in a transaction; on conflict, retry.
 
-To overcome the issue of pair assignment concurrency (if two people finish setting up at the same time) we should pre-assign pairs to tokens at mint time so there's no race condition. When the user registers, the UI will make it seem like the teams are assigned in real-time (some kind of animation that shuffles through country/team flags).
+Forgotten passwords shouldn't be an issue as users are not able to do anything once they're logged in- their team pair will have already been assigned. Anyone with the league name and password will already be able to view the table. Being logged in will show them their entry in the table highlighted.
 
-
-
-## Auth model
-
-- Token: Opaque random string. 10 character length. Excluding ambiguous characters.
-- Session can be local storage only. I'm ok with the token staying in local storage indefinitely.
-- For forgotten passwords, the player will need to let me know their username. I will then delete their password hash from the database manually. When the player accesses the application again they will be prompted to enter a password, as if it's the first time accessing the application. Once their password is reset, they regain access to their user (same token, same teams, same username).
-- Token leak. I'm ok with tokens leaking from the chat. I will need a way (from the admin UI) to create new tokens (writing them to the DB), retrieve unused tokens, and delete unused tokens.
+To prevent abuse (if the league password is leaked), I should be able to lock the league from accepting any more players. I can do this manually in the database by setting `is_locked: true` (registration blocked; viewing the table with the league password still works).
 
 
 ## Game updates
 
-We will have a separate FE path which is accessible by an admin (assigned to the database manually). From here, they can input match results. This means there will need to be a separate table for results: date (yyyy-mm-dd, for easy sorting) home_team_id, away_team_id, scoreline, result (home_win | away_win | draw).
+We will have a separate FE path which is accessible by an admin (assigned to the database manually). From here, they can input match results.
 
 Scoreline is final match score (including ET).
 
-| Situation                 | Result               | Notes                         |
-| ------------------------- | -------------------- | ----------------------------- |
-| Group stage 1–1           | draw                 | Both teams +1 in points       |
-| Knockout, winner on pens  | home_win or away_win | Winner +3, loser +0; not draw |
-| Knockout, winner in ET/90 | home_win / away_win  | As normal                     |
+### Points derivation
+
+The `stage` field is for display only (e.g. 'Group B', 'Semi Final'). Points are derived from scores and penalty fields, in this order:
+
+1. If `home_penalties_score` and `away_penalties_score` are set: the side with the higher penalty score gets 3 points, the other gets 0. Regulation/ET goals in `home_score`/`away_score` still count toward GD; penalty shootout goals do not.
+2. Else if `home_score > away_score`: home 3, away 0.
+3. Else if `away_score > home_score`: away 3, home 0.
+4. Else (`home_score === away_score` and no penalty fields): draw — both teams get 1 point.
+
+| Situation                 | Maps to |
+| ------------------------- | ------- |
+| Group stage 1–1           | Rule 4 (draw) |
+| Knockout, winner on pens  | Rule 1 (level scores + penalty fields) |
+| Knockout, winner in ET/90 | Rule 2 or 3 (decisive scoreline) |
+
+### Admin validation
+
+When saving a match result, show a warning (do not block save) if scores are level, penalty fields are empty, and `stage` looks like a knockout round — e.g. `stage` contains 'Final', 'Semi', 'Quarter', 'Round of', or 'Last 16', or does not contain 'Group'.
 
 Admin will be identified by is_admin on the player row. I'll assign this manually to the database.
 
-Admin will have all regular player abilities (uses a token, has a pair of teams and appears on leaderboard).
-
-That mint script can be run with a specified number of tokens to write to the database. Tokens land as uninitialised players (they won't appear in the leaderboard table). An uninitialised row ought to be just { token, team_a_id, team_b_id }. When generating tokens, we'll need to pull all initialised and uninitialised players to ensure no duplicate pairs.
+Admin will have all regular player abilities (has a pair of teams and appears on leaderboard) as well as their ability to view the match result page and input scores.
 
 
 ## User journey
 
-- Admin runs token script → posts tokens → colleague opens app → enters token/name/password → sees their teams + leaderboard → admin updates scores after each matchday.
+**Not logged into league + Not logged in as player**
+- User (not logged in) visits site...
+- sees league name and password inputs (rate limit incorrect tries by IP to stop brute force attacks)...
+- enters valid league name and correct password...
+- sees league table and log in/register links in nav bar (We store the id_league in their local storage so register/login knows which league- and prevents them from having to input league and password on every visit).
 
+**Logged into league + Not logged in as player**
+- Given a user can see the league table page (they have entered the league)...
+- they click on the log in/register link...
+- they are directed to the login page where they see inputs for player name, password and a link to register
+- they click register...
+- they are directed to the registration page where they see inputs for player name, password and confirm password...
+- they provide valid player name and password...
+- they then see the two World Cup teams they have been assigned, a goodluck message and a link back to the league table page (We store their id_player in local storage as an opaque UUID)
+
+
+**Logged into league + Logged in as player**
+- A user visits the site after previously logging into the league and registering as a player...
+- They see the league table (the application remembers them due to id_league and id_player in local storage)
 
 ## Leaderboard
 
@@ -106,7 +165,6 @@ That mint script can be run with a specified number of tokens to write to the da
 
 - Goal difference: Per team: goals scored minus goals conceded across all recorded matches; penalty shootout goals don’t count toward GD.
 
-- The leaderboard should show all information: username, team pairs (as flags), points, goal difference.
+- The leaderboard should show all information: player, team pairs (as flags), points, goal difference.
 
-- The leaderboard should only show initialised players.
-
+- Leaderboard lists all players for the current id_league, ranked by points then combined GD.
