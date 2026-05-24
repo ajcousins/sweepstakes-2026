@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { SiteHeader } from '@/components/SiteHeader';
+import { LeagueSessionProvider } from '@/lib/league-session-context';
 import { useLeagueSession } from '@/lib/use-league-session';
 
 type Props = {
@@ -14,15 +15,15 @@ type Props = {
 /** Renders children only after league session is confirmed; avoids nav flash. */
 export function LeaguePageShell({ children, redirectIfOut = true }: Props) {
   const router = useRouter();
-  const session = useLeagueSession();
+  const { status, leagueTitle } = useLeagueSession();
 
   useEffect(() => {
-    if (redirectIfOut && session === 'out_of_league') {
+    if (redirectIfOut && status === 'out_of_league') {
       router.replace('/');
     }
-  }, [redirectIfOut, router, session]);
+  }, [redirectIfOut, router, status]);
 
-  if (session !== 'in_league') {
+  if (status !== 'in_league') {
     return (
       <div className="flex min-h-full flex-col">
         <SiteHeader leagueReady={false} playerLoggedIn={false} />
@@ -33,5 +34,7 @@ export function LeaguePageShell({ children, redirectIfOut = true }: Props) {
     );
   }
 
-  return <>{children}</>;
+  return (
+    <LeagueSessionProvider leagueTitle={leagueTitle}>{children}</LeagueSessionProvider>
+  );
 }

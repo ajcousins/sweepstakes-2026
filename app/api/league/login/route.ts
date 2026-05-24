@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const supabase = createAdminClient();
     const { data: league, error } = await supabase
       .from('league_info')
-      .select('id_league, password_hash, welcome_message')
+      .select('id_league, league_name, title, password_hash, welcome_message')
       .eq('league_name', league_name)
       .maybeSingle();
 
@@ -46,8 +46,11 @@ export async function POST(request: Request) {
 
     await setLeagueSession(league.id_league);
 
+    const title = league.title?.trim() || league.league_name;
+
     return jsonOk({
       id_league: league.id_league,
+      title,
       welcome_message: league.welcome_message,
     });
   } catch (e) {

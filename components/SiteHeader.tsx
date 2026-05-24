@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useLeagueTitle } from '@/lib/league-session-context';
 
 type Props = {
   leagueReady: boolean;
@@ -9,21 +10,18 @@ type Props = {
 };
 
 export function SiteHeader({ leagueReady, playerLoggedIn, isAdmin }: Props) {
+  const leagueTitle = useLeagueTitle();
+  const title = leagueReady && leagueTitle ? leagueTitle : '';
+
   return (
     <header className="border-b border-zinc-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-4">
         <Link href={leagueReady ? '/table' : '/'} className="text-lg font-semibold tracking-tight">
-          Sweepstakes 2026
+          {title}
         </Link>
         <nav className="flex items-center gap-3 text-sm">
           {leagueReady && (
             <>
-              <Link
-                href="/table"
-                className="text-zinc-600 hover:text-zinc-900"
-              >
-                League table
-              </Link>
               {isAdmin && (
                 <Link
                   href="/admin/matches"

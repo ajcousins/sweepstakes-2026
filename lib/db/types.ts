@@ -4,6 +4,7 @@ export type LeagueInfo = {
   goodluck_message: string | null;
   info_message: string | null;
   league_name: string;
+  title: string | null;
   password_hash: string;
   is_locked: boolean;
 };

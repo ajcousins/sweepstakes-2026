@@ -7,15 +7,15 @@ import { useLeagueSession } from '@/lib/use-league-session';
 
 export default function HomePage() {
   const router = useRouter();
-  const session = useLeagueSession();
+  const { status } = useLeagueSession();
 
   useEffect(() => {
-    if (session === 'in_league') {
+    if (status === 'in_league') {
       router.replace('/table');
     }
-  }, [router, session]);
+  }, [router, status]);
 
-  if (session === 'pending' || session === 'in_league') {
+  if (status === 'pending' || status === 'in_league') {
     return (
       <div className="flex min-h-full flex-col bg-gradient-to-b from-emerald-50 to-white">
         <main className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center px-4 py-16">

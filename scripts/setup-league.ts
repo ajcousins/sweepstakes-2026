@@ -16,6 +16,7 @@ import { supabaseNodeOptions } from '../lib/supabase/node-options';
 type LeagueInput = {
   league_name: string;
   password: string;
+  title?: string;
   welcome_message?: string;
   goodluck_message?: string;
   info_message?: string;
@@ -68,13 +69,14 @@ async function main() {
     .from('league_info')
     .insert({
       league_name: input.league_name.trim(),
+      title: input.title?.trim() ?? null,
       password_hash,
       welcome_message: input.welcome_message ?? null,
       goodluck_message: input.goodluck_message ?? null,
       info_message: input.info_message ?? null,
       is_locked: false,
     })
-    .select('id_league, league_name')
+    .select('id_league, league_name, title')
     .single();
 
   if (error) {
@@ -85,6 +87,7 @@ async function main() {
   console.log('League created:');
   console.log('  id_league:', data.id_league);
   console.log('  league_name:', data.league_name);
+  console.log('  title:', data.title ?? '(none)');
 }
 
 main();
