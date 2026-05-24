@@ -3,15 +3,23 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { LeaguePageShell } from '@/components/LeaguePageShell';
 import { SiteHeader } from '@/components/SiteHeader';
 import {
   clearRegisterSuccess,
   loadRegisterSuccess,
 } from '@/lib/register-success';
 import { TeamFlag } from '@/components/TeamFlag';
-import { getStoredLeagueId } from '@/lib/storage-client';
 
 export default function RegisterSuccessPage() {
+  return (
+    <LeaguePageShell>
+      <RegisterSuccessContent />
+    </LeaguePageShell>
+  );
+}
+
+function RegisterSuccessContent() {
   const router = useRouter();
   const [payload] = useState<ReturnType<typeof loadRegisterSuccess>>(() => {
     if (typeof window === 'undefined') return null;
@@ -19,10 +27,6 @@ export default function RegisterSuccessPage() {
   });
 
   useEffect(() => {
-    if (!getStoredLeagueId()) {
-      router.replace('/');
-      return;
-    }
     if (!payload) {
       router.replace('/table');
       return;
@@ -34,8 +38,11 @@ export default function RegisterSuccessPage() {
 
   if (!payload) {
     return (
-      <div className="flex min-h-full items-center justify-center">
-        <p className="text-zinc-500">Loading…</p>
+      <div className="flex min-h-full flex-col">
+        <SiteHeader leagueReady playerLoggedIn />
+        <main className="mx-auto flex flex-1 items-center justify-center px-4 py-16">
+          <p className="text-zinc-500">Loading…</p>
+        </main>
       </div>
     );
   }
@@ -45,8 +52,8 @@ export default function RegisterSuccessPage() {
       <SiteHeader leagueReady playerLoggedIn />
       <main className="mx-auto w-full max-w-lg flex-1 px-4 py-12 text-center">
         <h1 className="mb-2 text-2xl font-bold">You&apos;re in!</h1>
-        <p className="mb-8 text-zinc-600 dark:text-zinc-400">Your World Cup teams:</p>
-        <div className="mb-8 flex flex-col items-center gap-6 rounded-2xl border border-emerald-200 bg-emerald-50 px-8 py-12 dark:border-emerald-900 dark:bg-emerald-950/40">
+        <p className="mb-8 text-zinc-600">Your World Cup teams:</p>
+        <div className="mb-8 flex flex-col items-center gap-6 rounded-2xl border border-emerald-200 bg-emerald-50 px-8 py-12">
           <div className="flex items-end justify-center gap-8 sm:gap-12">
             <TeamFlag
               teamCode={payload.team_a}
@@ -64,7 +71,7 @@ export default function RegisterSuccessPage() {
           </div>
         </div>
         {payload.goodluck_message && (
-          <p className="mb-8 text-lg text-emerald-800 dark:text-emerald-200">
+          <p className="mb-8 text-lg text-emerald-800">
             {payload.goodluck_message}
           </p>
         )}

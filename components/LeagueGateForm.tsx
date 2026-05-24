@@ -53,7 +53,7 @@ export function LeagueGateForm() {
           required
           value={leagueName}
           onChange={(e) => setLeagueName(e.target.value)}
-          className="w-full rounded-lg border border-zinc-300 px-3 py-2 dark:border-zinc-600 dark:bg-zinc-900"
+          className="w-full rounded-lg border border-zinc-300 px-3 py-2"
         />
       </div>
       <div>
@@ -67,11 +67,11 @@ export function LeagueGateForm() {
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full rounded-lg border border-zinc-300 px-3 py-2 dark:border-zinc-600 dark:bg-zinc-900"
+          className="w-full rounded-lg border border-zinc-300 px-3 py-2"
         />
       </div>
       {error && (
-        <p className="text-sm text-red-600 dark:text-red-400" role="alert">
+        <p className="text-sm text-red-600" role="alert">
           {error}
         </p>
       )}

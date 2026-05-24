@@ -24,16 +24,16 @@ type Props = {
 export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
   if (rows.length === 0) {
     return (
-      <p className="rounded-lg border border-dashed border-zinc-300 px-4 py-8 text-center text-zinc-500 dark:border-zinc-700">
+      <p className="rounded-lg border border-dashed border-zinc-300 px-4 py-8 text-center text-zinc-500">
         No players registered yet. Be the first to register.
       </p>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="overflow-x-auto rounded-xl border border-zinc-200">
       <table className="w-full min-w-[640px] text-left text-sm">
-        <thead className="bg-zinc-100 text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">
+        <thead className="bg-zinc-100 text-zinc-600">
           <tr>
             <th className="px-4 py-3 font-medium">#</th>
             <th className="px-4 py-3 font-medium">Player</th>
@@ -49,9 +49,7 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
               <tr
                 key={row.id_player}
                 className={
-                  highlighted
-                    ? 'bg-emerald-50 dark:bg-emerald-950/40'
-                    : 'border-t border-zinc-100 dark:border-zinc-800'
+                  highlighted ? 'bg-emerald-50' : 'border-t border-zinc-100'
                 }
               >
                 <td className="px-4 py-3 tabular-nums">{row.rank}</td>

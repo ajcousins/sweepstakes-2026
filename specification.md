@@ -206,8 +206,8 @@ Progress tracker for implementation. Update **done?** as work completes.
 | ✅ | UI: league table | `/table` |
 | ✅ | UI: player register/login | `/login`, `/register`, `/register/success` (static reveal, no animation) |
 | 🔴 | UI: team reveal animation | Shuffle flags on register (pairs already assigned in DB) |
-| 🔴 | Admin: match results page | CRUD `game_results`; knockout level-score warning per § Admin validation |
-| 🔴 | Admin guard | Server checks `is_admin` on player row for admin routes |
+| ✅ | Admin: match results page | `/admin/matches` — CRUD `game_results`; knockout level-score warning per § Admin validation |
+| ✅ | Admin guard | `lib/admin.ts` + `requireAdmin()` on `/api/admin/*` |
 | 🔴 | Session hardening (recommended) | Prefer signed httpOnly cookies over raw `localStorage` IDs for server trust |
 | 🔴 | Optional DB index | `game_results(kick_off)` for matchday ordering |
 | 🔴 | Deploy + smoke test | Vercel/hosting; end-to-end user journey § User journey |
