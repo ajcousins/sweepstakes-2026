@@ -1,8 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { TextLink } from '@/components/ui/TextLink';
 import { LeaguePageShell } from '@/components/LeaguePageShell';
 import { SiteHeader } from '@/components/SiteHeader';
 import {
@@ -181,7 +181,7 @@ function AdminMatchesContent() {
   if (authorized === null) {
     return (
       <div className="flex min-h-full flex-col">
-        <SiteHeader leagueReady playerLoggedIn />
+        <SiteHeader leagueReady />
         <main className="mx-auto max-w-lg flex-1 px-4 py-16 text-center">
           <p className="text-zinc-500">Checking access…</p>
         </main>
@@ -192,12 +192,12 @@ function AdminMatchesContent() {
   if (authorized === false) {
     return (
       <div className="flex min-h-full flex-col">
-        <SiteHeader leagueReady playerLoggedIn />
+        <SiteHeader leagueReady />
         <main className="mx-auto max-w-lg flex-1 px-4 py-16 text-center">
           <h1 className="text-xl font-bold">Admin access required</h1>
-          <Link href="/table" className="mt-6 inline-block text-emerald-700">
+          <TextLink href="/table" className="mt-6 inline-block">
             Back to league table
-          </Link>
+          </TextLink>
         </main>
       </div>
     );
@@ -205,20 +205,17 @@ function AdminMatchesContent() {
 
   return (
     <div className="flex min-h-full flex-col">
-      <SiteHeader leagueReady playerLoggedIn isAdmin />
+      <SiteHeader leagueReady isAdmin />
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-2">
           <h1 className="text-2xl font-bold">Match results</h1>
-          <Link
-            href="/table"
-            className="text-sm text-emerald-700 hover:underline"
-          >
+          <TextLink href="/table" className="text-sm hover:underline">
             ← League table
-          </Link>
+          </TextLink>
         </div>
 
         {notice && (
-          <p className="mb-4 rounded-lg bg-emerald-50 px-4 py-2 text-sm text-emerald-800">
+          <p className="mb-4 rounded-lg bg-primary-subtle px-4 py-2 text-sm text-primary-ink">
             {notice}
           </p>
         )}

@@ -17,7 +17,7 @@ export default function HomePage() {
 
   if (status === 'pending' || status === 'in_league') {
     return (
-      <div className="flex min-h-full flex-col bg-gradient-to-b from-emerald-50 to-white">
+      <div className="flex min-h-full flex-col bg-gradient-to-b from-primary-subtle to-white">
         <main className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center px-4 py-16">
           <p className="text-zinc-500">Loading…</p>
         </main>
@@ -26,7 +26,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex min-h-full flex-col bg-gradient-to-b from-emerald-50 to-white">
+    <div className="flex min-h-full flex-col bg-gradient-to-b from-primary-subtle to-white">
       <main className="mx-auto flex w-full max-w-lg flex-1 flex-col justify-center px-4 py-16">
         <h1 className="mb-2 text-3xl font-bold tracking-tight">World Cup Sweepstakes</h1>
         <p className="mb-8 text-zinc-600">

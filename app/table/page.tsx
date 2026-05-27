@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/Button';
 import { LeaderboardTable, type LeaderboardRowView } from '@/components/LeaderboardTable';
 import { LeaguePageShell } from '@/components/LeaguePageShell';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -62,16 +63,17 @@ function TablePageContent() {
 
   return (
     <div className="flex min-h-full flex-col">
-      <SiteHeader
-        leagueReady
-        playerLoggedIn={playerLoggedIn}
-        isAdmin={data?.is_admin}
-      />
+      <SiteHeader leagueReady isAdmin={data?.is_admin} />
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
-        {data?.welcome_message && (
-          <p className="mb-4 rounded-lg bg-emerald-50 px-4 py-3 text-emerald-900">
-            {data.welcome_message}
-          </p>
+        {/* <p className="mb-4 rounded-lg bg-primary-subtle px-4 py-3 text-primary-ink">
+          Announcement text
+        </p> */}
+        {!playerLoggedIn && (
+          <Button href="/register"
+            className="mb-6 px-6"
+          >
+            Join league
+          </Button>
         )}
         <h1 className="mb-2 text-2xl font-bold">League table</h1>
         {data?.info_message && (

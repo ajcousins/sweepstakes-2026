@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/ui/Button';
 import { TEAMS } from '@/lib/teams';
 import { kickOffToDatetimeLocal } from '@/lib/match-results';
 import type { MatchResultRow } from '@/lib/match-results';
@@ -188,21 +189,13 @@ export function MatchResultForm({
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <button
-          type="submit"
-          disabled={loading}
-          className="rounded-lg bg-emerald-700 px-4 py-2 font-medium text-white hover:bg-emerald-600 disabled:opacity-60"
-        >
+        <Button type="submit" fullWidth disabled={loading}>
           {loading ? 'Saving…' : submitLabel}
-        </button>
+        </Button>
         {onCancel && (
-          <button
-            type="button"
-            onClick={onCancel}
-            className="rounded-lg border border-zinc-300 px-4 py-2 font-medium hover:bg-zinc-100"
-          >
+          <Button type="button" variant="secondary" onClick={onCancel}>
             Cancel
-          </button>
+          </Button>
         )}
       </div>
     </form>

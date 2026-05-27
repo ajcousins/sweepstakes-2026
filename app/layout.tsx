@@ -15,7 +15,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Sweepstakes 2026",
-  description: "Internal 2026 FIFA World Cup sweepstakes",
+  description: "2026 FIFA World Cup sweepstakes",
 };
 
 export default function RootLayout({

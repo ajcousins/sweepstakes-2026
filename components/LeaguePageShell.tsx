@@ -26,7 +26,7 @@ export function LeaguePageShell({ children, redirectIfOut = true }: Props) {
   if (status !== 'in_league') {
     return (
       <div className="flex min-h-full flex-col">
-        <SiteHeader leagueReady={false} playerLoggedIn={false} />
+        <SiteHeader leagueReady={false} />
         <main className="mx-auto flex flex-1 items-center justify-center px-4 py-16">
           <p className="text-zinc-500">Loading…</p>
         </main>
