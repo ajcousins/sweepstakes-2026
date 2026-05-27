@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { setStoredLeagueId } from '@/lib/storage-client';
+import { setStoredLeagueId, setStoredLeagueTitle } from '@/lib/storage-client';
 
 export function LeagueGateForm() {
   const router = useRouter();
@@ -31,6 +31,7 @@ export function LeagueGateForm() {
       }
 
       setStoredLeagueId(data.id_league);
+      if (data.title) setStoredLeagueTitle(data.title);
       router.push('/table');
       router.refresh();
     } catch {

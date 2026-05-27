@@ -19,7 +19,7 @@ D             .
 E
 ```
 
-So in theory we could have up to 1128 players.
+So in theory we could have up to 1128 players given every player has a unique pair of teams.
 
 How well a player does will depend on how well their teams perform in the tournament.
 
@@ -65,6 +65,8 @@ normalised_pair: text (eg. 'BRA_GER' — min(team_a, team_b) + '_' + max(team_a,
 is_admin: boolean
 created_at
 
+- *normalised_pair* stores the team pairs alphabetically and makes it easier for the database to ensure this is unique.
+
 ----game_results----
 id_result
 kick_off: datetime (kick off datetime BST)
@@ -88,6 +90,8 @@ Because this is an internal / private application, we need to limit the number o
 To set up, I should be able to use a script that I can run locally, which sets up the league. From here I can supply data like the league name, password and text content specific to the league (welcome_message, goodluck_message, info_message) in a json file. This also means more than one league can be set up (for smaller non-work leagues and testing).
 
 I can share the league name and password in a company chat. People can use them to access the application. They will be able to see the league table from here. Anyone with the league name and password will be able to view the table.
+
+I don't want the responsibility of keeping anyone's personal data; So no emails should be stored. Users can choose to supply anonymous player names.
 
 If users want to participate, they can register their player name and password, after which they will be assigned two different teams from the World Cup. This combination of two teams should be unique to the league. Their `id_player` is stored in local storage, which ensures they don't need to log in again.
 
