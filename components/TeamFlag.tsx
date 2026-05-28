@@ -8,24 +8,21 @@ type Props = {
 };
 
 const FLAG_SIZES = {
-  sm: { width: 24, cdn: 24 },
-  md: { width: 32, cdn: 40 },
-  lg: { width: 64, cdn: 80 },
-  xl: { width: 120, cdn: 160 },
+  sm: { width: 24 },
+  md: { width: 32 },
+  lg: { width: 64 },
+  xl: { width: 120 },
 } as const;
 
-/**
- * Renders a flag via image (reliable on Linux/WSL) with emoji in alt text.
- * Unicode flag emojis in `lib/teams.ts` are correct but often missing from Arial/Geist.
- */
+/** Renders a team flag image from FIFA's flags endpoint. */
 export function TeamFlag({
   teamCode,
   showName = false,
   size = 'sm',
   nameClassName,
 }: Props) {
-  const { width, cdn } = FLAG_SIZES[size];
-  const { name, emoji, flagUrl } = getTeamDisplay(teamCode, cdn);
+  const { width } = FLAG_SIZES[size];
+  const { name, flagUrl } = getTeamDisplay(teamCode);
 
   const stacked = size === 'lg' || size === 'xl';
 
@@ -40,13 +37,13 @@ export function TeamFlag({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={flagUrl}
-        alt={`${name} ${emoji}`}
+        alt={name}
         width={width}
         height={Math.round(width * 0.67)}
         className={
           stacked
-            ? 'inline-block rounded-md object-cover shadow-md ring-1 ring-black/10'
-            : 'inline-block rounded-sm object-cover shadow-sm'
+            ? 'inline-block object-cover shadow-md ring-1 ring-black/10'
+            : 'inline-block object-cover shadow-sm'
         }
         loading="lazy"
       />
