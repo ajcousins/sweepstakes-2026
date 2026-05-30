@@ -23,7 +23,7 @@ export default async function TablePage() {
   const playerLoggedIn = highlightPlayerId != null;
 
   return (
-    <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
+    <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 pb-60">
       {!playerLoggedIn && (
         <Button href="/register" className="mb-6 px-6">
           Join sweepstakes
