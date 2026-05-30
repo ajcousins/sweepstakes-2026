@@ -168,7 +168,7 @@ export function AdminMatchesPanel({ initialResults }: Props) {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-2xl font-bold">Match results</h1>
         <TextLink href="/table" className="text-sm hover:underline">
-          ← League table
+          ← Leaderboard
         </TextLink>
       </div>
 

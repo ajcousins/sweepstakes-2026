@@ -13,7 +13,7 @@ export async function requireAdmin(): Promise<
 > {
   const idLeague = await getLeagueSession();
   if (!idLeague) {
-    return { ok: false, status: 401, message: 'Enter the league first' };
+    return { ok: false, status: 401, message: 'Enter the sweepstakes first' };
   }
 
   const playerSession = await getPlayerSession();

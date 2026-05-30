@@ -6,7 +6,7 @@ export async function GET() {
   try {
     const idLeague = await getLeagueSession();
     if (!idLeague) {
-      return jsonError('Enter the league first', 401);
+      return jsonError('Enter the sweepstakes first', 401);
     }
 
     const results = await fetchMatchResults();

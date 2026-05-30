@@ -66,7 +66,7 @@ export function LeagueGateForm() {
         </p>
       )}
       <Button type="submit" fullWidth disabled={loading}>
-        {loading ? 'Entering…' : 'Enter league'}
+        {loading ? 'Entering…' : 'Enter sweepstakes'}
       </Button>
     </form>
   );

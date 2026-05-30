@@ -16,7 +16,7 @@ export default async function AdminMatchesPage() {
       <main className="mx-auto max-w-lg flex-1 px-4 py-16 text-center">
         <h1 className="text-xl font-bold">Admin access required</h1>
         <TextLink href="/table" className="mt-6 inline-block">
-          Back to league table
+          Back to leaderboard
         </TextLink>
       </main>
     );

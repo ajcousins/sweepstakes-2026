@@ -39,7 +39,7 @@ export default async function RegisterSuccessPage() {
         <p className="mb-8 text-lg">{profile.goodluck_message}</p>
       )}
       <Button href="/table" className="px-6">
-        View league table
+        View leaderboard
       </Button>
     </main>
   );

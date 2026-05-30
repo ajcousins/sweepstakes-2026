@@ -8,7 +8,7 @@ export default function LoginPage() {
       <LoginForm />
       <p className="mt-6 text-sm text-zinc-600">
         Haven&apos;t joined yet?{' '}
-        <TextLink href="/register">Join the league!</TextLink>
+        <TextLink href="/register">Join the sweepstakes!</TextLink>
       </p>
     </main>
   );

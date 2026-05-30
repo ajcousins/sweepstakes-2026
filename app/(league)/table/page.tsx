@@ -26,10 +26,10 @@ export default async function TablePage() {
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8">
       {!playerLoggedIn && (
         <Button href="/register" className="mb-6 px-6">
-          Join league
+          Join sweepstakes
         </Button>
       )}
-      <h1 className="mb-2 text-2xl font-bold">League table</h1>
+      <h1 className="mb-2 text-2xl font-bold">Leaderboard</h1>
       {info_message && (
         <p className="mb-6 text-sm text-zinc-600">{info_message}</p>
       )}
