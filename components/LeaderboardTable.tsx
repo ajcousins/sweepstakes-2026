@@ -21,6 +21,9 @@ type Props = {
   highlightPlayerId: string | null;
 };
 
+const thClass = 'px-2 py-2 font-medium sm:px-4 sm:py-3';
+const tdClass = 'px-2 py-2 sm:px-4 sm:py-3';
+
 export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
   if (rows.length === 0) {
     return (
@@ -32,14 +35,21 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
 
   return (
     <div className="overflow-x-auto border border-zinc-200">
-      <table className="w-full min-w-[640px] text-left text-sm">
+      <table className="w-full table-fixed text-left text-sm">
+        <colgroup>
+          <col className="w-6" />
+          <col className="w-20" />
+          <col className="w-10 md:w-30" />
+          <col className="w-10 md:w-12" />
+          <col className="w-10 md:w-12" />
+        </colgroup>
         <thead className="bg-zinc-100 text-zinc-600">
           <tr>
-            <th className="px-4 py-3 font-medium">#</th>
-            <th className="px-4 py-3 font-medium">Player</th>
-            <th className="px-4 py-3 font-medium">Teams</th>
-            <th className="px-4 py-3 font-medium text-right">Pts</th>
-            <th className="px-4 py-3 font-medium text-right">GD</th>
+            <th className={thClass}>#</th>
+            <th className={thClass}>Player</th>
+            <th className={thClass}>Teams</th>
+            <th className={`${thClass} text-right`}>Pts</th>
+            <th className={`${thClass} text-right`}>GD</th>
           </tr>
         </thead>
         <tbody>
@@ -52,19 +62,20 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
                   highlighted ? 'bg-primary-subtle' : 'border-t border-zinc-100'
                 }
               >
-                <td className="px-4 py-3 tabular-nums">{row.rank}</td>
-                <td className="px-4 py-3 font-medium">{row.player_name}</td>
-                <td className="px-4 py-3">
-                  <span className="inline-flex flex-wrap items-center gap-2">
+                <td className={`${tdClass} tabular-nums`}>{row.rank}</td>
+                <td className={`${tdClass} font-medium wrap-break-words`}>
+                  {row.player_name}
+                </td>
+                <td className={tdClass}>
+                  <span className="flex items-center gap-2 sm:gap-3">
                     <TeamFlag teamCode={row.team_a} showName size="sm" />
-                    <span className="text-zinc-400">+</span>
                     <TeamFlag teamCode={row.team_b} showName size="sm" />
                   </span>
                 </td>
-                <td className="px-4 py-3 text-right tabular-nums font-semibold">
+                <td className={`${tdClass} text-right tabular-nums font-semibold`}>
                   {row.points}
                 </td>
-                <td className="px-4 py-3 text-right tabular-nums">
+                <td className={`${tdClass} text-right tabular-nums`}>
                   {row.goal_difference > 0 ? '+' : ''}
                   {row.goal_difference}
                 </td>

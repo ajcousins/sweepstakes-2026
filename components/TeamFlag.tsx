@@ -42,13 +42,13 @@ export function TeamFlag({
         height={Math.round(width * 0.67)}
         className={
           stacked
-            ? 'inline-block object-cover shadow-md ring-1 ring-black/10'
+            ? 'inline-block object-cover shadow-lg ring-1 ring-black/10'
             : 'inline-block object-cover shadow-sm'
         }
         loading="lazy"
       />
       {showName && (
-        <span className={nameClassName ?? 'text-sm'}>{name}</span>
+        <span className={nameClassName ?? 'hidden md:block text-sm'}>{name}</span>
       )}
     </span>
   );
