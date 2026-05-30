@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { LeaderboardTable, type LeaderboardRowView } from '@/components/LeaderboardTable';
 import { LeaguePageShell } from '@/components/LeaguePageShell';
+import { MatchScoresList } from '@/components/MatchScoresList';
 import { SiteHeader } from '@/components/SiteHeader';
+import type { MatchResultRow } from '@/lib/match-results';
 import { getStoredPlayerId } from '@/lib/storage-client';
 
 type LeaderboardResponse = {
@@ -14,6 +16,10 @@ type LeaderboardResponse = {
   info_message: string | null;
   highlight_player_id: string | null;
   is_admin?: boolean;
+};
+
+type MatchResultsResponse = {
+  results: MatchResultRow[];
 };
 
 export default function TablePage() {
@@ -27,6 +33,7 @@ export default function TablePage() {
 function TablePageContent() {
   const router = useRouter();
   const [data, setData] = useState<LeaderboardResponse | null>(null);
+  const [matchResults, setMatchResults] = useState<MatchResultRow[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -34,17 +41,33 @@ function TablePageContent() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/leaderboard', { credentials: 'include' });
-      const json = await res.json();
-      if (res.status === 401) {
+      const [leaderboardRes, matchResultsRes] = await Promise.all([
+        fetch('/api/leaderboard', { credentials: 'include' }),
+        fetch('/api/match-results', { credentials: 'include' }),
+      ]);
+
+      const leaderboardJson = await leaderboardRes.json();
+      if (leaderboardRes.status === 401) {
         router.replace('/');
         return;
       }
-      if (!res.ok) {
-        setError(json.error ?? 'Could not load table');
+      if (!leaderboardRes.ok) {
+        setError(leaderboardJson.error ?? 'Could not load table');
         return;
       }
-      setData(json);
+
+      const matchResultsJson = (await matchResultsRes.json()) as MatchResultsResponse;
+      if (!matchResultsRes.ok) {
+        setError(
+          'error' in matchResultsJson && typeof matchResultsJson.error === 'string'
+            ? matchResultsJson.error
+            : 'Could not load match results',
+        );
+        return;
+      }
+
+      setData(leaderboardJson);
+      setMatchResults(matchResultsJson.results);
     } catch {
       setError('Could not load table');
     } finally {
@@ -69,9 +92,7 @@ function TablePageContent() {
           Announcement text
         </p> */}
         {!playerLoggedIn && (
-          <Button href="/register"
-            className="mb-6 px-6"
-          >
+          <Button href="/register" className="mb-6 px-6">
             Join league
           </Button>
         )}
@@ -91,6 +112,9 @@ function TablePageContent() {
             highlightPlayerId={data.highlight_player_id}
           />
         )}
+
+        <h2 className="mt-12 mb-6 text-2xl font-bold">Match scores</h2>
+        {!loading && !error && <MatchScoresList results={matchResults} />}
       </main>
     </div>
   );
