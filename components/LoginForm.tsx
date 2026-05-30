@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { TextField } from '@/components/ui/TextField';
 
-export function LeagueGateForm() {
+export function LoginForm() {
   const router = useRouter();
-  const [leagueName, setLeagueName] = useState('');
+  const [playerName, setPlayerName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -18,11 +18,11 @@ export function LeagueGateForm() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/league/login', {
+      const res = await fetch('/api/player/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify({ league_name: leagueName, password }),
+        body: JSON.stringify({ player_name: playerName, password }),
       });
       const data = await res.json();
 
@@ -43,19 +43,16 @@ export function LeagueGateForm() {
   return (
     <form onSubmit={onSubmit} className="flex w-full flex-col gap-4">
       <TextField
-        id="league_name"
-        label="League name"
-        type="text"
-        autoComplete="username"
+        id="player_name"
+        label="Player name"
         required
-        value={leagueName}
-        onChange={(e) => setLeagueName(e.target.value)}
+        value={playerName}
+        onChange={(e) => setPlayerName(e.target.value)}
       />
       <TextField
-        id="league_password"
-        label="League password"
+        id="password"
+        label="Password"
         type="password"
-        autoComplete="current-password"
         required
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -66,7 +63,7 @@ export function LeagueGateForm() {
         </p>
       )}
       <Button type="submit" fullWidth disabled={loading}>
-        {loading ? 'Entering…' : 'Enter league'}
+        {loading ? 'Logging in…' : 'Log in'}
       </Button>
     </form>
   );

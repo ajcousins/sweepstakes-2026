@@ -1,5 +1,3 @@
-'use client';
-
 import { TeamFlag } from '@/components/TeamFlag';
 import type { MatchResultRow } from '@/lib/match-results';
 

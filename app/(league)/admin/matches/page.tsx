@@ -1,0 +1,28 @@
+import { redirect } from 'next/navigation';
+import { AdminMatchesPanel } from '@/components/AdminMatchesPanel';
+import { TextLink } from '@/components/ui/TextLink';
+import { requireAdmin } from '@/lib/admin';
+import { fetchMatchResults } from '@/lib/match-results-service';
+
+export default async function AdminMatchesPage() {
+  const auth = await requireAdmin();
+
+  if (!auth.ok) {
+    if (auth.status === 401) {
+      redirect('/login');
+    }
+
+    return (
+      <main className="mx-auto max-w-lg flex-1 px-4 py-16 text-center">
+        <h1 className="text-xl font-bold">Admin access required</h1>
+        <TextLink href="/table" className="mt-6 inline-block">
+          Back to league table
+        </TextLink>
+      </main>
+    );
+  }
+
+  const results = await fetchMatchResults();
+
+  return <AdminMatchesPanel initialResults={results} />;
+}

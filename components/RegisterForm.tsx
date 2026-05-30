@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { TextField } from '@/components/ui/TextField';
 
-export function LeagueGateForm() {
+export function RegisterForm() {
   const router = useRouter();
-  const [leagueName, setLeagueName] = useState('');
+  const [playerName, setPlayerName] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -18,20 +19,24 @@ export function LeagueGateForm() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/league/login', {
+      const res = await fetch('/api/player/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify({ league_name: leagueName, password }),
+        body: JSON.stringify({
+          player_name: playerName,
+          password,
+          confirm_password: confirmPassword,
+        }),
       });
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error ?? 'Login failed');
+        setError(data.error ?? 'Join failed');
         return;
       }
 
-      router.push('/table');
+      router.push('/register/success');
       router.refresh();
     } catch {
       setError('Something went wrong. Try again.');
@@ -43,22 +48,29 @@ export function LeagueGateForm() {
   return (
     <form onSubmit={onSubmit} className="flex w-full flex-col gap-4">
       <TextField
-        id="league_name"
-        label="League name"
-        type="text"
-        autoComplete="username"
+        id="player_name"
+        label="Player name"
         required
-        value={leagueName}
-        onChange={(e) => setLeagueName(e.target.value)}
+        value={playerName}
+        onChange={(e) => setPlayerName(e.target.value)}
       />
       <TextField
-        id="league_password"
-        label="League password"
+        id="password"
+        label="Password"
         type="password"
-        autoComplete="current-password"
         required
+        minLength={6}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+      />
+      <TextField
+        id="confirm_password"
+        label="Confirm password"
+        type="password"
+        required
+        minLength={6}
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
       />
       {error && (
         <p className="text-sm text-red-600" role="alert">
@@ -66,7 +78,7 @@ export function LeagueGateForm() {
         </p>
       )}
       <Button type="submit" fullWidth disabled={loading}>
-        {loading ? 'Entering…' : 'Enter league'}
+        {loading ? 'Joining…' : 'Join'}
       </Button>
     </form>
   );

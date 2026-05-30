@@ -1,28 +1,11 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import { LeagueGateForm } from '@/components/LeagueGateForm';
-import { useLeagueSession } from '@/lib/use-league-session';
+import { getLeagueSession } from '@/lib/session';
 
-export default function HomePage() {
-  const router = useRouter();
-  const { status } = useLeagueSession();
-
-  useEffect(() => {
-    if (status === 'in_league') {
-      router.replace('/table');
-    }
-  }, [router, status]);
-
-  if (status === 'pending' || status === 'in_league') {
-    return (
-      <div className="flex min-h-full flex-col bg-gradient-to-b from-primary-subtle to-white">
-        <main className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center px-4 py-16">
-          <p className="text-zinc-500">Loading…</p>
-        </main>
-      </div>
-    );
+export default async function HomePage() {
+  const idLeague = await getLeagueSession();
+  if (idLeague) {
+    redirect('/table');
   }
 
   return (
