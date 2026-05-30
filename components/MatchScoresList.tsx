@@ -2,20 +2,13 @@
 
 import { useState } from 'react';
 import { TeamFlag } from '@/components/TeamFlag';
-import type { MatchResultRow } from '@/lib/match-results';
+import { formatKickOffDisplay, type MatchResultRow } from '@/lib/match-results';
 
 const RECENT_MATCH_LIMIT = 3;
 
 type Props = {
   results: MatchResultRow[];
 };
-
-function formatKickOff(iso: string) {
-  return new Date(iso).toLocaleString(undefined, {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  });
-}
 
 function scoreSuffix(row: MatchResultRow) {
   return row.went_to_extra_time ? ' · ET' : '';
@@ -53,7 +46,7 @@ function MatchScoreItem({ row }: { row: MatchResultRow }) {
       <p className="mb-3 text-xs text-zinc-500 sm:text-sm">
         {row.stage ?? 'Match'}
         {' · '}
-        {formatKickOff(row.kick_off)}
+        {formatKickOffDisplay(row.kick_off)}
         {scoreSuffix(row)}
       </p>
       <div>

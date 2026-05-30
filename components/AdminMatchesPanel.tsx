@@ -9,7 +9,7 @@ import {
   matchToFormValues,
   type MatchFormValues,
 } from '@/components/MatchResultForm';
-import type { MatchResultRow } from '@/lib/match-results';
+import { formatKickOffDisplay, type MatchResultRow } from '@/lib/match-results';
 
 type Props = {
   initialResults: MatchResultRow[];
@@ -229,7 +229,7 @@ export function AdminMatchesPanel({ initialResults }: Props) {
                     </p>
                     <p className="mt-1 text-sm text-zinc-500">
                       {row.stage ?? '—'} ·{' '}
-                      {new Date(row.kick_off).toLocaleString()}
+                      {formatKickOffDisplay(row.kick_off)}
                       {row.went_to_extra_time && ' · ET'}
                       {row.home_penalties_score != null &&
                         ` · Pens ${row.home_penalties_score}-${row.away_penalties_score}`}

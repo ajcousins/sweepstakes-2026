@@ -124,6 +124,18 @@ export function enrichMatchResult(row: GameResult): MatchResultRow {
   };
 }
 
+const KICK_OFF_DISPLAY_LOCALE = 'en-GB';
+const KICK_OFF_DISPLAY_TIME_ZONE = 'UTC';
+
+/** Format ISO kick_off for display (fixed locale/timezone for SSR hydration). */
+export function formatKickOffDisplay(iso: string): string {
+  return new Date(iso).toLocaleString(KICK_OFF_DISPLAY_LOCALE, {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+    timeZone: KICK_OFF_DISPLAY_TIME_ZONE,
+  });
+}
+
 /** Format ISO kick_off for datetime-local input (local timezone). */
 export function kickOffToDatetimeLocal(iso: string): string {
   const d = new Date(iso);
