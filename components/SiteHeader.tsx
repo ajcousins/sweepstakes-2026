@@ -6,7 +6,7 @@ export async function SiteHeader() {
   const displayTitle = inLeague && title ? title : '';
 
   return (
-    <header className="bg-white/90 backdrop-blur">
+    <header>
       <div className="mx-auto max-w-4xl px-4 py-4">
         <Link
           href={inLeague ? '/table' : '/'}
