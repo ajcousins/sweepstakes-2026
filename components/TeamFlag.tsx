@@ -14,6 +14,10 @@ const FLAG_SIZES = {
   xl: { width: 120 },
 } as const;
 
+/** Flag only (default, &lt; sm). Team code at sm. Full name at md+. */
+const LABEL_CODE_CLASS = 'hidden whitespace-nowrap text-sm sm:inline md:hidden';
+const LABEL_NAME_BASE_CLASS = 'hidden whitespace-nowrap text-sm md:inline';
+
 /** Renders a team flag image from FIFA's flags endpoint. */
 export function TeamFlag({
   teamCode,
@@ -22,7 +26,7 @@ export function TeamFlag({
   nameClassName,
 }: Props) {
   const { width } = FLAG_SIZES[size];
-  const { name, flagUrl } = getTeamDisplay(teamCode);
+  const { name, code, flagUrl } = getTeamDisplay(teamCode);
 
   const stacked = size === 'lg' || size === 'xl';
 
@@ -30,8 +34,8 @@ export function TeamFlag({
     <span
       className={
         stacked
-          ? 'inline-flex flex-col items-center gap-2'
-          : 'inline-flex items-center gap-1.5'
+          ? 'inline-flex shrink-0 flex-col items-center gap-2'
+          : 'inline-flex shrink-0 items-center gap-1.5'
       }
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -48,7 +52,18 @@ export function TeamFlag({
         loading="lazy"
       />
       {showName && (
-        <span className={nameClassName ?? 'hidden md:block text-sm'}>{name}</span>
+        <>
+          <span className={LABEL_CODE_CLASS}>{code}</span>
+          <span
+            className={
+              nameClassName
+                ? `hidden whitespace-nowrap md:inline ${nameClassName}`
+                : LABEL_NAME_BASE_CLASS
+            }
+          >
+            {name}
+          </span>
+        </>
       )}
     </span>
   );

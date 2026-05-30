@@ -38,7 +38,7 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
         <colgroup>
           <col className="w-6" />
           <col className="md:w-20 w-15" />
-          <col className="md:w-30 w-8" />
+          <col className="w-16 sm:w-36 md:w-48" />
           <col className="md:w-12 w-8" />
           <col className="md:w-12 w-8" />
         </colgroup>
@@ -66,7 +66,7 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
                   {row.player_name}
                 </td>
                 <td className={tdClass}>
-                  <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="flex items-center gap-3 sm:gap-4">
                     <TeamFlag teamCode={row.team_a} showName size="sm" />
                     <TeamFlag teamCode={row.team_b} showName size="sm" />
                   </span>
