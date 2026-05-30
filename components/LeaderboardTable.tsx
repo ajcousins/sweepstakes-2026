@@ -21,7 +21,8 @@ type Props = {
   highlightPlayerId: string | null;
 };
 
-const thClass = 'px-2 py-2 font-medium sm:px-4 sm:py-3';
+const thClass =
+  'sticky top-0 z-10 bg-zinc-100 px-2 py-2 font-medium shadow-[0_1px_0_0_rgb(228_228_231)] sm:px-4 sm:py-3';
 const tdClass = 'px-2 py-2 sm:px-4 sm:py-3';
 
 export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
@@ -34,16 +35,16 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
   }
 
   return (
-    <div className="overflow-x-auto border border-zinc-200">
+    <div className="border border-zinc-200">
       <table className="w-full table-fixed text-left text-sm">
         <colgroup>
           <col className="w-6" />
-          <col className="w-20" />
-          <col className="w-10 md:w-30" />
-          <col className="w-10 md:w-12" />
-          <col className="w-10 md:w-12" />
+          <col className="md:w-20 w-15" />
+          <col className="md:w-30 w-8" />
+          <col className="md:w-12 w-8" />
+          <col className="md:w-12 w-8" />
         </colgroup>
-        <thead className="bg-zinc-100 text-zinc-600">
+        <thead className="text-zinc-600">
           <tr>
             <th className={thClass}>#</th>
             <th className={thClass}>Player</th>
@@ -63,7 +64,7 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
                 }
               >
                 <td className={`${tdClass} tabular-nums`}>{row.rank}</td>
-                <td className={`${tdClass} font-medium wrap-break-words`}>
+                <td className={`${tdClass} text-xs sm:text-sm font-normal wrap-break-words`}>
                   {row.player_name}
                 </td>
                 <td className={tdClass}>
