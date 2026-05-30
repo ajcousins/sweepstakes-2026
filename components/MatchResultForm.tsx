@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/Button';
+import { MATCH_STAGES } from '@/lib/match-stages';
 import { TEAMS } from '@/lib/teams';
 import { kickOffToDatetimeLocal } from '@/lib/match-results';
 import type { MatchResultRow } from '@/lib/match-results';
@@ -84,13 +85,23 @@ export function MatchResultForm({
         </div>
         <div>
           <label className="mb-1 block text-sm font-medium">Stage</label>
-          <input
-            type="text"
-            placeholder="e.g. Group B, Semi Final"
+          <select
+            required
             value={values.stage}
             onChange={(e) => set({ stage: e.target.value })}
             className="w-full rounded-lg border border-zinc-300 px-3 py-2"
-          />
+          >
+            <option value="">Select…</option>
+            {values.stage &&
+              !(MATCH_STAGES as readonly string[]).includes(values.stage) && (
+                <option value={values.stage}>{values.stage}</option>
+              )}
+            {MATCH_STAGES.map((stage) => (
+              <option key={stage} value={stage}>
+                {stage}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
