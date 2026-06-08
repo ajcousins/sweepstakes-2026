@@ -71,7 +71,7 @@ export function MatchResultForm({
     onChange({ ...values, ...patch });
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+    <form onSubmit={onSubmit} className="flex flex-col gap-4 border border-zinc-200 bg-zinc-50 p-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="mb-1 block text-sm font-medium">Kick-off</label>
@@ -80,7 +80,7 @@ export function MatchResultForm({
             required
             value={values.kick_off}
             onChange={(e) => set({ kick_off: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           />
         </div>
         <div>
@@ -89,7 +89,7 @@ export function MatchResultForm({
             required
             value={values.stage}
             onChange={(e) => set({ stage: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           >
             <option value="">Select…</option>
             {values.stage &&
@@ -112,7 +112,7 @@ export function MatchResultForm({
             required
             value={values.home_team}
             onChange={(e) => set({ home_team: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           >
             <option value="">Select…</option>
             {teamOptions.map((t) => (
@@ -128,7 +128,7 @@ export function MatchResultForm({
             required
             value={values.away_team}
             onChange={(e) => set({ away_team: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           >
             <option value="">Select…</option>
             {teamOptions.map((t) => (
@@ -149,7 +149,7 @@ export function MatchResultForm({
             required
             value={values.home_score}
             onChange={(e) => set({ home_score: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           />
         </div>
         <div>
@@ -160,7 +160,7 @@ export function MatchResultForm({
             required
             value={values.away_score}
             onChange={(e) => set({ away_score: e.target.value })}
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           />
         </div>
       </div>
@@ -183,7 +183,7 @@ export function MatchResultForm({
             value={values.home_penalties_score}
             onChange={(e) => set({ home_penalties_score: e.target.value })}
             placeholder="—"
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           />
         </div>
         <div>
@@ -194,7 +194,7 @@ export function MatchResultForm({
             value={values.away_penalties_score}
             onChange={(e) => set({ away_penalties_score: e.target.value })}
             placeholder="—"
-            className="w-full rounded-lg border border-zinc-300 px-3 py-2"
+            className="w-full border border-zinc-300 px-3 py-2"
           />
         </div>
       </div>

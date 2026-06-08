@@ -173,12 +173,12 @@ export function AdminMatchesPanel({ initialResults }: Props) {
       </div>
 
       {notice && (
-        <p className="mb-4 rounded-lg bg-primary-subtle px-4 py-2 text-sm text-primary-ink">
+        <p className="mb-4 bg-primary-subtle px-4 py-2 text-sm text-primary-ink">
           {notice}
         </p>
       )}
       {warning && (
-        <p className="mb-4 rounded-lg bg-amber-50 px-4 py-2 text-sm text-amber-900" role="alert">
+        <p className="mb-4 bg-amber-50 px-4 py-2 text-sm text-amber-900" role="alert">
           {warning}
         </p>
       )}
@@ -209,7 +209,7 @@ export function AdminMatchesPanel({ initialResults }: Props) {
           {results.map((row) => (
             <li
               key={row.id_result}
-              className="rounded-xl border border-zinc-200 p-4"
+              className="border border-zinc-200 p-4"
             >
               {editingId === row.id_result ? (
                 <MatchResultForm
@@ -239,14 +239,14 @@ export function AdminMatchesPanel({ initialResults }: Props) {
                     <button
                       type="button"
                       onClick={() => startEdit(row)}
-                      className="rounded-lg border border-zinc-300 px-3 py-1.5 text-sm hover:bg-zinc-50"
+                      className="border border-zinc-300 px-3 py-1.5 text-sm hover:bg-zinc-50"
                     >
                       Edit
                     </button>
                     <button
                       type="button"
                       onClick={() => handleDelete(row.id_result)}
-                      className="rounded-lg border border-red-200 px-3 py-1.5 text-sm text-red-700 hover:bg-red-50"
+                      className="border border-red-200 px-3 py-1.5 text-sm text-red-700 hover:bg-red-50"
                     >
                       Delete
                     </button>

@@ -83,7 +83,7 @@ export function MatchScoresList({ results }: Props) {
 
   if (results.length === 0) {
     return (
-      <p className="rounded-lg border border-dashed border-zinc-300 px-4 py-8 text-center text-zinc-500">
+      <p className="border border-dashed border-zinc-300 px-4 py-8 text-center text-zinc-500">
         No matches played yet.
       </p>
     );
