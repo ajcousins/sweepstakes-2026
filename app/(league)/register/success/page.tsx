@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation';
+import { ConfettiSideCannons } from '@/components/ConfettiSideCannons';
 import { Button } from '@/components/ui/Button';
 import { TeamFlag } from '@/components/TeamFlag';
 import { getPlayerProfile } from '@/lib/player-session-server';
@@ -16,7 +17,8 @@ export default async function RegisterSuccessPage() {
   }
 
   return (
-    <main className="mx-auto w-full max-w-lg flex-1 px-4 py-12 text-center">
+    <main className="relative mx-auto w-full max-w-lg flex-1 px-4 py-12 text-center">
+      <ConfettiSideCannons />
       <h1 className="mb-2 text-2xl font-bold">You&apos;re in!</h1>
       <p className="mb-8 text-zinc-600">Your World Cup teams:</p>
       <div className="mb-8 flex flex-col items-center gap-6 px-8 py-12">
