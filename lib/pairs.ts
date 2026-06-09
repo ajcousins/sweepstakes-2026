@@ -10,6 +10,19 @@ export function allTeamCodes(): TeamCode[] {
   return Object.keys(TEAMS) as TeamCode[];
 }
 
+function teamPot(code: TeamCode): number {
+  return TEAMS[code].pot;
+}
+
+/** One team from pots 1–2 (strong) and one from pots 3–4 (weak). */
+export function isPotBalancedPair(a: TeamCode, b: TeamCode): boolean {
+  const pa = teamPot(a);
+  const pb = teamPot(b);
+  const strong = (p: number) => p <= 2;
+  const weak = (p: number) => p >= 3;
+  return (strong(pa) && weak(pb)) || (weak(pa) && strong(pb));
+}
+
 export function buildAllPairs(): Array<{ team_a: TeamCode; team_b: TeamCode }> {
   const codes = allTeamCodes();
   const pairs: Array<{ team_a: TeamCode; team_b: TeamCode }> = [];
@@ -19,6 +32,10 @@ export function buildAllPairs(): Array<{ team_a: TeamCode; team_b: TeamCode }> {
     }
   }
   return pairs;
+}
+
+export function buildPotBalancedPairs(): Array<{ team_a: TeamCode; team_b: TeamCode }> {
+  return buildAllPairs().filter((p) => isPotBalancedPair(p.team_a, p.team_b));
 }
 
 export type TeamCounts = Record<string, number>;
@@ -54,7 +71,7 @@ export function pickBalancedPair(
   usedPairs: Set<string>,
   counts: TeamCounts,
 ): PairChoice | null {
-  const unused = buildAllPairs().filter(
+  const unused = buildPotBalancedPairs().filter(
     (p) => !usedPairs.has(normalisePair(p.team_a, p.team_b)),
   );
   if (unused.length === 0) return null;
