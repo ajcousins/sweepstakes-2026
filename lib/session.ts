@@ -83,3 +83,13 @@ export async function clearPlayerSession() {
   const jar = await cookies();
   jar.delete(PLAYER_COOKIE);
 }
+
+export async function clearLeagueSession() {
+  const jar = await cookies();
+  jar.delete(LEAGUE_COOKIE);
+}
+
+export async function clearAllSessions() {
+  await clearPlayerSession();
+  await clearLeagueSession();
+}
