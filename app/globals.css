@@ -23,6 +23,8 @@
   --color-primary-ink: var(--primary-ink);
   --font-sans: var(--font-roboto);
   --font-mono: var(--font-roboto-mono);
+
+  --inset-shadow-md: inset 3px 3px 5px rgba(0, 0, 0, 0.25); 
 }
 
 html {

@@ -98,7 +98,6 @@ async function main() {
 
   const endDate = options.date ? new Date(`${options.date}T12:00:00Z`) : undefined;
   const days = options.date ? 1 : options.days;
-  console.log('days:', days);
 
   try {
     const summary = await syncScores({

@@ -2,7 +2,7 @@
 
 
 ## Intro
-This is a script that will run a few times every day to check whether matches from the FIFA 2026 World Cup have completed.
+This is a script that fetches completed FIFA 2026 World Cup matches from BBC Sport and inserts new scores into Supabase.
 
 It will take relevant scores from matches and update the Supabase table for the Sweepstakes app.
 
@@ -25,12 +25,13 @@ Flags:
 
 Requires `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `.env.local` (unless `--dry-run --fixtures`).
 
-## GitHub Actions
+## Admin page
 
-Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-scores.yml)
+Admins can trigger a score sync from the app at **`/admin/update-scores`**.
 
-- Runs on cron ~4× daily (`0 6,12,18,23 * * *` UTC) and via **workflow_dispatch**
-- Repo secrets: `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`
+- Requires league login, player login, and `is_admin` on the player row (same as `/admin/matches`).
+- Click **Update scores** to fetch BBC data and insert new completed matches.
+- The page shows the same log output as the CLI (per-match inserts + summary).
 
 ## Apendix
 

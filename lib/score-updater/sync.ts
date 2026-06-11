@@ -20,6 +20,7 @@ export type SyncSummary = {
   unmappedTeams: string[];
   validationErrors: string[];
   dryRun: boolean;
+  logs: string[];
 };
 
 function pairKey(home: string, away: string): string {
@@ -53,6 +54,33 @@ async function insertResult(
   }
 }
 
+export function formatSummaryLines(summary: SyncSummary): string[] {
+  const lines = [
+    '--- score updater summary ---',
+    `events parsed:      ${summary.fetchedEvents}`,
+    `completed (WC):     ${summary.completed}`,
+    `skipped (existing): ${summary.skippedExisting}`,
+    `inserted:           ${summary.inserted}${summary.dryRun ? ' (dry-run)' : ''}`,
+    `skipped (pending):  ${summary.skippedNotCompleted}`,
+  ];
+
+  if (summary.unmappedTeams.length > 0) {
+    lines.push(`unmapped teams:     ${summary.unmappedTeams.length}`);
+    for (const msg of summary.unmappedTeams) {
+      lines.push(`  - ${msg}`);
+    }
+  }
+
+  if (summary.validationErrors.length > 0) {
+    lines.push(`validation errors:  ${summary.validationErrors.length}`);
+    for (const msg of summary.validationErrors) {
+      lines.push(`  - ${msg}`);
+    }
+  }
+
+  return lines;
+}
+
 export async function syncScores(options: SyncOptions = {}): Promise<SyncSummary> {
   const dryRun = options.dryRun ?? false;
   const days = options.days ?? 2;
@@ -77,6 +105,7 @@ export async function syncScores(options: SyncOptions = {}): Promise<SyncSummary
     unmappedTeams: [],
     validationErrors: [],
     dryRun,
+    logs: [],
   };
 
   const checkExisting = !dryRun || !options.fixtures;
@@ -110,7 +139,7 @@ export async function syncScores(options: SyncOptions = {}): Promise<SyncSummary
 
     if (dryRun) {
       summary.inserted++;
-      console.log(
+      summary.logs.push(
         `[dry-run] would insert: ${validated.data.home_team} ${validated.data.home_score}-${validated.data.away_score} ${validated.data.away_team} (${validated.data.stage ?? 'no stage'})`,
       );
       continue;
@@ -119,31 +148,17 @@ export async function syncScores(options: SyncOptions = {}): Promise<SyncSummary
     await insertResult(validated);
     existingPairs.add(key);
     summary.inserted++;
-    console.log(
+    summary.logs.push(
       `inserted: ${validated.data.home_team} ${validated.data.home_score}-${validated.data.away_score} ${validated.data.away_team}`,
     );
   }
 
+  summary.logs.push(...formatSummaryLines(summary));
   return summary;
 }
 
 export function printSummary(summary: SyncSummary): void {
-  console.log('--- score updater summary ---');
-  console.log(`events parsed:      ${summary.fetchedEvents}`);
-  console.log(`completed (WC):     ${summary.completed}`);
-  console.log(`skipped (existing): ${summary.skippedExisting}`);
-  console.log(`inserted:           ${summary.inserted}${summary.dryRun ? ' (dry-run)' : ''}`);
-  console.log(`skipped (pending):  ${summary.skippedNotCompleted}`);
-  if (summary.unmappedTeams.length > 0) {
-    console.log(`unmapped teams:     ${summary.unmappedTeams.length}`);
-    for (const msg of summary.unmappedTeams) {
-      console.log(`  - ${msg}`);
-    }
-  }
-  if (summary.validationErrors.length > 0) {
-    console.log(`validation errors:  ${summary.validationErrors.length}`);
-    for (const msg of summary.validationErrors) {
-      console.log(`  - ${msg}`);
-    }
+  for (const line of summary.logs) {
+    console.log(line);
   }
 }
