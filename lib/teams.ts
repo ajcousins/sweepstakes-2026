@@ -1,14 +1,4 @@
-interface Team {
-  [index: string]: {
-    teamName: string,
-    code: string,
-    flag: string,
-    pot: 1 | 2 | 3 | 4;
-    bbcName?: string;
-  }
-}
-
-export const TEAMS: Team = {
+export const TEAMS = {
   ALG: { teamName: 'Algeria', code: 'ALG', flag: '🇩🇿', pot: 3 },
   ARG: { teamName: 'Argentina', code: 'ARG', flag: '🇦🇷', pot: 1 },
   AUS: { teamName: 'Australia', code: 'AUS', flag: '🇦🇺', pot: 2 },
@@ -57,12 +47,15 @@ export const TEAMS: Team = {
   URU: { teamName: 'Uruguay', code: 'URU', flag: '🇺🇾', pot: 2 },
   USA: { teamName: 'United States', code: 'USA', flag: '🇺🇸', pot: 2 },
   UZB: { teamName: 'Uzbekistan', code: 'UZB', flag: '🇺🇿', pot: 3 },
-};
+} as const;
 
-export function teamCodeFromBbcName(fullName: string): string | null {
+export type TeamCode = keyof typeof TEAMS;
+
+export function teamCodeFromBbcName(fullName: string): TeamCode | null {
   const normalized = fullName.trim();
-  for (const [code, team] of Object.entries(TEAMS)) {
-    if (team.teamName === normalized || team.bbcName === normalized) {
+  for (const code of Object.keys(TEAMS) as TeamCode[]) {
+    const team = TEAMS[code];
+    if (team.teamName === normalized || ('bbcName' in team && team.bbcName === normalized)) {
       return code;
     }
   }

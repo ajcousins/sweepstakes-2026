@@ -1,6 +1,6 @@
-import { TEAMS } from '@/lib/teams';
+import { TEAMS, type TeamCode } from '@/lib/teams';
 
-export type TeamCode = keyof typeof TEAMS;
+export type { TeamCode };
 
 export function normalisePair(a: string, b: string): string {
   return a < b ? `${a}_${b}` : `${b}_${a}`;
