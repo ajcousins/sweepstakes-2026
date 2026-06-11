@@ -125,9 +125,9 @@ export function enrichMatchResult(row: GameResult): MatchResultRow {
 }
 
 const KICK_OFF_DISPLAY_LOCALE = 'en-GB';
-const KICK_OFF_DISPLAY_TIME_ZONE = 'UTC';
+const KICK_OFF_DISPLAY_TIME_ZONE = 'Europe/London';
 
-/** Format ISO kick_off for display (fixed locale/timezone for SSR hydration). */
+/** Format ISO kick_off for display in UK time (BST/GMT; fixed for SSR hydration). */
 export function formatKickOffDisplay(iso: string): string {
   return new Date(iso).toLocaleString(KICK_OFF_DISPLAY_LOCALE, {
     dateStyle: 'medium',
