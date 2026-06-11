@@ -45,39 +45,18 @@ select * from (
 
   union all
 
-  -- Constraints (PK, UNIQUE, FK, CHECK)
+  -- Constraints (PK, UNIQUE, FK, CHECK) — pg_get_constraintdef includes full CHECK bodies
   select
     30,
     'constraint',
-    tc.table_name::text,
-    tc.constraint_name::text,
-    tc.constraint_type::text
-      || ' [' || string_agg(kcu.column_name, ', ' order by kcu.ordinal_position) || ']'
-      || coalesce(
-        ' -> ' || ccu.table_name::text || '('
-          || string_agg(ccu.column_name::text, ', ' order by kcu.ordinal_position) || ')',
-        ''
-      )
-      || coalesce(' check: ' || chk.check_clause, '')
-  from information_schema.table_constraints tc
-  left join information_schema.key_column_usage kcu
-    on tc.constraint_schema = kcu.constraint_schema
-    and tc.constraint_name = kcu.constraint_name
-  left join information_schema.constraint_column_usage ccu
-    on tc.constraint_schema = ccu.constraint_schema
-    and tc.constraint_name = ccu.constraint_name
-    and tc.constraint_type = 'FOREIGN KEY'
-  left join information_schema.check_constraints chk
-    on tc.constraint_schema = chk.constraint_schema
-    and tc.constraint_name = chk.constraint_name
-  where tc.table_schema = 'public'
-    and tc.constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY', 'CHECK')
-  group by
-    tc.table_name,
-    tc.constraint_name,
-    tc.constraint_type,
-    ccu.table_name,
-    chk.check_clause
+    c.relname::text,
+    con.conname::text,
+    pg_get_constraintdef(con.oid)
+  from pg_constraint con
+  join pg_class c on c.oid = con.conrelid
+  join pg_namespace n on n.oid = c.relnamespace
+  where n.nspname = 'public'
+    and con.contype in ('p', 'u', 'f', 'c')
 
   union all
 

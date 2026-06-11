@@ -1,0 +1,4523 @@
+{
+  "eventGroups": [
+    {
+      "displayLabel": "FIFA World Cup",
+      "displayLabelOnwardJourneyPath": "/sport/football/world-cup/table",
+      "secondaryGroups": [
+        {
+          "displayLabel": "Group A",
+          "events": [
+            {
+              "home": {
+                "id": "1yghbv1c71b37eenutbwnvvq",
+                "fullName": "South Korea",
+                "shortName": "South Korea",
+                "urn": "urn:bbc:sportsdata:football:team:south-korea",
+                "actions": []
+              },
+              "away": {
+                "id": "70tnqyqn871jwlk26gtjw7knm",
+                "fullName": "Czech Republic",
+                "shortName": "Czech Republic",
+                "urn": "urn:bbc:sportsdata:football:team:czech-republic",
+                "actions": []
+              },
+              "id": "s-9hjlhmip7tn4qgpwr47txpafo",
+              "urn": "urn:bbc:sportsdata:football:event:s-9hjlhmip7tn4qgpwr47txpafo",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "startDateTime": "2026-06-12T02:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-12T02:00:00Z",
+                "time": "03:00",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "03:00",
+                "displayTimeUK": "03:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "1yghbv1c71b37eenutbwnvvq",
+                  "urn": "urn:bbc:sportsdata:football:team:south-korea",
+                  "name": {
+                    "fullName": "South Korea",
+                    "shortName": "South Korea"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "70tnqyqn871jwlk26gtjw7knm",
+                  "urn": "urn:bbc:sportsdata:football:team:czech-republic",
+                  "name": {
+                    "fullName": "Czech Republic",
+                    "shortName": "Czech Republic"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87loxnvgbo667kpp36890i9sk",
+                "name": "Group A",
+                "urn": ""
+              },
+              "tipoTopicId": "ckg0vvrg70vt",
+              "onwardJourneyLink": "/sport/football/live/ckg0vvrg70vt",
+              "accessibleEventSummary": "South Korea versus Czech Republic kick off 03:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "70tnqyqn871jwlk26gtjw7knm",
+                "fullName": "Czech Republic",
+                "shortName": "Czech Republic",
+                "urn": "urn:bbc:sportsdata:football:team:czech-republic",
+                "actions": []
+              },
+              "away": {
+                "id": "xmip8t9f2kefltjkraxzsxl9",
+                "fullName": "South Africa",
+                "shortName": "South Africa",
+                "urn": "urn:bbc:sportsdata:football:team:south-africa",
+                "actions": []
+              },
+              "id": "s-cbn3r0bwd3283f8bj4vuvifis",
+              "urn": "urn:bbc:sportsdata:football:event:s-cbn3r0bwd3283f8bj4vuvifis",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "startDateTime": "2026-06-18T16:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-18T16:00:00Z",
+                "time": "17:00",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "17:00",
+                "displayTimeUK": "17:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "70tnqyqn871jwlk26gtjw7knm",
+                  "urn": "urn:bbc:sportsdata:football:team:czech-republic",
+                  "name": {
+                    "fullName": "Czech Republic",
+                    "shortName": "Czech Republic"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "xmip8t9f2kefltjkraxzsxl9",
+                  "urn": "urn:bbc:sportsdata:football:team:south-africa",
+                  "name": {
+                    "fullName": "South Africa",
+                    "shortName": "South Africa"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87loxnvgbo667kpp36890i9sk",
+                "name": "Group A",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Czech Republic versus South Africa kick off 17:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "4vofb84dzb5fyc81n2ssws6ah",
+                "fullName": "Mexico",
+                "shortName": "Mexico",
+                "urn": "urn:bbc:sportsdata:football:team:mexico",
+                "actions": []
+              },
+              "away": {
+                "id": "1yghbv1c71b37eenutbwnvvq",
+                "fullName": "South Korea",
+                "shortName": "South Korea",
+                "urn": "urn:bbc:sportsdata:football:team:south-korea",
+                "actions": []
+              },
+              "id": "s-bdoe50pj6ug3jrc5to1j8st1w",
+              "urn": "urn:bbc:sportsdata:football:event:s-bdoe50pj6ug3jrc5to1j8st1w",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "startDateTime": "2026-06-19T01:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-19T01:00:00Z",
+                "time": "02:00",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "02:00",
+                "displayTimeUK": "02:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "4vofb84dzb5fyc81n2ssws6ah",
+                  "urn": "urn:bbc:sportsdata:football:team:mexico",
+                  "name": {
+                    "fullName": "Mexico",
+                    "shortName": "Mexico"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "1yghbv1c71b37eenutbwnvvq",
+                  "urn": "urn:bbc:sportsdata:football:team:south-korea",
+                  "name": {
+                    "fullName": "South Korea",
+                    "shortName": "South Korea"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group A",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87loxnvgbo667kpp36890i9sk",
+                "name": "Group A",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Mexico versus South Korea kick off 02:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group B",
+          "events": [
+            {
+              "home": {
+                "id": "eg7vduna0h3vis1wd47s41za7",
+                "fullName": "Canada",
+                "shortName": "Canada",
+                "urn": "urn:bbc:sportsdata:football:team:canada",
+                "actions": []
+              },
+              "away": {
+                "id": "o5iztj2zl6b0v6ed9q5m7p1k",
+                "fullName": "Bosnia-Herzegovina",
+                "shortName": "Bosnia",
+                "urn": "urn:bbc:sportsdata:football:team:bosnia-herzegovina",
+                "actions": []
+              },
+              "id": "s-y1ow9ht5baxn64i01hq9moes",
+              "urn": "urn:bbc:sportsdata:football:event:s-y1ow9ht5baxn64i01hq9moes",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "startDateTime": "2026-06-12T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-12T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "eg7vduna0h3vis1wd47s41za7",
+                  "urn": "urn:bbc:sportsdata:football:team:canada",
+                  "name": {
+                    "fullName": "Canada",
+                    "shortName": "Canada"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "o5iztj2zl6b0v6ed9q5m7p1k",
+                  "urn": "urn:bbc:sportsdata:football:team:bosnia-herzegovina",
+                  "name": {
+                    "fullName": "Bosnia-Herzegovina",
+                    "shortName": "Bosnia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87mssi90kfbu5uxsmbcqw23h0",
+                "name": "Group B",
+                "urn": ""
+              },
+              "tipoTopicId": "c1dy55edn2yt",
+              "accessibleEventSummary": "Canada versus Bosnia-Herzegovina kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "ea68amhsn28ijs7bzjuzeqrz6",
+                "fullName": "Qatar",
+                "shortName": "Qatar",
+                "urn": "urn:bbc:sportsdata:football:team:qatar",
+                "actions": []
+              },
+              "away": {
+                "id": "339wxbt07ltnva7hop6m5o477",
+                "fullName": "Switzerland",
+                "shortName": "Switzerland",
+                "urn": "urn:bbc:sportsdata:football:team:switzerland",
+                "actions": []
+              },
+              "id": "s-2lzhf44ic9g2dj0l29fji2xw4",
+              "urn": "urn:bbc:sportsdata:football:event:s-2lzhf44ic9g2dj0l29fji2xw4",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "startDateTime": "2026-06-13T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-13T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "ea68amhsn28ijs7bzjuzeqrz6",
+                  "urn": "urn:bbc:sportsdata:football:team:qatar",
+                  "name": {
+                    "fullName": "Qatar",
+                    "shortName": "Qatar"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "339wxbt07ltnva7hop6m5o477",
+                  "urn": "urn:bbc:sportsdata:football:team:switzerland",
+                  "name": {
+                    "fullName": "Switzerland",
+                    "shortName": "Switzerland"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87mssi90kfbu5uxsmbcqw23h0",
+                "name": "Group B",
+                "urn": ""
+              },
+              "tipoTopicId": "c4gy0jy8dglt",
+              "accessibleEventSummary": "Qatar versus Switzerland kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "339wxbt07ltnva7hop6m5o477",
+                "fullName": "Switzerland",
+                "shortName": "Switzerland",
+                "urn": "urn:bbc:sportsdata:football:team:switzerland",
+                "actions": []
+              },
+              "away": {
+                "id": "o5iztj2zl6b0v6ed9q5m7p1k",
+                "fullName": "Bosnia-Herzegovina",
+                "shortName": "Bosnia",
+                "urn": "urn:bbc:sportsdata:football:team:bosnia-herzegovina",
+                "actions": []
+              },
+              "id": "s-4mov5r6nivdn6dhlmb9hv5q1g",
+              "urn": "urn:bbc:sportsdata:football:event:s-4mov5r6nivdn6dhlmb9hv5q1g",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "startDateTime": "2026-06-18T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-18T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "339wxbt07ltnva7hop6m5o477",
+                  "urn": "urn:bbc:sportsdata:football:team:switzerland",
+                  "name": {
+                    "fullName": "Switzerland",
+                    "shortName": "Switzerland"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "o5iztj2zl6b0v6ed9q5m7p1k",
+                  "urn": "urn:bbc:sportsdata:football:team:bosnia-herzegovina",
+                  "name": {
+                    "fullName": "Bosnia-Herzegovina",
+                    "shortName": "Bosnia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87mssi90kfbu5uxsmbcqw23h0",
+                "name": "Group B",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Switzerland versus Bosnia-Herzegovina kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "eg7vduna0h3vis1wd47s41za7",
+                "fullName": "Canada",
+                "shortName": "Canada",
+                "urn": "urn:bbc:sportsdata:football:team:canada",
+                "actions": []
+              },
+              "away": {
+                "id": "ea68amhsn28ijs7bzjuzeqrz6",
+                "fullName": "Qatar",
+                "shortName": "Qatar",
+                "urn": "urn:bbc:sportsdata:football:team:qatar",
+                "actions": []
+              },
+              "id": "s-3luqmzpzk0qoh2tc96utv0ges",
+              "urn": "urn:bbc:sportsdata:football:event:s-3luqmzpzk0qoh2tc96utv0ges",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "startDateTime": "2026-06-18T22:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-18T22:00:00Z",
+                "time": "23:00",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "23:00",
+                "displayTimeUK": "23:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "eg7vduna0h3vis1wd47s41za7",
+                  "urn": "urn:bbc:sportsdata:football:team:canada",
+                  "name": {
+                    "fullName": "Canada",
+                    "shortName": "Canada"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "ea68amhsn28ijs7bzjuzeqrz6",
+                  "urn": "urn:bbc:sportsdata:football:team:qatar",
+                  "name": {
+                    "fullName": "Qatar",
+                    "shortName": "Qatar"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group B",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87mssi90kfbu5uxsmbcqw23h0",
+                "name": "Group B",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Canada versus Qatar kick off 23:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group C",
+          "events": [
+            {
+              "home": {
+                "id": "ajab3nmpoltsoeqcuoyi4pwzx",
+                "fullName": "Brazil",
+                "shortName": "Brazil",
+                "urn": "urn:bbc:sportsdata:football:team:brazil",
+                "actions": []
+              },
+              "away": {
+                "id": "avggs3u2b5cu8i1dnzknhth52",
+                "fullName": "Morocco",
+                "shortName": "Morocco",
+                "urn": "urn:bbc:sportsdata:football:team:morocco",
+                "actions": []
+              },
+              "id": "s-ar8b186wqraa80u0vpi2e4nis",
+              "urn": "urn:bbc:sportsdata:football:event:s-ar8b186wqraa80u0vpi2e4nis",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "startDateTime": "2026-06-13T22:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-13T22:00:00Z",
+                "time": "23:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "23:00",
+                "displayTimeUK": "23:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "ajab3nmpoltsoeqcuoyi4pwzx",
+                  "urn": "urn:bbc:sportsdata:football:team:brazil",
+                  "name": {
+                    "fullName": "Brazil",
+                    "shortName": "Brazil"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "avggs3u2b5cu8i1dnzknhth52",
+                  "urn": "urn:bbc:sportsdata:football:team:morocco",
+                  "name": {
+                    "fullName": "Morocco",
+                    "shortName": "Morocco"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87o4d88ilulnj26bg5cz5tses",
+                "name": "Group C",
+                "urn": ""
+              },
+              "tipoTopicId": "c20ym4y24ggt",
+              "accessibleEventSummary": "Brazil versus Morocco kick off 23:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "151psmk1h1c846f2lqmflkx75",
+                "fullName": "Haiti",
+                "shortName": "Haiti",
+                "urn": "urn:bbc:sportsdata:football:team:haiti",
+                "actions": []
+              },
+              "away": {
+                "id": "bcllqlzvj9j7opjene2zvran7",
+                "fullName": "Scotland",
+                "shortName": "Scotland",
+                "urn": "urn:bbc:sportsdata:football:team:scotland",
+                "actions": []
+              },
+              "id": "s-cydmo9vjfyvaefav6t1531xck",
+              "urn": "urn:bbc:sportsdata:football:event:s-cydmo9vjfyvaefav6t1531xck",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "startDateTime": "2026-06-14T01:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-14T01:00:00Z",
+                "time": "02:00",
+                "shortDate": "Sun 14 Jun",
+                "longDate": "Sunday 14th June 2026",
+                "dayOfWeek": "Sun",
+                "day": "14",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-14"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "02:00",
+                "displayTimeUK": "02:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "151psmk1h1c846f2lqmflkx75",
+                  "urn": "urn:bbc:sportsdata:football:team:haiti",
+                  "name": {
+                    "fullName": "Haiti",
+                    "shortName": "Haiti"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "bcllqlzvj9j7opjene2zvran7",
+                  "urn": "urn:bbc:sportsdata:football:team:scotland",
+                  "name": {
+                    "fullName": "Scotland",
+                    "shortName": "Scotland"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87o4d88ilulnj26bg5cz5tses",
+                "name": "Group C",
+                "urn": ""
+              },
+              "tipoTopicId": "c4gy7dxk0xwt",
+              "accessibleEventSummary": "Haiti versus Scotland kick off 02:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "bcllqlzvj9j7opjene2zvran7",
+                "fullName": "Scotland",
+                "shortName": "Scotland",
+                "urn": "urn:bbc:sportsdata:football:team:scotland",
+                "actions": []
+              },
+              "away": {
+                "id": "avggs3u2b5cu8i1dnzknhth52",
+                "fullName": "Morocco",
+                "shortName": "Morocco",
+                "urn": "urn:bbc:sportsdata:football:team:morocco",
+                "actions": []
+              },
+              "id": "s-exuljwp9gd116hkf5sox4q5g4",
+              "urn": "urn:bbc:sportsdata:football:event:s-exuljwp9gd116hkf5sox4q5g4",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "startDateTime": "2026-06-19T22:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-19T22:00:00Z",
+                "time": "23:00",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "23:00",
+                "displayTimeUK": "23:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "bcllqlzvj9j7opjene2zvran7",
+                  "urn": "urn:bbc:sportsdata:football:team:scotland",
+                  "name": {
+                    "fullName": "Scotland",
+                    "shortName": "Scotland"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "avggs3u2b5cu8i1dnzknhth52",
+                  "urn": "urn:bbc:sportsdata:football:team:morocco",
+                  "name": {
+                    "fullName": "Morocco",
+                    "shortName": "Morocco"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group C",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87o4d88ilulnj26bg5cz5tses",
+                "name": "Group C",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Scotland versus Morocco kick off 23:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group D",
+          "events": [
+            {
+              "home": {
+                "id": "9vh2u1p4ppm597tjfahst2m3n",
+                "fullName": "United States",
+                "shortName": "United States",
+                "urn": "urn:bbc:sportsdata:football:team:usa",
+                "actions": []
+              },
+              "away": {
+                "id": "3cwjdmekfdouwg990mqdq9fh0",
+                "fullName": "Paraguay",
+                "shortName": "Paraguay",
+                "urn": "urn:bbc:sportsdata:football:team:paraguay",
+                "actions": []
+              },
+              "id": "s-49wa9ymnt0trv2mjruak556ok",
+              "urn": "urn:bbc:sportsdata:football:event:s-49wa9ymnt0trv2mjruak556ok",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "startDateTime": "2026-06-13T01:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-13T01:00:00Z",
+                "time": "02:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "02:00",
+                "displayTimeUK": "02:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "9vh2u1p4ppm597tjfahst2m3n",
+                  "urn": "urn:bbc:sportsdata:football:team:usa",
+                  "name": {
+                    "fullName": "United States",
+                    "shortName": "United States"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "3cwjdmekfdouwg990mqdq9fh0",
+                  "urn": "urn:bbc:sportsdata:football:team:paraguay",
+                  "name": {
+                    "fullName": "Paraguay",
+                    "shortName": "Paraguay"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87p9q4r6vnxfm609dlmkh2b6c",
+                "name": "Group D",
+                "urn": ""
+              },
+              "tipoTopicId": "c78y1jyknv1t",
+              "accessibleEventSummary": "United States versus Paraguay kick off 02:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "bl4fd8cxe6kjvjx8br82gkhnq",
+                "fullName": "Australia",
+                "shortName": "Australia",
+                "urn": "urn:bbc:sportsdata:football:team:australia",
+                "actions": []
+              },
+              "away": {
+                "id": "9s2kpeunkes0g17l95r3t91j6",
+                "fullName": "Turkey",
+                "shortName": "Turkey",
+                "urn": "urn:bbc:sportsdata:football:team:turkey",
+                "actions": []
+              },
+              "id": "s-5d1c5lu90p9hhk82c0kcp05qs",
+              "urn": "urn:bbc:sportsdata:football:event:s-5d1c5lu90p9hhk82c0kcp05qs",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "startDateTime": "2026-06-14T04:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-14T04:00:00Z",
+                "time": "05:00",
+                "shortDate": "Sun 14 Jun",
+                "longDate": "Sunday 14th June 2026",
+                "dayOfWeek": "Sun",
+                "day": "14",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-14"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "05:00",
+                "displayTimeUK": "05:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "bl4fd8cxe6kjvjx8br82gkhnq",
+                  "urn": "urn:bbc:sportsdata:football:team:australia",
+                  "name": {
+                    "fullName": "Australia",
+                    "shortName": "Australia"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "9s2kpeunkes0g17l95r3t91j6",
+                  "urn": "urn:bbc:sportsdata:football:team:turkey",
+                  "name": {
+                    "fullName": "Turkey",
+                    "shortName": "Turkey"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87p9q4r6vnxfm609dlmkh2b6c",
+                "name": "Group D",
+                "urn": ""
+              },
+              "tipoTopicId": "cn8kgrx2pl7t",
+              "accessibleEventSummary": "Australia versus Turkey kick off 05:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "9vh2u1p4ppm597tjfahst2m3n",
+                "fullName": "United States",
+                "shortName": "United States",
+                "urn": "urn:bbc:sportsdata:football:team:usa",
+                "actions": []
+              },
+              "away": {
+                "id": "bl4fd8cxe6kjvjx8br82gkhnq",
+                "fullName": "Australia",
+                "shortName": "Australia",
+                "urn": "urn:bbc:sportsdata:football:team:australia",
+                "actions": []
+              },
+              "id": "s-6dt4a73k05gldmswzc3tgxmvo",
+              "urn": "urn:bbc:sportsdata:football:event:s-6dt4a73k05gldmswzc3tgxmvo",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "startDateTime": "2026-06-19T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-19T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "9vh2u1p4ppm597tjfahst2m3n",
+                  "urn": "urn:bbc:sportsdata:football:team:usa",
+                  "name": {
+                    "fullName": "United States",
+                    "shortName": "United States"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "bl4fd8cxe6kjvjx8br82gkhnq",
+                  "urn": "urn:bbc:sportsdata:football:team:australia",
+                  "name": {
+                    "fullName": "Australia",
+                    "shortName": "Australia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group D",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87p9q4r6vnxfm609dlmkh2b6c",
+                "name": "Group D",
+                "urn": ""
+              },
+              "accessibleEventSummary": "United States versus Australia kick off 20:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group E",
+          "events": [
+            {
+              "home": {
+                "id": "3l2t2db0c5ow2f7s7bhr6mij4",
+                "fullName": "Germany",
+                "shortName": "Germany",
+                "urn": "urn:bbc:sportsdata:football:team:germany",
+                "actions": []
+              },
+              "away": {
+                "id": "3csexoalt9hfesmo2p4619ga4",
+                "fullName": "Curaçao",
+                "shortName": "Curaçao",
+                "urn": "urn:bbc:sportsdata:football:team:curacao",
+                "actions": []
+              },
+              "id": "s-cjc09ujyfc1ks4blsyl8hbfv8",
+              "urn": "urn:bbc:sportsdata:football:event:s-cjc09ujyfc1ks4blsyl8hbfv8",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group E",
+              "startDateTime": "2026-06-14T17:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-14T17:00:00Z",
+                "time": "18:00",
+                "shortDate": "Sun 14 Jun",
+                "longDate": "Sunday 14th June 2026",
+                "dayOfWeek": "Sun",
+                "day": "14",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-14"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "18:00",
+                "displayTimeUK": "18:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "3l2t2db0c5ow2f7s7bhr6mij4",
+                  "urn": "urn:bbc:sportsdata:football:team:germany",
+                  "name": {
+                    "fullName": "Germany",
+                    "shortName": "Germany"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "3csexoalt9hfesmo2p4619ga4",
+                  "urn": "urn:bbc:sportsdata:football:team:curacao",
+                  "name": {
+                    "fullName": "Curaçao",
+                    "shortName": "Curaçao"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group E",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87qbys23gg08alj5di7vyubys",
+                "name": "Group E",
+                "urn": ""
+              },
+              "tipoTopicId": "c621jz79r3jt",
+              "accessibleEventSummary": "Germany versus Curaçao kick off 18:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "39d8zamp9tvg3wc51jxc2a1c0",
+                "fullName": "Ivory Coast",
+                "shortName": "Ivory Coast",
+                "urn": "urn:bbc:sportsdata:football:team:ivory-coast",
+                "actions": []
+              },
+              "away": {
+                "id": "2j2402oabiovxw24cnjk9m369",
+                "fullName": "Ecuador",
+                "shortName": "Ecuador",
+                "urn": "urn:bbc:sportsdata:football:team:ecuador",
+                "actions": []
+              },
+              "id": "s-ddupm8zbfndp54r8uru3obf9w",
+              "urn": "urn:bbc:sportsdata:football:event:s-ddupm8zbfndp54r8uru3obf9w",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group E",
+              "startDateTime": "2026-06-14T23:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-14T23:00:00Z",
+                "time": "00:00",
+                "shortDate": "Mon 15 Jun",
+                "longDate": "Monday 15th June 2026",
+                "dayOfWeek": "Mon",
+                "day": "15",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-15"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "00:00",
+                "displayTimeUK": "00:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "39d8zamp9tvg3wc51jxc2a1c0",
+                  "urn": "urn:bbc:sportsdata:football:team:ivory-coast",
+                  "name": {
+                    "fullName": "Ivory Coast",
+                    "shortName": "Ivory Coast"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "2j2402oabiovxw24cnjk9m369",
+                  "urn": "urn:bbc:sportsdata:football:team:ecuador",
+                  "name": {
+                    "fullName": "Ecuador",
+                    "shortName": "Ecuador"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group E",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87qbys23gg08alj5di7vyubys",
+                "name": "Group E",
+                "urn": ""
+              },
+              "tipoTopicId": "c78ydgjxyvnt",
+              "accessibleEventSummary": "Ivory Coast versus Ecuador kick off 00:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group F",
+          "events": [
+            {
+              "home": {
+                "id": "657oha8nkne1ybba2bouzkbo7",
+                "fullName": "Netherlands",
+                "shortName": "Netherlands",
+                "urn": "urn:bbc:sportsdata:football:team:netherlands",
+                "actions": []
+              },
+              "away": {
+                "id": "6duaxcbrofil112qfq4v895go",
+                "fullName": "Japan",
+                "shortName": "Japan",
+                "urn": "urn:bbc:sportsdata:football:team:japan",
+                "actions": []
+              },
+              "id": "s-424kyd0drjm51x8dsauowgpp0",
+              "urn": "urn:bbc:sportsdata:football:event:s-424kyd0drjm51x8dsauowgpp0",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group F",
+              "startDateTime": "2026-06-14T20:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-14T20:00:00Z",
+                "time": "21:00",
+                "shortDate": "Sun 14 Jun",
+                "longDate": "Sunday 14th June 2026",
+                "dayOfWeek": "Sun",
+                "day": "14",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-14"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "21:00",
+                "displayTimeUK": "21:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "657oha8nkne1ybba2bouzkbo7",
+                  "urn": "urn:bbc:sportsdata:football:team:netherlands",
+                  "name": {
+                    "fullName": "Netherlands",
+                    "shortName": "Netherlands"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "6duaxcbrofil112qfq4v895go",
+                  "urn": "urn:bbc:sportsdata:football:team:japan",
+                  "name": {
+                    "fullName": "Japan",
+                    "shortName": "Japan"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group F",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87rhkipl1efut8vgz5g1pfod0",
+                "name": "Group F",
+                "urn": ""
+              },
+              "tipoTopicId": "c30ypmd6g35t",
+              "accessibleEventSummary": "Netherlands versus Japan kick off 21:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+                "fullName": "Sweden",
+                "shortName": "Sweden",
+                "urn": "urn:bbc:sportsdata:football:team:sweden",
+                "actions": []
+              },
+              "away": {
+                "id": "ctp7ovvf34m7fzshua9ogbr6i",
+                "fullName": "Tunisia",
+                "shortName": "Tunisia",
+                "urn": "urn:bbc:sportsdata:football:team:tunisia",
+                "actions": []
+              },
+              "id": "s-4v4v3ge0g7tm1w9uzpoehmzh0",
+              "urn": "urn:bbc:sportsdata:football:event:s-4v4v3ge0g7tm1w9uzpoehmzh0",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group F",
+              "startDateTime": "2026-06-15T02:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-15T02:00:00Z",
+                "time": "03:00",
+                "shortDate": "Mon 15 Jun",
+                "longDate": "Monday 15th June 2026",
+                "dayOfWeek": "Mon",
+                "day": "15",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-15"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "03:00",
+                "displayTimeUK": "03:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "4w1ktgu1nbbgqfe3ssbb4fg5v",
+                  "urn": "urn:bbc:sportsdata:football:team:sweden",
+                  "name": {
+                    "fullName": "Sweden",
+                    "shortName": "Sweden"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "ctp7ovvf34m7fzshua9ogbr6i",
+                  "urn": "urn:bbc:sportsdata:football:team:tunisia",
+                  "name": {
+                    "fullName": "Tunisia",
+                    "shortName": "Tunisia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group F",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87rhkipl1efut8vgz5g1pfod0",
+                "name": "Group F",
+                "urn": ""
+              },
+              "tipoTopicId": "cq61ldqg3yqt",
+              "accessibleEventSummary": "Sweden versus Tunisia kick off 03:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group G",
+          "events": [
+            {
+              "home": {
+                "id": "pfvmhackqyhhk02majd2tb8l",
+                "fullName": "Belgium",
+                "shortName": "Belgium",
+                "urn": "urn:bbc:sportsdata:football:team:belgium",
+                "actions": []
+              },
+              "away": {
+                "id": "3669sbeijslw88073qlw1cbcp",
+                "fullName": "Egypt",
+                "shortName": "Egypt",
+                "urn": "urn:bbc:sportsdata:football:team:egypt",
+                "actions": []
+              },
+              "id": "s-aw4mhrfav7b5r7d4lc6dwz1g4",
+              "urn": "urn:bbc:sportsdata:football:event:s-aw4mhrfav7b5r7d4lc6dwz1g4",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group G",
+              "startDateTime": "2026-06-15T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-15T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Mon 15 Jun",
+                "longDate": "Monday 15th June 2026",
+                "dayOfWeek": "Mon",
+                "day": "15",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-15"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "pfvmhackqyhhk02majd2tb8l",
+                  "urn": "urn:bbc:sportsdata:football:team:belgium",
+                  "name": {
+                    "fullName": "Belgium",
+                    "shortName": "Belgium"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "3669sbeijslw88073qlw1cbcp",
+                  "urn": "urn:bbc:sportsdata:football:team:egypt",
+                  "name": {
+                    "fullName": "Egypt",
+                    "shortName": "Egypt"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group G",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87sjzsruzratgaxqckt1q9ses",
+                "name": "Group G",
+                "urn": ""
+              },
+              "tipoTopicId": "c93275wqzq7t",
+              "accessibleEventSummary": "Belgium versus Egypt kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "cubclbw5k5gdqdau95bnav0nn",
+                "fullName": "Iran",
+                "shortName": "Iran",
+                "urn": "urn:bbc:sportsdata:football:team:iran",
+                "actions": []
+              },
+              "away": {
+                "id": "bhu61cgwm07e2pik1jqmnztgl",
+                "fullName": "New Zealand",
+                "shortName": "New Zealand",
+                "urn": "urn:bbc:sportsdata:football:team:new-zealand",
+                "actions": []
+              },
+              "id": "s-c4kuk30dj016i6gjwxw4clnh0",
+              "urn": "urn:bbc:sportsdata:football:event:s-c4kuk30dj016i6gjwxw4clnh0",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group G",
+              "startDateTime": "2026-06-16T01:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-16T01:00:00Z",
+                "time": "02:00",
+                "shortDate": "Tue 16 Jun",
+                "longDate": "Tuesday 16th June 2026",
+                "dayOfWeek": "Tue",
+                "day": "16",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-16"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "02:00",
+                "displayTimeUK": "02:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "cubclbw5k5gdqdau95bnav0nn",
+                  "urn": "urn:bbc:sportsdata:football:team:iran",
+                  "name": {
+                    "fullName": "Iran",
+                    "shortName": "Iran"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "bhu61cgwm07e2pik1jqmnztgl",
+                  "urn": "urn:bbc:sportsdata:football:team:new-zealand",
+                  "name": {
+                    "fullName": "New Zealand",
+                    "shortName": "New Zealand"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group G",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87sjzsruzratgaxqckt1q9ses",
+                "name": "Group G",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Iran versus New Zealand kick off 02:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group H",
+          "events": [
+            {
+              "home": {
+                "id": "eh7yt2x2wck51oixw8012ux5j",
+                "fullName": "Spain",
+                "shortName": "Spain",
+                "urn": "urn:bbc:sportsdata:football:team:spain",
+                "actions": []
+              },
+              "away": {
+                "id": "1iq69zi4oze3oh0cis0s5wb7o",
+                "fullName": "Cape Verde",
+                "shortName": "Cape Verde",
+                "urn": "urn:bbc:sportsdata:football:team:cape-verde",
+                "actions": []
+              },
+              "id": "s-66cem7lh6o8ckkfxp4tao7o5w",
+              "urn": "urn:bbc:sportsdata:football:event:s-66cem7lh6o8ckkfxp4tao7o5w",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group H",
+              "startDateTime": "2026-06-15T16:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-15T16:00:00Z",
+                "time": "17:00",
+                "shortDate": "Mon 15 Jun",
+                "longDate": "Monday 15th June 2026",
+                "dayOfWeek": "Mon",
+                "day": "15",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-15"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "17:00",
+                "displayTimeUK": "17:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "eh7yt2x2wck51oixw8012ux5j",
+                  "urn": "urn:bbc:sportsdata:football:team:spain",
+                  "name": {
+                    "fullName": "Spain",
+                    "shortName": "Spain"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "1iq69zi4oze3oh0cis0s5wb7o",
+                  "urn": "urn:bbc:sportsdata:football:team:cape-verde",
+                  "name": {
+                    "fullName": "Cape Verde",
+                    "shortName": "Cape Verde"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group H",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87tpe9mebbtq4pe72i8orww7o",
+                "name": "Group H",
+                "urn": ""
+              },
+              "tipoTopicId": "cr7xnk3eygxt",
+              "accessibleEventSummary": "Spain versus Cape Verde kick off 17:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "9l4imoomrnyceg5u3kdxf5l5r",
+                "fullName": "Saudi Arabia",
+                "shortName": "Saudi Arabia",
+                "urn": "urn:bbc:sportsdata:football:team:saudi-arabia",
+                "actions": []
+              },
+              "away": {
+                "id": "9l06impjllgop0gte8fldb4zo",
+                "fullName": "Uruguay",
+                "shortName": "Uruguay",
+                "urn": "urn:bbc:sportsdata:football:team:uruguay",
+                "actions": []
+              },
+              "id": "s-6zuh8kndp7mz2j33tqajmos2c",
+              "urn": "urn:bbc:sportsdata:football:event:s-6zuh8kndp7mz2j33tqajmos2c",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group H",
+              "startDateTime": "2026-06-15T22:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-15T22:00:00Z",
+                "time": "23:00",
+                "shortDate": "Mon 15 Jun",
+                "longDate": "Monday 15th June 2026",
+                "dayOfWeek": "Mon",
+                "day": "15",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-15"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "23:00",
+                "displayTimeUK": "23:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "9l4imoomrnyceg5u3kdxf5l5r",
+                  "urn": "urn:bbc:sportsdata:football:team:saudi-arabia",
+                  "name": {
+                    "fullName": "Saudi Arabia",
+                    "shortName": "Saudi Arabia"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "9l06impjllgop0gte8fldb4zo",
+                  "urn": "urn:bbc:sportsdata:football:team:uruguay",
+                  "name": {
+                    "fullName": "Uruguay",
+                    "shortName": "Uruguay"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group H",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "87tpe9mebbtq4pe72i8orww7o",
+                "name": "Group H",
+                "urn": ""
+              },
+              "tipoTopicId": "cz75wdgv3jwt",
+              "accessibleEventSummary": "Saudi Arabia versus Uruguay kick off 23:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group I",
+          "events": [
+            {
+              "home": {
+                "id": "4pz87gsel7183b7kcadw1dwzv",
+                "fullName": "France",
+                "shortName": "France",
+                "urn": "urn:bbc:sportsdata:football:team:france",
+                "actions": []
+              },
+              "away": {
+                "id": "2wk1549tkz80oet8226euj7jp",
+                "fullName": "Senegal",
+                "shortName": "Senegal",
+                "urn": "urn:bbc:sportsdata:football:team:senegal",
+                "actions": []
+              },
+              "id": "s-cqsflhc7vaul90l2d4ipzzzmc",
+              "urn": "urn:bbc:sportsdata:football:event:s-cqsflhc7vaul90l2d4ipzzzmc",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group I",
+              "startDateTime": "2026-06-16T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-16T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Tue 16 Jun",
+                "longDate": "Tuesday 16th June 2026",
+                "dayOfWeek": "Tue",
+                "day": "16",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-16"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "4pz87gsel7183b7kcadw1dwzv",
+                  "urn": "urn:bbc:sportsdata:football:team:france",
+                  "name": {
+                    "fullName": "France",
+                    "shortName": "France"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "2wk1549tkz80oet8226euj7jp",
+                  "urn": "urn:bbc:sportsdata:football:team:senegal",
+                  "name": {
+                    "fullName": "Senegal",
+                    "shortName": "Senegal"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group I",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "eatdvv3frs1cb03uw99z30x04",
+                "name": "Group I",
+                "urn": ""
+              },
+              "accessibleEventSummary": "France versus Senegal kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "7u6a9femhquay3jnk6ysgiwx9",
+                "fullName": "Iraq",
+                "shortName": "Iraq",
+                "urn": "urn:bbc:sportsdata:football:team:iraq",
+                "actions": []
+              },
+              "away": {
+                "id": "e1vf7kzswllumuykwezkrbo70",
+                "fullName": "Norway",
+                "shortName": "Norway",
+                "urn": "urn:bbc:sportsdata:football:team:norway",
+                "actions": []
+              },
+              "id": "s-dk9nrrzts19sez2hpbxx7soic",
+              "urn": "urn:bbc:sportsdata:football:event:s-dk9nrrzts19sez2hpbxx7soic",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group I",
+              "startDateTime": "2026-06-16T22:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-16T22:00:00Z",
+                "time": "23:00",
+                "shortDate": "Tue 16 Jun",
+                "longDate": "Tuesday 16th June 2026",
+                "dayOfWeek": "Tue",
+                "day": "16",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-16"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "23:00",
+                "displayTimeUK": "23:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "7u6a9femhquay3jnk6ysgiwx9",
+                  "urn": "urn:bbc:sportsdata:football:team:iraq",
+                  "name": {
+                    "fullName": "Iraq",
+                    "shortName": "Iraq"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "e1vf7kzswllumuykwezkrbo70",
+                  "urn": "urn:bbc:sportsdata:football:team:norway",
+                  "name": {
+                    "fullName": "Norway",
+                    "shortName": "Norway"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group I",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "eatdvv3frs1cb03uw99z30x04",
+                "name": "Group I",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Iraq versus Norway kick off 23:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group J",
+          "events": [
+            {
+              "home": {
+                "id": "ak48fkypnql8y4n69cvcq5ghc",
+                "fullName": "Argentina",
+                "shortName": "Argentina",
+                "urn": "urn:bbc:sportsdata:football:team:argentina",
+                "actions": []
+              },
+              "away": {
+                "id": "cbx8lz7loz866tsoawwrpxyl9",
+                "fullName": "Algeria",
+                "shortName": "Algeria",
+                "urn": "urn:bbc:sportsdata:football:team:algeria",
+                "actions": []
+              },
+              "id": "s-55108ze2r7d8dgkmcauepuhp0",
+              "urn": "urn:bbc:sportsdata:football:event:s-55108ze2r7d8dgkmcauepuhp0",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group J",
+              "startDateTime": "2026-06-17T01:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-17T01:00:00Z",
+                "time": "02:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "02:00",
+                "displayTimeUK": "02:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "ak48fkypnql8y4n69cvcq5ghc",
+                  "urn": "urn:bbc:sportsdata:football:team:argentina",
+                  "name": {
+                    "fullName": "Argentina",
+                    "shortName": "Argentina"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "cbx8lz7loz866tsoawwrpxyl9",
+                  "urn": "urn:bbc:sportsdata:football:team:algeria",
+                  "name": {
+                    "fullName": "Algeria",
+                    "shortName": "Algeria"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group J",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "erijwp2ypiqouucfmzgnndst0",
+                "name": "Group J",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Argentina versus Algeria kick off 02:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "61g4epojd5f198lv1sje27yh3",
+                "fullName": "Austria",
+                "shortName": "Austria",
+                "urn": "urn:bbc:sportsdata:football:team:austria",
+                "actions": []
+              },
+              "away": {
+                "id": "btn8ibf55ovz7y252vdiprbip",
+                "fullName": "Jordan",
+                "shortName": "Jordan",
+                "urn": "urn:bbc:sportsdata:football:team:jordan",
+                "actions": []
+              },
+              "id": "s-67uqo1wgdcka1yxqltbiqxn9w",
+              "urn": "urn:bbc:sportsdata:football:event:s-67uqo1wgdcka1yxqltbiqxn9w",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group J",
+              "startDateTime": "2026-06-17T04:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-17T04:00:00Z",
+                "time": "05:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "05:00",
+                "displayTimeUK": "05:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "61g4epojd5f198lv1sje27yh3",
+                  "urn": "urn:bbc:sportsdata:football:team:austria",
+                  "name": {
+                    "fullName": "Austria",
+                    "shortName": "Austria"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "btn8ibf55ovz7y252vdiprbip",
+                  "urn": "urn:bbc:sportsdata:football:team:jordan",
+                  "name": {
+                    "fullName": "Jordan",
+                    "shortName": "Jordan"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group J",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "erijwp2ypiqouucfmzgnndst0",
+                "name": "Group J",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Austria versus Jordan kick off 05:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group K",
+          "events": [
+            {
+              "home": {
+                "id": "8gxg8f7p9299jbrz30u8bsc7g",
+                "fullName": "Portugal",
+                "shortName": "Portugal",
+                "urn": "urn:bbc:sportsdata:football:team:portugal",
+                "actions": []
+              },
+              "away": {
+                "id": "dd4ko7d3muqheb54u1s9k39p3",
+                "fullName": "Congo DR",
+                "shortName": "Congo DR",
+                "urn": "urn:bbc:sportsdata:football:team:dr-congo",
+                "actions": []
+              },
+              "id": "s-aa59tfi9hkmjec05olroia13o",
+              "urn": "urn:bbc:sportsdata:football:event:s-aa59tfi9hkmjec05olroia13o",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group K",
+              "startDateTime": "2026-06-17T17:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-17T17:00:00Z",
+                "time": "18:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "18:00",
+                "displayTimeUK": "18:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "8gxg8f7p9299jbrz30u8bsc7g",
+                  "urn": "urn:bbc:sportsdata:football:team:portugal",
+                  "name": {
+                    "fullName": "Portugal",
+                    "shortName": "Portugal"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "dd4ko7d3muqheb54u1s9k39p3",
+                  "urn": "urn:bbc:sportsdata:football:team:dr-congo",
+                  "name": {
+                    "fullName": "Congo DR",
+                    "shortName": "Congo DR"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group K",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "2aye2z7szghinnxu44f2uj8",
+                "name": "Group K",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Portugal versus Congo DR kick off 18:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "elayenut7wtobtmg7hyujzdoe",
+                "fullName": "Uzbekistan",
+                "shortName": "Uzbekistan",
+                "urn": "urn:bbc:sportsdata:football:team:uzbekistan",
+                "actions": []
+              },
+              "away": {
+                "id": "7km4szeh6fs5bbdgypshh0snd",
+                "fullName": "Colombia",
+                "shortName": "Colombia",
+                "urn": "urn:bbc:sportsdata:football:team:colombia",
+                "actions": []
+              },
+              "id": "s-b6gp5y32kvgossb0feqipr8r8",
+              "urn": "urn:bbc:sportsdata:football:event:s-b6gp5y32kvgossb0feqipr8r8",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group K",
+              "startDateTime": "2026-06-18T02:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-18T02:00:00Z",
+                "time": "03:00",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "03:00",
+                "displayTimeUK": "03:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "elayenut7wtobtmg7hyujzdoe",
+                  "urn": "urn:bbc:sportsdata:football:team:uzbekistan",
+                  "name": {
+                    "fullName": "Uzbekistan",
+                    "shortName": "Uzbekistan"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "7km4szeh6fs5bbdgypshh0snd",
+                  "urn": "urn:bbc:sportsdata:football:team:colombia",
+                  "name": {
+                    "fullName": "Colombia",
+                    "shortName": "Colombia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group K",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "2aye2z7szghinnxu44f2uj8",
+                "name": "Group K",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Uzbekistan versus Colombia kick off 03:00",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Group L",
+          "events": [
+            {
+              "home": {
+                "id": "ck8m1cn23sukwsurgx5qakttk",
+                "fullName": "England",
+                "shortName": "England",
+                "urn": "urn:bbc:sportsdata:football:team:england",
+                "actions": []
+              },
+              "away": {
+                "id": "4njsfszcgd9m765d6suktsz2a",
+                "fullName": "Croatia",
+                "shortName": "Croatia",
+                "urn": "urn:bbc:sportsdata:football:team:croatia",
+                "actions": []
+              },
+              "id": "s-jx85i5ao3wvsb8opsu0ic1sk",
+              "urn": "urn:bbc:sportsdata:football:event:s-jx85i5ao3wvsb8opsu0ic1sk",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group L",
+              "startDateTime": "2026-06-17T20:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-17T20:00:00Z",
+                "time": "21:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "21:00",
+                "displayTimeUK": "21:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "ck8m1cn23sukwsurgx5qakttk",
+                  "urn": "urn:bbc:sportsdata:football:team:england",
+                  "name": {
+                    "fullName": "England",
+                    "shortName": "England"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "4njsfszcgd9m765d6suktsz2a",
+                  "urn": "urn:bbc:sportsdata:football:team:croatia",
+                  "name": {
+                    "fullName": "Croatia",
+                    "shortName": "Croatia"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group L",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "et52d08iosjcjha77sa4y7f8",
+                "name": "Group L",
+                "urn": ""
+              },
+              "accessibleEventSummary": "England versus Croatia kick off 21:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "9bix8nlt6cgbson25qntg2zzh",
+                "fullName": "Ghana",
+                "shortName": "Ghana",
+                "urn": "urn:bbc:sportsdata:football:team:ghana",
+                "actions": []
+              },
+              "away": {
+                "id": "8856r86rattc8kxn6a0l9tb2t",
+                "fullName": "Panama",
+                "shortName": "Panama",
+                "urn": "urn:bbc:sportsdata:football:team:panama",
+                "actions": []
+              },
+              "id": "s-1ewge3gy7siiimkd64tawg1zo",
+              "urn": "urn:bbc:sportsdata:football:event:s-1ewge3gy7siiimkd64tawg1zo",
+              "eventGroupingLabel": "World - FIFA World Cup - Group Stage - Group L",
+              "startDateTime": "2026-06-17T23:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2026-06-17T23:00:00Z",
+                "time": "00:00",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "00:00",
+                "displayTimeUK": "00:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "9bix8nlt6cgbson25qntg2zzh",
+                  "urn": "urn:bbc:sportsdata:football:team:ghana",
+                  "name": {
+                    "fullName": "Ghana",
+                    "shortName": "Ghana"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "8856r86rattc8kxn6a0l9tb2t",
+                  "urn": "urn:bbc:sportsdata:football:team:panama",
+                  "name": {
+                    "fullName": "Panama",
+                    "shortName": "Panama"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - FIFA World Cup - Group Stage - Group L",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "87i5eesbymvgzmz5d0y4a855g",
+                "name": "Group Stage",
+                "urn": ""
+              },
+              "round": {
+                "id": "et52d08iosjcjha77sa4y7f8",
+                "name": "Group L",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Ghana versus Panama kick off 00:00",
+              "hasStandings": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "displayLabel": "Irish Premier Division",
+      "displayLabelOnwardJourneyPath": "/sport/football/league-of-ireland-premier/table",
+      "secondaryGroups": [
+        {
+          "displayLabel": null,
+          "events": [
+            {
+              "home": {
+                "id": "90mig1t9vpe2a8ckksz0oo29g",
+                "fullName": "Derry City",
+                "shortName": "Derry",
+                "actions": []
+              },
+              "away": {
+                "id": "7qeeszxk0dy7hdvml7julotl",
+                "fullName": "Bohemians",
+                "shortName": "Bohemians",
+                "actions": []
+              },
+              "id": "s-elzn2crv4m4p78gjvaawouz9w",
+              "urn": "urn:bbc:sportsdata:football:event:s-elzn2crv4m4p78gjvaawouz9w",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-12T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-12T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "90mig1t9vpe2a8ckksz0oo29g",
+                  "name": {
+                    "fullName": "Derry City",
+                    "shortName": "Derry"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "7qeeszxk0dy7hdvml7julotl",
+                  "name": {
+                    "fullName": "Bohemians",
+                    "shortName": "Bohemians"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "tipoTopicId": "cdjkee9jlvyt",
+              "onwardJourneyLink": "/sport/football/live/cdjkee9jlvyt",
+              "accessibleEventSummary": "Derry City versus Bohemians kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "alcqlgraa5a5t57uee3wgy2kd",
+                "fullName": "Galway United",
+                "shortName": "Galway Utd",
+                "actions": []
+              },
+              "away": {
+                "id": "436hohrrikc4zq7qgoquszrfq",
+                "fullName": "Dundalk",
+                "shortName": "Dundalk",
+                "actions": []
+              },
+              "id": "s-emjsynt60ikjowi3oub8hrrpw",
+              "urn": "urn:bbc:sportsdata:football:event:s-emjsynt60ikjowi3oub8hrrpw",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-12T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-12T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "alcqlgraa5a5t57uee3wgy2kd",
+                  "name": {
+                    "fullName": "Galway United",
+                    "shortName": "Galway Utd"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "436hohrrikc4zq7qgoquszrfq",
+                  "name": {
+                    "fullName": "Dundalk",
+                    "shortName": "Dundalk"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "tipoTopicId": "cvg7ll5g53jt",
+              "onwardJourneyLink": "/sport/football/live/cvg7ll5g53jt",
+              "accessibleEventSummary": "Galway United versus Dundalk kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "1bb2bbjq1gdsq3qqlh3c6rxs7",
+                "fullName": "St Patrick's Athletic",
+                "shortName": "St Pat's",
+                "actions": []
+              },
+              "away": {
+                "id": "fd8o1pvys32969sd8d46sycp",
+                "fullName": "Drogheda United",
+                "shortName": "Drogheda",
+                "actions": []
+              },
+              "id": "s-ennx54hda8mxp5e5zkcpdp1qs",
+              "urn": "urn:bbc:sportsdata:football:event:s-ennx54hda8mxp5e5zkcpdp1qs",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-12T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-12T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "1bb2bbjq1gdsq3qqlh3c6rxs7",
+                  "name": {
+                    "fullName": "St Patrick's Athletic",
+                    "shortName": "St Pat's"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "fd8o1pvys32969sd8d46sycp",
+                  "name": {
+                    "fullName": "Drogheda United",
+                    "shortName": "Drogheda"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "tipoTopicId": "c23ykkm310et",
+              "onwardJourneyLink": "/sport/football/live/c23ykkm310et",
+              "accessibleEventSummary": "St Patrick's Athletic versus Drogheda United kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "1du12fqlr6kjdnrkrao4diwt1",
+                "fullName": "Waterford",
+                "shortName": "Waterford",
+                "actions": []
+              },
+              "away": {
+                "id": "aohs75l7e949y8lxxwoa44agb",
+                "fullName": "Sligo Rovers",
+                "shortName": "Sligo",
+                "actions": []
+              },
+              "id": "s-eo7d7jcwnd1fza83gjk5zrh1w",
+              "urn": "urn:bbc:sportsdata:football:event:s-eo7d7jcwnd1fza83gjk5zrh1w",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-12T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-12T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "1du12fqlr6kjdnrkrao4diwt1",
+                  "name": {
+                    "fullName": "Waterford",
+                    "shortName": "Waterford"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "aohs75l7e949y8lxxwoa44agb",
+                  "name": {
+                    "fullName": "Sligo Rovers",
+                    "shortName": "Sligo"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "tipoTopicId": "cvgdxxqg4q0t",
+              "onwardJourneyLink": "/sport/football/live/cvgdxxqg4q0t",
+              "accessibleEventSummary": "Waterford versus Sligo Rovers kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "7e5odtzvbyx4ubpzwyphao0sv",
+                "fullName": "Shelbourne",
+                "shortName": "Shelbourne",
+                "actions": []
+              },
+              "away": {
+                "id": "51xekmm31jztuvdliya7idg5d",
+                "fullName": "Shamrock Rovers",
+                "shortName": "Shamrock",
+                "urn": "urn:bbc:sportsdata:football:team:shamrock-rovers",
+                "actions": []
+              },
+              "id": "s-en4957tfbb8g5jbwxqp7hal1w",
+              "urn": "urn:bbc:sportsdata:football:event:s-en4957tfbb8g5jbwxqp7hal1w",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-12T19:00:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-12T19:00:00Z",
+                "time": "20:00",
+                "shortDate": "Fri 12 Jun",
+                "longDate": "Friday 12th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "12",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-12"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "20:00",
+                "displayTimeUK": "20:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "7e5odtzvbyx4ubpzwyphao0sv",
+                  "name": {
+                    "fullName": "Shelbourne",
+                    "shortName": "Shelbourne"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "51xekmm31jztuvdliya7idg5d",
+                  "urn": "urn:bbc:sportsdata:football:team:shamrock-rovers",
+                  "name": {
+                    "fullName": "Shamrock Rovers",
+                    "shortName": "Shamrock"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "tipoTopicId": "cn0733505z1t",
+              "onwardJourneyLink": "/sport/football/live/cn0733505z1t",
+              "accessibleEventSummary": "Shelbourne versus Shamrock Rovers kick off 20:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "7qeeszxk0dy7hdvml7julotl",
+                "fullName": "Bohemians",
+                "shortName": "Bohemians",
+                "actions": []
+              },
+              "away": {
+                "id": "436hohrrikc4zq7qgoquszrfq",
+                "fullName": "Dundalk",
+                "shortName": "Dundalk",
+                "actions": []
+              },
+              "id": "s-eoqsnjp5360miox08oyavkpp0",
+              "urn": "urn:bbc:sportsdata:football:event:s-eoqsnjp5360miox08oyavkpp0",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-19T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-19T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "7qeeszxk0dy7hdvml7julotl",
+                  "name": {
+                    "fullName": "Bohemians",
+                    "shortName": "Bohemians"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "436hohrrikc4zq7qgoquszrfq",
+                  "name": {
+                    "fullName": "Dundalk",
+                    "shortName": "Dundalk"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "accessibleEventSummary": "Bohemians versus Dundalk kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "fd8o1pvys32969sd8d46sycp",
+                "fullName": "Drogheda United",
+                "shortName": "Drogheda",
+                "actions": []
+              },
+              "away": {
+                "id": "7e5odtzvbyx4ubpzwyphao0sv",
+                "fullName": "Shelbourne",
+                "shortName": "Shelbourne",
+                "actions": []
+              },
+              "id": "s-epcejzxh6pu16vsupo5jdxvdg",
+              "urn": "urn:bbc:sportsdata:football:event:s-epcejzxh6pu16vsupo5jdxvdg",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-19T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-19T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "fd8o1pvys32969sd8d46sycp",
+                  "name": {
+                    "fullName": "Drogheda United",
+                    "shortName": "Drogheda"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "7e5odtzvbyx4ubpzwyphao0sv",
+                  "name": {
+                    "fullName": "Shelbourne",
+                    "shortName": "Shelbourne"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "accessibleEventSummary": "Drogheda United versus Shelbourne kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "alcqlgraa5a5t57uee3wgy2kd",
+                "fullName": "Galway United",
+                "shortName": "Galway Utd",
+                "actions": []
+              },
+              "away": {
+                "id": "90mig1t9vpe2a8ckksz0oo29g",
+                "fullName": "Derry City",
+                "shortName": "Derry",
+                "actions": []
+              },
+              "id": "s-epw155ashyy7sf6bncvxf1rtg",
+              "urn": "urn:bbc:sportsdata:football:event:s-epw155ashyy7sf6bncvxf1rtg",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-19T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-19T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "alcqlgraa5a5t57uee3wgy2kd",
+                  "name": {
+                    "fullName": "Galway United",
+                    "shortName": "Galway Utd"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "90mig1t9vpe2a8ckksz0oo29g",
+                  "name": {
+                    "fullName": "Derry City",
+                    "shortName": "Derry"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "accessibleEventSummary": "Galway United versus Derry City kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "1bb2bbjq1gdsq3qqlh3c6rxs7",
+                "fullName": "St Patrick's Athletic",
+                "shortName": "St Pat's",
+                "actions": []
+              },
+              "away": {
+                "id": "aohs75l7e949y8lxxwoa44agb",
+                "fullName": "Sligo Rovers",
+                "shortName": "Sligo",
+                "actions": []
+              },
+              "id": "s-eqpjpexevr9ehkcfah9jvio7o",
+              "urn": "urn:bbc:sportsdata:football:event:s-eqpjpexevr9ehkcfah9jvio7o",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-19T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-19T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "1bb2bbjq1gdsq3qqlh3c6rxs7",
+                  "name": {
+                    "fullName": "St Patrick's Athletic",
+                    "shortName": "St Pat's"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "aohs75l7e949y8lxxwoa44agb",
+                  "name": {
+                    "fullName": "Sligo Rovers",
+                    "shortName": "Sligo"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "accessibleEventSummary": "St Patrick's Athletic versus Sligo Rovers kick off 19:45",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "1du12fqlr6kjdnrkrao4diwt1",
+                "fullName": "Waterford",
+                "shortName": "Waterford",
+                "actions": []
+              },
+              "away": {
+                "id": "51xekmm31jztuvdliya7idg5d",
+                "fullName": "Shamrock Rovers",
+                "shortName": "Shamrock",
+                "urn": "urn:bbc:sportsdata:football:team:shamrock-rovers",
+                "actions": []
+              },
+              "id": "s-er8zjo7hi9wku5slqazo6i68k",
+              "urn": "urn:bbc:sportsdata:football:event:s-er8zjo7hi9wku5slqazo6i68k",
+              "eventGroupingLabel": "Republic of Ireland - Irish Premier Division",
+              "startDateTime": "2026-06-19T18:45:00Z",
+              "tournamentId": "4mbfidy8zum5u0aqjqo0vuqs2",
+              "date": {
+                "iso": "2026-06-19T18:45:00Z",
+                "time": "19:45",
+                "shortDate": "Fri 19 Jun",
+                "longDate": "Friday 19th June 2026",
+                "dayOfWeek": "Fri",
+                "day": "19",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-19"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:45",
+                "displayTimeUK": "19:45",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "1du12fqlr6kjdnrkrao4diwt1",
+                  "name": {
+                    "fullName": "Waterford",
+                    "shortName": "Waterford"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "51xekmm31jztuvdliya7idg5d",
+                  "urn": "urn:bbc:sportsdata:football:team:shamrock-rovers",
+                  "name": {
+                    "fullName": "Shamrock Rovers",
+                    "shortName": "Shamrock"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Republic of Ireland - Irish Premier Division",
+              "tournament": {
+                "id": "4mbfidy8zum5u0aqjqo0vuqs2",
+                "name": "Irish Premier Division",
+                "disambiguatedName": "Irish Premier Division",
+                "urn": "urn:bbc:sportsdata:football:tournament:league-of-ireland-premier",
+                "thingsGuid": "7dd1ef4f-d66b-4987-8638-312dc3db2058"
+              },
+              "accessibleEventSummary": "Waterford versus Shamrock Rovers kick off 19:45",
+              "hasStandings": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "displayLabel": "Internationals Women",
+      "displayLabelOnwardJourneyPath": null,
+      "secondaryGroups": [
+        {
+          "displayLabel": "Friendlies 2",
+          "events": [
+            {
+              "home": {
+                "id": "7wyfoznyrx5vol3pp5h3dmzh0",
+                "fullName": "Saudi Arabia",
+                "shortName": "Saudi Arabia",
+                "actions": []
+              },
+              "away": {
+                "id": "f3xc9mhdtrrhidaj97xe5bn08",
+                "fullName": "Laos",
+                "shortName": "Laos",
+                "actions": []
+              },
+              "id": "s-57md2q96o645l4ek18xld1iqc",
+              "urn": "urn:bbc:sportsdata:football:event:s-57md2q96o645l4ek18xld1iqc",
+              "eventGroupingLabel": "World - Friendlies Women - Friendlies 2",
+              "startDateTime": "2026-06-13T12:00:00Z",
+              "tournamentId": "dvtl8sf1262pd2aqgu641qa7u",
+              "date": {
+                "iso": "2026-06-13T12:00:00Z",
+                "time": "13:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "13:00",
+                "displayTimeUK": "13:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "7wyfoznyrx5vol3pp5h3dmzh0",
+                  "name": {
+                    "fullName": "Saudi Arabia",
+                    "shortName": "Saudi Arabia"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "f3xc9mhdtrrhidaj97xe5bn08",
+                  "name": {
+                    "fullName": "Laos",
+                    "shortName": "Laos"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - Friendlies Women - Friendlies 2",
+              "tournament": {
+                "id": "dvtl8sf1262pd2aqgu641qa7u",
+                "name": "Friendlies Women",
+                "disambiguatedName": "Internationals Women",
+                "urn": "urn:bbc:sportsdata:football:tournament:womens-international-friendlies",
+                "thingsGuid": "58c093b8-6bbf-4a84-9ad5-e927110e907b"
+              },
+              "stage": {
+                "id": "d9rck1wqi4nwypfs5133vw6xg",
+                "name": "Friendlies 2",
+                "urn": ""
+              },
+              "accessibleEventSummary": "Saudi Arabia versus Laos kick off 13:00",
+              "hasStandings": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "displayLabel": "Finnish Veikkausliiga",
+      "displayLabelOnwardJourneyPath": "/sport/football/finnish-veikkausliiga/table",
+      "secondaryGroups": [
+        {
+          "displayLabel": null,
+          "events": [
+            {
+              "home": {
+                "id": "2rdnn9p03qrmmv34tyx1nahpa",
+                "fullName": "Ilves",
+                "shortName": "Ilves",
+                "actions": []
+              },
+              "away": {
+                "id": "bzi3odajl7kfbut8jbi7wioa8",
+                "fullName": "TPS",
+                "shortName": "TPS",
+                "actions": []
+              },
+              "id": "s-2y4vdvok46h7dtgnviwe1ug44",
+              "urn": "urn:bbc:sportsdata:football:event:s-2y4vdvok46h7dtgnviwe1ug44",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T12:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T12:00:00Z",
+                "time": "13:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "13:00",
+                "displayTimeUK": "13:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "2rdnn9p03qrmmv34tyx1nahpa",
+                  "name": {
+                    "fullName": "Ilves",
+                    "shortName": "Ilves"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "bzi3odajl7kfbut8jbi7wioa8",
+                  "name": {
+                    "fullName": "TPS",
+                    "shortName": "TPS"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "cj6gedgpl16t",
+              "accessibleEventSummary": "Ilves versus TPS kick off 13:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "8eab5wbcnttsiosd1o8c71gmk",
+                "fullName": "Inter Turku",
+                "shortName": "Inter Turku",
+                "actions": []
+              },
+              "away": {
+                "id": "cy6zs39z79dcfbr4xzkp38z7q",
+                "fullName": "Oulu",
+                "shortName": "Oulu",
+                "actions": []
+              },
+              "id": "s-2ylysn6cay7gjkcbgb98ug3ys",
+              "urn": "urn:bbc:sportsdata:football:event:s-2ylysn6cay7gjkcbgb98ug3ys",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T12:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T12:00:00Z",
+                "time": "13:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "13:00",
+                "displayTimeUK": "13:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "8eab5wbcnttsiosd1o8c71gmk",
+                  "name": {
+                    "fullName": "Inter Turku",
+                    "shortName": "Inter Turku"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "cy6zs39z79dcfbr4xzkp38z7q",
+                  "name": {
+                    "fullName": "Oulu",
+                    "shortName": "Oulu"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "c8x2ey2wxg9t",
+              "accessibleEventSummary": "Inter Turku versus Oulu kick off 13:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "7efqk7uh63928il0yffxijnv7",
+                "fullName": "Jaro",
+                "shortName": "Jaro",
+                "actions": []
+              },
+              "away": {
+                "id": "303582z192rnbr2x28o2t7u38",
+                "fullName": "HJK",
+                "shortName": "HJK",
+                "urn": "urn:bbc:sportsdata:football:team:hjk-helsinki",
+                "actions": []
+              },
+              "id": "s-2z3mbe5xxmd26vnqb373w96ok",
+              "urn": "urn:bbc:sportsdata:football:event:s-2z3mbe5xxmd26vnqb373w96ok",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T14:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T14:00:00Z",
+                "time": "15:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "15:00",
+                "displayTimeUK": "15:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "7efqk7uh63928il0yffxijnv7",
+                  "name": {
+                    "fullName": "Jaro",
+                    "shortName": "Jaro"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "303582z192rnbr2x28o2t7u38",
+                  "urn": "urn:bbc:sportsdata:football:team:hjk-helsinki",
+                  "name": {
+                    "fullName": "HJK",
+                    "shortName": "HJK"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "cdejn4jpe4gt",
+              "accessibleEventSummary": "Jaro versus HJK kick off 15:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "duspptyvnr5kpx2iko5gerhnz",
+                "fullName": "VPS",
+                "shortName": "VPS",
+                "actions": []
+              },
+              "away": {
+                "id": "1c7dv8ays675v9kp6a04sd8pq",
+                "fullName": "KuPS",
+                "shortName": "KuPS",
+                "actions": []
+              },
+              "id": "s-2zl170bugcucc4moe7ddfoidw",
+              "urn": "urn:bbc:sportsdata:football:event:s-2zl170bugcucc4moe7ddfoidw",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T14:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T14:00:00Z",
+                "time": "15:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "15:00",
+                "displayTimeUK": "15:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "duspptyvnr5kpx2iko5gerhnz",
+                  "name": {
+                    "fullName": "VPS",
+                    "shortName": "VPS"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "1c7dv8ays675v9kp6a04sd8pq",
+                  "name": {
+                    "fullName": "KuPS",
+                    "shortName": "KuPS"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "cn94de44dg7t",
+              "accessibleEventSummary": "VPS versus KuPS kick off 15:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "8hrhwh8rty0eoykwj44ew04ng",
+                "fullName": "Lahti",
+                "shortName": "Lahti",
+                "actions": []
+              },
+              "away": {
+                "id": "ea3yd0dgq6uy6pupkpn17j5xg",
+                "fullName": "SJK",
+                "shortName": "SJK",
+                "actions": []
+              },
+              "id": "s-3048h7qhurds88nucn59gnpqs",
+              "urn": "urn:bbc:sportsdata:football:event:s-3048h7qhurds88nucn59gnpqs",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T16:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T16:00:00Z",
+                "time": "17:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "17:00",
+                "displayTimeUK": "17:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "8hrhwh8rty0eoykwj44ew04ng",
+                  "name": {
+                    "fullName": "Lahti",
+                    "shortName": "Lahti"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "ea3yd0dgq6uy6pupkpn17j5xg",
+                  "name": {
+                    "fullName": "SJK",
+                    "shortName": "SJK"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "cn8qjzqqjgxt",
+              "accessibleEventSummary": "Lahti versus SJK kick off 17:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "3ptum5fjcgw51mqui0gu6uuf4",
+                "fullName": "Mariehamn",
+                "shortName": "Mariehamn",
+                "actions": []
+              },
+              "away": {
+                "id": "3cbke8cbou2ms925872vk6dwx",
+                "fullName": "Gnistan",
+                "shortName": "Gnistan",
+                "actions": []
+              },
+              "id": "s-30ll530jmm6xv2l7jyc53wx04",
+              "urn": "urn:bbc:sportsdata:football:event:s-30ll530jmm6xv2l7jyc53wx04",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-13T16:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-13T16:00:00Z",
+                "time": "17:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "17:00",
+                "displayTimeUK": "17:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "3ptum5fjcgw51mqui0gu6uuf4",
+                  "name": {
+                    "fullName": "Mariehamn",
+                    "shortName": "Mariehamn"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "3cbke8cbou2ms925872vk6dwx",
+                  "name": {
+                    "fullName": "Gnistan",
+                    "shortName": "Gnistan"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "tipoTopicId": "cwyle8ll594t",
+              "accessibleEventSummary": "Mariehamn versus Gnistan kick off 17:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "303582z192rnbr2x28o2t7u38",
+                "fullName": "HJK",
+                "shortName": "HJK",
+                "urn": "urn:bbc:sportsdata:football:team:hjk-helsinki",
+                "actions": []
+              },
+              "away": {
+                "id": "8eab5wbcnttsiosd1o8c71gmk",
+                "fullName": "Inter Turku",
+                "shortName": "Inter Turku",
+                "actions": []
+              },
+              "id": "s-3136tfmkn0oo5zi2jnqr8fjtg",
+              "urn": "urn:bbc:sportsdata:football:event:s-3136tfmkn0oo5zi2jnqr8fjtg",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-17T15:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-17T15:00:00Z",
+                "time": "16:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "16:00",
+                "displayTimeUK": "16:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "303582z192rnbr2x28o2t7u38",
+                  "urn": "urn:bbc:sportsdata:football:team:hjk-helsinki",
+                  "name": {
+                    "fullName": "HJK",
+                    "shortName": "HJK"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "8eab5wbcnttsiosd1o8c71gmk",
+                  "name": {
+                    "fullName": "Inter Turku",
+                    "shortName": "Inter Turku"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "HJK versus Inter Turku kick off 16:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "2rdnn9p03qrmmv34tyx1nahpa",
+                "fullName": "Ilves",
+                "shortName": "Ilves",
+                "actions": []
+              },
+              "away": {
+                "id": "7efqk7uh63928il0yffxijnv7",
+                "fullName": "Jaro",
+                "shortName": "Jaro",
+                "actions": []
+              },
+              "id": "s-31kicpbqiosfnwq5g9h5px250",
+              "urn": "urn:bbc:sportsdata:football:event:s-31kicpbqiosfnwq5g9h5px250",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-17T15:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-17T15:00:00Z",
+                "time": "16:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "16:00",
+                "displayTimeUK": "16:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "2rdnn9p03qrmmv34tyx1nahpa",
+                  "name": {
+                    "fullName": "Ilves",
+                    "shortName": "Ilves"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "7efqk7uh63928il0yffxijnv7",
+                  "name": {
+                    "fullName": "Jaro",
+                    "shortName": "Jaro"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "Ilves versus Jaro kick off 16:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "bzi3odajl7kfbut8jbi7wioa8",
+                "fullName": "TPS",
+                "shortName": "TPS",
+                "actions": []
+              },
+              "away": {
+                "id": "1c7dv8ays675v9kp6a04sd8pq",
+                "fullName": "KuPS",
+                "shortName": "KuPS",
+                "actions": []
+              },
+              "id": "s-322w60ol9za9y0z2lv5dm268k",
+              "urn": "urn:bbc:sportsdata:football:event:s-322w60ol9za9y0z2lv5dm268k",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-17T15:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-17T15:00:00Z",
+                "time": "16:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "16:00",
+                "displayTimeUK": "16:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "bzi3odajl7kfbut8jbi7wioa8",
+                  "name": {
+                    "fullName": "TPS",
+                    "shortName": "TPS"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "1c7dv8ays675v9kp6a04sd8pq",
+                  "name": {
+                    "fullName": "KuPS",
+                    "shortName": "KuPS"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "TPS versus KuPS kick off 16:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "3cbke8cbou2ms925872vk6dwx",
+                "fullName": "Gnistan",
+                "shortName": "Gnistan",
+                "actions": []
+              },
+              "away": {
+                "id": "8hrhwh8rty0eoykwj44ew04ng",
+                "fullName": "Lahti",
+                "shortName": "Lahti",
+                "actions": []
+              },
+              "id": "s-33lyws4x950c3x9gbvv5psbh0",
+              "urn": "urn:bbc:sportsdata:football:event:s-33lyws4x950c3x9gbvv5psbh0",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-17T18:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-17T18:00:00Z",
+                "time": "19:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:00",
+                "displayTimeUK": "19:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "3cbke8cbou2ms925872vk6dwx",
+                  "name": {
+                    "fullName": "Gnistan",
+                    "shortName": "Gnistan"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "8hrhwh8rty0eoykwj44ew04ng",
+                  "name": {
+                    "fullName": "Lahti",
+                    "shortName": "Lahti"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "Gnistan versus Lahti kick off 19:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "ea3yd0dgq6uy6pupkpn17j5xg",
+                "fullName": "SJK",
+                "shortName": "SJK",
+                "actions": []
+              },
+              "away": {
+                "id": "duspptyvnr5kpx2iko5gerhnz",
+                "fullName": "VPS",
+                "shortName": "VPS",
+                "actions": []
+              },
+              "id": "s-3342zjeyfydvbfa512z0d5hqs",
+              "urn": "urn:bbc:sportsdata:football:event:s-3342zjeyfydvbfa512z0d5hqs",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-17T18:00:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-17T18:00:00Z",
+                "time": "19:00",
+                "shortDate": "Wed 17 Jun",
+                "longDate": "Wednesday 17th June 2026",
+                "dayOfWeek": "Wed",
+                "day": "17",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-17"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "19:00",
+                "displayTimeUK": "19:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "ea3yd0dgq6uy6pupkpn17j5xg",
+                  "name": {
+                    "fullName": "SJK",
+                    "shortName": "SJK"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "duspptyvnr5kpx2iko5gerhnz",
+                  "name": {
+                    "fullName": "VPS",
+                    "shortName": "VPS"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "SJK versus VPS kick off 19:00",
+              "hasStandings": true
+            },
+            {
+              "home": {
+                "id": "cy6zs39z79dcfbr4xzkp38z7q",
+                "fullName": "Oulu",
+                "shortName": "Oulu",
+                "actions": []
+              },
+              "away": {
+                "id": "3ptum5fjcgw51mqui0gu6uuf4",
+                "fullName": "Mariehamn",
+                "shortName": "Mariehamn",
+                "actions": []
+              },
+              "id": "s-32l7few7g3i2zoi9ya9lxyf4k",
+              "urn": "urn:bbc:sportsdata:football:event:s-32l7few7g3i2zoi9ya9lxyf4k",
+              "eventGroupingLabel": "Finland - Veikkausliiga",
+              "startDateTime": "2026-06-18T09:59:00Z",
+              "tournamentId": "dvstmwnvw0mt5p38twn9yttyb",
+              "date": {
+                "iso": "2026-06-18T09:59:00Z",
+                "time": "10:59",
+                "shortDate": "Thu 18 Jun",
+                "longDate": "Thursday 18th June 2026",
+                "dayOfWeek": "Thu",
+                "day": "18",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-18"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "10:59",
+                "displayTimeUK": "10:59",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "cy6zs39z79dcfbr4xzkp38z7q",
+                  "name": {
+                    "fullName": "Oulu",
+                    "shortName": "Oulu"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "id": "3ptum5fjcgw51mqui0gu6uuf4",
+                  "name": {
+                    "fullName": "Mariehamn",
+                    "shortName": "Mariehamn"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "Finland - Veikkausliiga",
+              "tournament": {
+                "id": "dvstmwnvw0mt5p38twn9yttyb",
+                "name": "Veikkausliiga",
+                "disambiguatedName": "Finnish Veikkausliiga",
+                "urn": "urn:bbc:sportsdata:football:tournament:finnish-veikkausliiga",
+                "thingsGuid": "2450a00a-82b2-4d5e-a782-08e413866cfb"
+              },
+              "accessibleEventSummary": "Oulu versus Mariehamn kick off 10:59",
+              "hasStandings": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "displayLabel": "Tournoi Maurice Revello",
+      "displayLabelOnwardJourneyPath": "/sport/football/tournoi-maurice-revello/table",
+      "secondaryGroups": [
+        {
+          "displayLabel": "3rd Place Final",
+          "events": [
+            {
+              "home": {
+                "id": "4k75vtqvr6j8i8gtjh20rg1rd",
+                "fullName": "Congo DR U20",
+                "shortName": "Congo DR",
+                "actions": []
+              },
+              "away": {
+                "fullName": "TBC",
+                "shortName": "TBC",
+                "actions": []
+              },
+              "id": "s-c3ysm4dsl6ylaparaetmm25g4",
+              "urn": "urn:bbc:sportsdata:football:event:s-c3ysm4dsl6ylaparaetmm25g4",
+              "eventGroupingLabel": "World - Tournoi Maurice Revello - 3rd Place Final",
+              "startDateTime": "2026-06-13T11:30:00Z",
+              "tournamentId": "b537iyp3c44psskitxwjxpng8",
+              "date": {
+                "iso": "2026-06-13T11:30:00Z",
+                "time": "12:30",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "12:30",
+                "displayTimeUK": "12:30",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "4k75vtqvr6j8i8gtjh20rg1rd",
+                  "name": {
+                    "fullName": "Congo DR U20",
+                    "shortName": "Congo DR"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "name": {
+                    "fullName": "TBC",
+                    "shortName": "TBC"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - Tournoi Maurice Revello - 3rd Place Final",
+              "tournament": {
+                "id": "b537iyp3c44psskitxwjxpng8",
+                "name": "Tournoi Maurice Revello",
+                "disambiguatedName": "Tournoi Maurice Revello",
+                "urn": "urn:bbc:sportsdata:football:tournament:tournoi-maurice-revello"
+              },
+              "stage": {
+                "id": "2ym2bt3yjncfsb14l4ye4xxxw",
+                "name": "3rd Place Final",
+                "urn": ""
+              },
+              "seriesWinner": "away",
+              "accessibleEventSummary": "Congo DR U20 versus Team to be confirmed kick off 12:30",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Final",
+          "events": [
+            {
+              "home": {
+                "id": "appc2qzlxf3jjjhazkxzynsb0",
+                "fullName": "Tunisia U23",
+                "shortName": "Tunisia U23",
+                "actions": []
+              },
+              "away": {
+                "fullName": "TBC",
+                "shortName": "TBC",
+                "actions": []
+              },
+              "id": "s-geltj6pmxqsyvb3wacee9hck",
+              "urn": "urn:bbc:sportsdata:football:event:s-geltj6pmxqsyvb3wacee9hck",
+              "eventGroupingLabel": "World - Tournoi Maurice Revello - Final",
+              "startDateTime": "2026-06-13T17:00:00Z",
+              "tournamentId": "b537iyp3c44psskitxwjxpng8",
+              "date": {
+                "iso": "2026-06-13T17:00:00Z",
+                "time": "18:00",
+                "shortDate": "Sat 13 Jun",
+                "longDate": "Saturday 13th June 2026",
+                "dayOfWeek": "Sat",
+                "day": "13",
+                "month": "June",
+                "shortMonth": "Jun",
+                "year": "2026",
+                "isoDate": "2026-06-13"
+              },
+              "periodLabel": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "time": {
+                "accessibleTime": "18:00",
+                "displayTimeUK": "18:00",
+                "timeCertainty": true
+              },
+              "status": "PreEvent",
+              "statusComment": {
+                "value": "Scheduled",
+                "accessible": "Scheduled"
+              },
+              "participants": [
+                {
+                  "id": "appc2qzlxf3jjjhazkxzynsb0",
+                  "name": {
+                    "fullName": "Tunisia U23",
+                    "shortName": "Tunisia U23"
+                  },
+                  "alignment": "home"
+                },
+                {
+                  "name": {
+                    "fullName": "TBC",
+                    "shortName": "TBC"
+                  },
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "World - Tournoi Maurice Revello - Final",
+              "tournament": {
+                "id": "b537iyp3c44psskitxwjxpng8",
+                "name": "Tournoi Maurice Revello",
+                "disambiguatedName": "Tournoi Maurice Revello",
+                "urn": "urn:bbc:sportsdata:football:tournament:tournoi-maurice-revello"
+              },
+              "stage": {
+                "id": "2xhhuyyar1u03p6ycp7dmp6ac",
+                "name": "Final",
+                "urn": ""
+              },
+              "seriesWinner": "away",
+              "accessibleEventSummary": "Tunisia U23 versus Team to be confirmed kick off 18:00",
+              "hasStandings": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sport": "football",
+  "selectedStartDate": "2026-06-12",
+  "selectedEndDate": "2026-06-19",
+  "shouldShowScorersButton": false,
+  "urn": "urn:bbc:sportsdata:football:tournament-collection:collated",
+  "maximumScoreDigits": 1
+}

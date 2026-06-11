@@ -17,29 +17,18 @@ from information_schema.columns
 where table_schema = 'public'
 order by table_name, ordinal_position;
 
--- BLOCK 3: Constraints
+-- BLOCK 3: Constraints (full definitions, including CHECK bodies)
 select
-  tc.table_name,
-  tc.constraint_name,
-  tc.constraint_type,
-  string_agg(kcu.column_name, ', ' order by kcu.ordinal_position) as columns,
-  ccu.table_name as references_table,
-  chk.check_clause
-from information_schema.table_constraints tc
-left join information_schema.key_column_usage kcu
-  on tc.constraint_schema = kcu.constraint_schema
-  and tc.constraint_name = kcu.constraint_name
-left join information_schema.constraint_column_usage ccu
-  on tc.constraint_schema = ccu.constraint_schema
-  and tc.constraint_name = ccu.constraint_name
-  and tc.constraint_type = 'FOREIGN KEY'
-left join information_schema.check_constraints chk
-  on tc.constraint_schema = chk.constraint_schema
-  and tc.constraint_name = chk.constraint_name
-where tc.table_schema = 'public'
-  and tc.constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY', 'CHECK')
-group by tc.table_name, tc.constraint_name, tc.constraint_type, ccu.table_name, chk.check_clause
-order by tc.table_name, tc.constraint_type;
+  c.relname as table_name,
+  con.conname as constraint_name,
+  con.contype as constraint_type,
+  pg_get_constraintdef(con.oid) as definition
+from pg_constraint con
+join pg_class c on c.oid = con.conrelid
+join pg_namespace n on n.oid = c.relnamespace
+where n.nspname = 'public'
+  and con.contype in ('p', 'u', 'f', 'c')
+order by c.relname, con.conname;
 
 -- BLOCK 4: Indexes
 select tablename, indexname, indexdef

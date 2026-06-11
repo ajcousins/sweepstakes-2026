@@ -1,0 +1,64 @@
+sort,section,table_name,object_name,definition
+10,table,game_results,null,"size=32 kB, rls=true"
+10,table,league_info,null,"size=48 kB, rls=true"
+10,table,player,null,"size=104 kB, rls=true"
+20,column,game_results,away_penalties_score,"numeric, pos=10, nullable=YES, default=null, generated=NEVER"
+20,column,game_results,away_score,"numeric, pos=7, nullable=NO, default=null, generated=NEVER"
+20,column,game_results,away_team,"text, pos=5, nullable=NO, default=null, generated=NEVER"
+20,column,game_results,home_penalties_score,"numeric, pos=9, nullable=YES, default=null, generated=NEVER"
+20,column,game_results,home_score,"numeric, pos=6, nullable=NO, default=null, generated=NEVER"
+20,column,game_results,home_team,"text, pos=4, nullable=NO, default=null, generated=NEVER"
+20,column,game_results,id_result,"uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+20,column,game_results,kick_off,"timestamp with time zone, pos=2, nullable=NO, default=now(), generated=NEVER"
+20,column,game_results,stage,"text, pos=3, nullable=YES, default=null, generated=NEVER"
+20,column,game_results,went_to_extra_time,"boolean, pos=8, nullable=NO, default=false, generated=NEVER"
+20,column,league_info,goodluck_message,"text, pos=3, nullable=YES, default=null, generated=NEVER"
+20,column,league_info,id_league,"uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+20,column,league_info,info_message,"text, pos=4, nullable=YES, default=null, generated=NEVER"
+20,column,league_info,is_locked,"boolean, pos=7, nullable=NO, default=false, generated=NEVER"
+20,column,league_info,league_name,"text, pos=5, nullable=NO, default=null, generated=NEVER"
+20,column,league_info,password_hash,"text, pos=6, nullable=NO, default=null, generated=NEVER"
+20,column,league_info,title,"text, pos=8, nullable=YES, default=null, generated=NEVER"
+20,column,league_info,welcome_message,"text, pos=2, nullable=YES, default=null, generated=NEVER"
+20,column,player,created_at,"timestamp with time zone, pos=9, nullable=NO, default=now(), generated=NEVER"
+20,column,player,id_league,"uuid, pos=2, nullable=NO, default=null, generated=NEVER"
+20,column,player,id_player,"uuid, pos=1, nullable=NO, default=gen_random_uuid(), generated=NEVER"
+20,column,player,is_admin,"boolean, pos=8, nullable=NO, default=false, generated=NEVER"
+20,column,player,normalised_pair,"text, pos=10, nullable=YES, default=null, generated=ALWAYS, expr=((LEAST(team_a, team_b) || '_'::text) || GREATEST(team_a, team_b))"
+20,column,player,password_hash,"text, pos=4, nullable=NO, default=null, generated=NEVER"
+20,column,player,player_name,"text, pos=3, nullable=NO, default=null, generated=NEVER"
+20,column,player,team_a,"text, pos=5, nullable=NO, default=null, generated=NEVER"
+20,column,player,team_b,"text, pos=6, nullable=NO, default=null, generated=NEVER"
+30,constraint,game_results,2200_17686_1_not_null,null
+30,constraint,game_results,2200_17686_2_not_null,null
+30,constraint,game_results,2200_17686_4_not_null,null
+30,constraint,game_results,2200_17686_5_not_null,null
+30,constraint,game_results,2200_17686_6_not_null,null
+30,constraint,game_results,2200_17686_7_not_null,null
+30,constraint,game_results,2200_17686_8_not_null,null
+30,constraint,game_results,game_results_pkey,PRIMARY KEY [id_result]
+30,constraint,league_info,2200_17622_1_not_null,null
+30,constraint,league_info,2200_17622_5_not_null,null
+30,constraint,league_info,2200_17622_6_not_null,null
+30,constraint,league_info,2200_17622_7_not_null,null
+30,constraint,league_info,league_info_league_name_key,UNIQUE [league_name]
+30,constraint,league_info,league_info_pkey,PRIMARY KEY [id_league]
+30,constraint,player,2200_17638_1_not_null,null
+30,constraint,player,2200_17638_2_not_null,null
+30,constraint,player,2200_17638_3_not_null,null
+30,constraint,player,2200_17638_4_not_null,null
+30,constraint,player,2200_17638_5_not_null,null
+30,constraint,player,2200_17638_6_not_null,null
+30,constraint,player,2200_17638_8_not_null,null
+30,constraint,player,2200_17638_9_not_null,null
+30,constraint,player,player_id_league_fkey,FOREIGN KEY [id_league] -> league_info(id_league)
+30,constraint,player,player_name_unique_per_league,"UNIQUE [id_league, player_name]"
+30,constraint,player,player_pair_unique_per_league,"UNIQUE [id_league, normalised_pair]"
+30,constraint,player,player_pkey,PRIMARY KEY [id_player]
+30,constraint,player,team_a_team_b_different,null
+40,index,game_results,game_results_pkey,CREATE UNIQUE INDEX game_results_pkey ON public.game_results USING btree (id_result)
+40,index,league_info,league_info_league_name_key,CREATE UNIQUE INDEX league_info_league_name_key ON public.league_info USING btree (league_name)
+40,index,league_info,league_info_pkey,CREATE UNIQUE INDEX league_info_pkey ON public.league_info USING btree (id_league)
+40,index,player,player_name_unique_per_league,"CREATE UNIQUE INDEX player_name_unique_per_league ON public.player USING btree (id_league, player_name)"
+40,index,player,player_pair_unique_per_league,"CREATE UNIQUE INDEX player_pair_unique_per_league ON public.player USING btree (id_league, normalised_pair)"
+40,index,player,player_pkey,CREATE UNIQUE INDEX player_pkey ON public.player USING btree (id_player)

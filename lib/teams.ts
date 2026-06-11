@@ -1,14 +1,24 @@
-export const TEAMS = {
+interface Team {
+  [index: string]: {
+    teamName: string,
+    code: string,
+    flag: string,
+    pot: 1 | 2 | 3 | 4;
+    bbcName?: string;
+  }
+}
+
+export const TEAMS: Team = {
   ALG: { teamName: 'Algeria', code: 'ALG', flag: '🇩🇿', pot: 3 },
   ARG: { teamName: 'Argentina', code: 'ARG', flag: '🇦🇷', pot: 1 },
   AUS: { teamName: 'Australia', code: 'AUS', flag: '🇦🇺', pot: 2 },
   AUT: { teamName: 'Austria', code: 'AUT', flag: '🇦🇹', pot: 2 },
   BEL: { teamName: 'Belgium', code: 'BEL', flag: '🇧🇪', pot: 1 },
-  BIH: { teamName: 'Bosnia and Herzegovina', code: 'BIH', flag: '🇧🇦', pot: 4 },
+  BIH: { teamName: 'Bosnia and Herzegovina', code: 'BIH', flag: '🇧🇦', pot: 4, bbcName: 'Bosnia-Herzegovina' },
   BRA: { teamName: 'Brazil', code: 'BRA', flag: '🇧🇷', pot: 1 },
   CAN: { teamName: 'Canada', code: 'CAN', flag: '🇨🇦', pot: 3 },
   CIV: { teamName: 'Ivory Coast', code: 'CIV', flag: '🇨🇮', pot: 3 },
-  COD: { teamName: 'DR Congo', code: 'COD', flag: '🇨🇩', pot: 4 },
+  COD: { teamName: 'DR Congo', code: 'COD', flag: '🇨🇩', pot: 4, bbcName: 'Congo DR' },
   COL: { teamName: 'Colombia', code: 'COL', flag: '🇨🇴', pot: 1 },
   CPV: { teamName: 'Cape Verde', code: 'CPV', flag: '🇨🇻', pot: 4 },
   CRO: { teamName: 'Croatia', code: 'CRO', flag: '🇭🇷', pot: 1 },
