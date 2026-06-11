@@ -1,0 +1,366 @@
+{
+  "eventGroups": [
+    {
+      "displayLabel": "FIFA World Cup",
+      "secondaryGroups": [
+        {
+          "displayLabel": "Final",
+          "events": [
+            {
+              "home": {
+                "id": "ak48fkypnql8y4n69cvcq5ghc",
+                "fullName": "Argentina",
+                "shortName": "Argentina",
+                "urn": "urn:bbc:sportsdata:football:team:argentina",
+                "runningScores": {
+                  "halftime": "2",
+                  "fulltime": "2",
+                  "extratime": "3",
+                  "penaltyShootout": "4"
+                },
+                "scoreUnconfirmed": "3",
+                "actions": [
+                  {
+                    "playerUrn": "urn:bbc:sportsdata:football:player:s-c5ryhn04g9goikd0blmh83aol",
+                    "playerName": "L. Messi",
+                    "actionType": "goal",
+                    "actions": [
+                      {
+                        "type": "Penalty",
+                        "typeLabel": {
+                          "value": "Penalty",
+                          "accessible": "Penalty"
+                        },
+                        "timeLabel": {
+                          "value": "23'",
+                          "accessible": "23 minutes"
+                        }
+                      },
+                      {
+                        "type": "Goal",
+                        "typeLabel": {
+                          "value": "Goal",
+                          "accessible": "Goal"
+                        },
+                        "timeLabel": {
+                          "value": "108' ET",
+                          "accessible": "108 minutes extra time"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "playerUrn": "urn:bbc:sportsdata:football:player:s-7glxasv2ed6ey82dknto1y66t",
+                    "playerName": "\u00c1. Di Mar\u00eda",
+                    "actionType": "goal",
+                    "actions": [
+                      {
+                        "type": "Goal",
+                        "typeLabel": {
+                          "value": "Goal",
+                          "accessible": "Goal"
+                        },
+                        "timeLabel": {
+                          "value": "36'",
+                          "accessible": "36 minutes"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "score": "3"
+              },
+              "away": {
+                "id": "4pz87gsel7183b7kcadw1dwzv",
+                "fullName": "France",
+                "shortName": "France",
+                "urn": "urn:bbc:sportsdata:football:team:france",
+                "runningScores": {
+                  "halftime": "0",
+                  "fulltime": "2",
+                  "extratime": "3",
+                  "penaltyShootout": "2"
+                },
+                "scoreUnconfirmed": "3",
+                "actions": [
+                  {
+                    "playerUrn": "urn:bbc:sportsdata:football:player:s-5e9ilgrz3tzg9kd1gk3yvrahh",
+                    "playerName": "K. Mbapp\u00e9",
+                    "actionType": "goal",
+                    "actions": [
+                      {
+                        "type": "Penalty",
+                        "typeLabel": {
+                          "value": "Penalty",
+                          "accessible": "Penalty"
+                        },
+                        "timeLabel": {
+                          "value": "80'",
+                          "accessible": "80 minutes"
+                        }
+                      },
+                      {
+                        "type": "Goal",
+                        "typeLabel": {
+                          "value": "Goal",
+                          "accessible": "Goal"
+                        },
+                        "timeLabel": {
+                          "value": "81'",
+                          "accessible": "81 minutes"
+                        }
+                      },
+                      {
+                        "type": "Penalty",
+                        "typeLabel": {
+                          "value": "Penalty",
+                          "accessible": "Penalty"
+                        },
+                        "timeLabel": {
+                          "value": "118' ET",
+                          "accessible": "118 minutes extra time"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "score": "3"
+              },
+              "id": "s-dn9kqyqgul5f1r43q6g544pka",
+              "urn": "urn:bbc:sportsdata:football:event:s-dn9kqyqgul5f1r43q6g544pka",
+              "eventGroupingLabel": "World - FIFA World Cup - Final",
+              "startDateTime": "2022-12-18T15:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2022-12-18T15:00:00Z",
+                "time": "15:00",
+                "shortDate": "Sun 18 Dec",
+                "longDate": "Sunday 18th December 2022",
+                "dayOfWeek": "Sun",
+                "day": "18",
+                "month": "December",
+                "shortMonth": "Dec",
+                "year": "2022",
+                "isoDate": "2022-12-18"
+              },
+              "periodLabel": {
+                "value": "PENS",
+                "accessible": "Penalty shootout"
+              },
+              "time": {
+                "accessibleTime": "15:00",
+                "displayTimeUK": "15:00",
+                "timeCertainty": true
+              },
+              "status": "PostEvent",
+              "statusComment": {
+                "value": "PENS",
+                "accessible": "Penalty shootout"
+              },
+              "participants": [
+                {
+                  "id": "ak48fkypnql8y4n69cvcq5ghc",
+                  "urn": "urn:bbc:sportsdata:football:team:argentina",
+                  "name": {
+                    "fullName": "Argentina",
+                    "shortName": "Argentina"
+                  },
+                  "score": "3",
+                  "halftimeScore": "2",
+                  "fulltimeScore": "2",
+                  "extratimeScore": "3",
+                  "penaltyShootoutScore": "4",
+                  "alignment": "home"
+                },
+                {
+                  "id": "4pz87gsel7183b7kcadw1dwzv",
+                  "urn": "urn:bbc:sportsdata:football:team:france",
+                  "name": {
+                    "fullName": "France",
+                    "shortName": "France"
+                  },
+                  "score": "3",
+                  "halftimeScore": "0",
+                  "fulltimeScore": "2",
+                  "extratimeScore": "3",
+                  "penaltyShootoutScore": "2",
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "FIFA World Cup",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "2aul720q5c849pdeufq5p36ui",
+                "name": "Final",
+                "urn": ""
+              },
+              "winner": "home",
+              "accessibleEventSummary": "Argentina 3 , France 3 After extra time , Argentina win 4 - 2 on penalties",
+              "hasStandings": true
+            }
+          ]
+        },
+        {
+          "displayLabel": "Semi-finals",
+          "events": [
+            {
+              "home": {
+                "id": "ak48fkypnql8y4n69cvcq5ghc",
+                "fullName": "Argentina",
+                "shortName": "Argentina",
+                "urn": "urn:bbc:sportsdata:football:team:argentina",
+                "runningScores": {
+                  "halftime": "2",
+                  "fulltime": "3"
+                },
+                "scoreUnconfirmed": "3",
+                "actions": [
+                  {
+                    "playerUrn": "urn:bbc:sportsdata:football:player:s-c5ryhn04g9goikd0blmh83aol",
+                    "playerName": "L. Messi",
+                    "actionType": "goal",
+                    "actions": [
+                      {
+                        "type": "Penalty",
+                        "typeLabel": {
+                          "value": "Penalty",
+                          "accessible": "Penalty"
+                        },
+                        "timeLabel": {
+                          "value": "34'",
+                          "accessible": "34 minutes"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "playerUrn": "urn:bbc:sportsdata:football:player:s-9ikkuxd19avliz1khcrm82gyy",
+                    "playerName": "J. Alvarez",
+                    "actionType": "goal",
+                    "actions": [
+                      {
+                        "type": "Goal",
+                        "typeLabel": {
+                          "value": "Goal",
+                          "accessible": "Goal"
+                        },
+                        "timeLabel": {
+                          "value": "39'",
+                          "accessible": "39 minutes"
+                        }
+                      },
+                      {
+                        "type": "Goal",
+                        "typeLabel": {
+                          "value": "Goal",
+                          "accessible": "Goal"
+                        },
+                        "timeLabel": {
+                          "value": "69'",
+                          "accessible": "69 minutes"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "score": "3"
+              },
+              "away": {
+                "id": "4njsfszcgd9m765d6suktsz2a",
+                "fullName": "Croatia",
+                "shortName": "Croatia",
+                "urn": "urn:bbc:sportsdata:football:team:croatia",
+                "runningScores": {
+                  "halftime": "0",
+                  "fulltime": "0"
+                },
+                "scoreUnconfirmed": "0",
+                "actions": [],
+                "score": "0"
+              },
+              "id": "s-pypvtrhbgg8d21q3hbm3osq2",
+              "urn": "urn:bbc:sportsdata:football:event:s-pypvtrhbgg8d21q3hbm3osq2",
+              "eventGroupingLabel": "World - FIFA World Cup - Semi-finals",
+              "startDateTime": "2022-12-13T19:00:00Z",
+              "tournamentId": "70excpe1synn9kadnbppahdn7",
+              "date": {
+                "iso": "2022-12-13T19:00:00Z",
+                "time": "19:00",
+                "shortDate": "Tue 13 Dec",
+                "longDate": "Tuesday 13th December 2022",
+                "dayOfWeek": "Tue",
+                "day": "13",
+                "month": "December",
+                "shortMonth": "Dec",
+                "year": "2022",
+                "isoDate": "2022-12-13"
+              },
+              "periodLabel": {
+                "value": "FT",
+                "accessible": "Full time"
+              },
+              "time": {
+                "accessibleTime": "19:00",
+                "displayTimeUK": "19:00",
+                "timeCertainty": true
+              },
+              "status": "PostEvent",
+              "statusComment": {
+                "value": "FT",
+                "accessible": "Full time"
+              },
+              "participants": [
+                {
+                  "id": "ak48fkypnql8y4n69cvcq5ghc",
+                  "urn": "urn:bbc:sportsdata:football:team:argentina",
+                  "name": {
+                    "fullName": "Argentina",
+                    "shortName": "Argentina"
+                  },
+                  "score": "3",
+                  "halftimeScore": "2",
+                  "fulltimeScore": "3",
+                  "alignment": "home"
+                },
+                {
+                  "id": "4njsfszcgd9m765d6suktsz2a",
+                  "urn": "urn:bbc:sportsdata:football:team:croatia",
+                  "name": {
+                    "fullName": "Croatia",
+                    "shortName": "Croatia"
+                  },
+                  "score": "0",
+                  "halftimeScore": "0",
+                  "fulltimeScore": "0",
+                  "alignment": "away"
+                }
+              ],
+              "headToHeadDetailLabel": "FIFA World Cup",
+              "tournament": {
+                "id": "70excpe1synn9kadnbppahdn7",
+                "name": "FIFA World Cup",
+                "disambiguatedName": "FIFA World Cup",
+                "urn": "urn:bbc:sportsdata:football:tournament:world-cup",
+                "thingsGuid": "de6a07ff-47ff-4551-9b71-7494a71aceac"
+              },
+              "stage": {
+                "id": "2bad2ps033b2b6i3udtwgtf8q",
+                "name": "Semi-finals",
+                "urn": ""
+              },
+              "winner": "home",
+              "accessibleEventSummary": "Argentina 3 , Croatia 0 at Full time",
+              "hasStandings": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -58,3 +58,13 @@ export const TEAMS: Team = {
   USA: { teamName: 'United States', code: 'USA', flag: '🇺🇸', pot: 2 },
   UZB: { teamName: 'Uzbekistan', code: 'UZB', flag: '🇺🇿', pot: 3 },
 };
+
+export function teamCodeFromBbcName(fullName: string): string | null {
+  const normalized = fullName.trim();
+  for (const [code, team] of Object.entries(TEAMS)) {
+    if (team.teamName === normalized || team.bbcName === normalized) {
+      return code;
+    }
+  }
+  return null;
+}

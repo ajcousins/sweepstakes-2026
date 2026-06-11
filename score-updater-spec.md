@@ -6,7 +6,31 @@ This is a script that will run a few times every day to check whether matches fr
 
 It will take relevant scores from matches and update the Supabase table for the Sweepstakes app.
 
+Only **new** completed matches are inserted. Rows already in `game_results` (including manual admin entries) are left unchanged.
 
+## Running locally
+
+```bash
+pnpm update-scores --dry-run --fixtures data/bbc-sample-completed.json
+pnpm update-scores --dry-run
+pnpm update-scores
+```
+
+Flags:
+
+- `--dry-run` — log what would be inserted; no Supabase writes
+- `--fixtures <path>` — use local BBC JSON instead of the live API
+- `--date YYYY-MM-DD` — fetch a single date (live API)
+- `--days N` — look back N days including today (default `2`)
+
+Requires `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `.env.local` (unless `--dry-run --fixtures`).
+
+## GitHub Actions
+
+Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-scores.yml)
+
+- Runs on cron ~4× daily (`0 6,12,18,23 * * *` UTC) and via **workflow_dispatch**
+- Repo secrets: `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`
 
 ## Apendix
 
