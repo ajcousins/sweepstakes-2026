@@ -33,6 +33,18 @@ Admins can trigger a score sync from the app at **`/admin/update-scores`**.
 - Click **Update scores** to fetch BBC data and insert new completed matches.
 - The page shows the same log output as the CLI (per-match inserts + summary).
 
+## GitHub Actions
+
+Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-scores.yml)
+
+- Runs **every hour** on the default branch (`0 * * * *` UTC)
+- Can also be triggered manually: Actions → **Update scores** → **Run workflow**
+- Repo secrets (Settings → Secrets and variables → Actions):
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `SUPABASE_SERVICE_ROLE_KEY`
+
+Scheduled runs only execute on the repository default branch (e.g. `main`).
+
 ## Apendix
 
 ### Example response from pubic source API
