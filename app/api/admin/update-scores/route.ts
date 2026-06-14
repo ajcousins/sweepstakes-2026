@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { jsonError, jsonOk } from '@/lib/api';
 import { requireAdmin } from '@/lib/admin';
-import { syncScores } from '@/lib/score-updater/sync';
+import { runScoreSync } from '@/lib/score-updater/run-sync';
 
 export async function POST() {
   const auth = await requireAdmin();
@@ -9,20 +9,20 @@ export async function POST() {
     return jsonError(auth.message, auth.status);
   }
 
-  try {
-    const summary = await syncScores();
-    const body = { summary, logs: summary.logs };
-
-    if (summary.validationErrors.length > 0) {
+  const result = await runScoreSync();
+  if (!result.ok) {
+    if (result.status === 400 && result.summary) {
       return NextResponse.json(
-        { ...body, error: 'Validation errors during score update' },
+        {
+          summary: result.summary,
+          logs: result.logs,
+          error: result.error,
+        },
         { status: 400 },
       );
     }
-
-    return jsonOk(body);
-  } catch (err) {
-    const message = err instanceof Error ? err.message : 'Score update failed';
-    return jsonError(message, 500);
+    return jsonError(result.error, result.status);
   }
+
+  return jsonOk({ summary: result.summary, logs: result.logs });
 }

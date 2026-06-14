@@ -33,21 +33,25 @@ Admins can trigger a score sync from the app at **`/admin/update-scores`**.
 - Click **Update scores** to fetch BBC data and insert new completed matches.
 - The page shows the same log output as the CLI (per-match inserts + summary).
 
-## GitHub Actions
+## External cron (cron-job.org)
 
-Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-scores.yml)
+Scheduled sync via [cron-job.org](https://cron-job.org) (or similar) calling the deployed app.
 
-- Runs **every hour** at **:13 UTC** on the default branch (`13 * * * *`)
-- Can also be triggered manually: Actions → **Update scores** → **Run workflow**
-- Repo credentials (Settings → Secrets and variables → Actions):
-  - `NEXT_PUBLIC_SUPABASE_URL` — **Repository secret** or **Repository variable** (public URL)
-  - `SUPABASE_SERVICE_ROLE_KEY` — **Repository secret** only (never a variable)
+**Endpoint:** `POST https://<your-vercel-domain>/api/cron/update-scores`
 
-Use **Repository secrets** (or variables for the URL), not **Environment secrets**. This workflow does not set a GitHub `environment`, so environment-scoped secrets are not available.
+**Auth:** header `Authorization: Bearer <CRON_SECRET>`
 
-If the repo is in an organisation, you may need to **authorize** secrets for Actions (SSO / repository access policy).
+**Suggested schedule:** every 5 minutes (`*/5 * * * *`)
 
-Scheduled runs only execute on the repository default branch (e.g. `main`).
+**Env:** set `CRON_SECRET` in Vercel (and `.env.local` for local testing).
+
+**Test locally** (with dev server running):
+
+```bash
+curl -X POST -H "Authorization: Bearer $CRON_SECRET" http://localhost:3000/api/cron/update-scores
+```
+
+Response (success): `{ "ok": true, "inserted": N, "skippedExisting": N, ... }` — no verbose logs (use admin page or CLI for full output).
 
 ## Apendix
 
