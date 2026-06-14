@@ -86,7 +86,9 @@ async function main() {
   if (!options.dryRun || !options.fixtures) {
     loadEnvFile();
     if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-      console.error('Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY');
+      console.error(
+        'Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (GitHub Actions: Settings → Secrets and variables → Actions → Secrets)',
+      );
       process.exit(1);
     }
   }

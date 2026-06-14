@@ -6,6 +6,9 @@ on:
     - cron: '0 * * * *'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-scores:
     runs-on: ubuntu-latest
@@ -21,7 +24,20 @@ jobs:
           node-version: '22'
           cache: 'pnpm'
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify secrets are configured
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ]; then
+            echo "::error::NEXT_PUBLIC_SUPABASE_URL secret is missing or empty. Add it under Settings → Secrets and variables → Actions → Secrets."
+            exit 1
+          fi
+          if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "::error::SUPABASE_SERVICE_ROLE_KEY secret is missing or empty. Add it under Settings → Secrets and variables → Actions → Secrets."
+            exit 1
+          fi
+          echo "Required secrets are present."
 
       - name: Sync BBC scores to Supabase
         run: pnpm update-scores

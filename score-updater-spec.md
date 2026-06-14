@@ -39,9 +39,11 @@ Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-score
 
 - Runs **every hour** on the default branch (`0 * * * *` UTC)
 - Can also be triggered manually: Actions → **Update scores** → **Run workflow**
-- Repo secrets (Settings → Secrets and variables → Actions):
+- Repo secrets (Settings → Secrets and variables → Actions → **Secrets**, not Variables):
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `SUPABASE_SERVICE_ROLE_KEY`
+
+If the workflow fails, open the run log: the **Verify secrets** step reports missing secrets; the **Sync BBC scores** step shows script output (BBC/Supabase errors or validation issues).
 
 Scheduled runs only execute on the repository default branch (e.g. `main`).
 
