@@ -12,6 +12,10 @@ env:
 jobs:
   update-scores:
     runs-on: ubuntu-latest
+    env:
+      # Public URL: repository secret OR repository variable (not environment-scoped).
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL || vars.NEXT_PUBLIC_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -25,20 +29,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify secrets are configured
+      - name: Verify credentials are configured
         run: |
           if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ]; then
-            echo "::error::NEXT_PUBLIC_SUPABASE_URL secret is missing or empty. Add it under Settings → Secrets and variables → Actions → Secrets."
+            echo "::error::NEXT_PUBLIC_SUPABASE_URL is missing or empty."
+            echo "Add it as a repository secret OR repository variable:"
+            echo "  Settings → Secrets and variables → Actions → Repository secrets (or Repository variables)"
+            echo "Do not use Environment secrets — this workflow does not target an environment."
             exit 1
           fi
           if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
-            echo "::error::SUPABASE_SERVICE_ROLE_KEY secret is missing or empty. Add it under Settings → Secrets and variables → Actions → Secrets."
+            echo "::error::SUPABASE_SERVICE_ROLE_KEY is missing or empty."
+            echo "Add it as a repository secret (not a variable):"
+            echo "  Settings → Secrets and variables → Actions → Repository secrets"
             exit 1
           fi
-          echo "Required secrets are present."
+          echo "Required credentials are present."
 
       - name: Sync BBC scores to Supabase
         run: pnpm update-scores
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
