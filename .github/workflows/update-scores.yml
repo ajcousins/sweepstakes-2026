@@ -2,8 +2,8 @@ name: Update scores
 
 on:
   schedule:
-    # Every hour, every day (UTC)
-    - cron: '0 * * * *'
+    # 13 minutes past each hour, every day (UTC) — avoids top-of-hour GHA delays
+    - cron: '13 * * * *'
   workflow_dispatch:
 
 env:

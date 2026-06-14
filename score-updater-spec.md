@@ -37,7 +37,7 @@ Admins can trigger a score sync from the app at **`/admin/update-scores`**.
 
 Workflow: [`.github/workflows/update-scores.yml`](.github/workflows/update-scores.yml)
 
-- Runs **every hour** on the default branch (`0 * * * *` UTC)
+- Runs **every hour** at **:13 UTC** on the default branch (`13 * * * *`)
 - Can also be triggered manually: Actions → **Update scores** → **Run workflow**
 - Repo credentials (Settings → Secrets and variables → Actions):
   - `NEXT_PUBLIC_SUPABASE_URL` — **Repository secret** or **Repository variable** (public URL)
