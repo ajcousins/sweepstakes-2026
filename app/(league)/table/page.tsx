@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/Button';
+import { ConfettiFireworks } from '@/components/ConfettiFireworks';
 import { LeaderboardTable } from '@/components/LeaderboardTable';
 import { MatchScoresList } from '@/components/MatchScoresList';
+import { formatCompetitionFinishedMessage } from '@/lib/competition-finished-message';
 import { fetchLeaderboard } from '@/lib/leaderboard-service';
 import { fetchMatchResults } from '@/lib/match-results-service';
 import { getLeagueSession, getPlayerSession } from '@/lib/session';
@@ -21,17 +23,22 @@ export default async function TablePage() {
   ]);
 
   const playerLoggedIn = highlightPlayerId != null;
+  const subtitle =
+    winningTeam != null
+      ? formatCompetitionFinishedMessage(rows, winningTeam)
+      : info_message;
 
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 pb-60">
+      {winningTeam != null && <ConfettiFireworks />}
       {!playerLoggedIn && (
         <Button href="/register" className="mb-6 px-6">
           Join sweepstakes
         </Button>
       )}
       <h1 className="mb-2 text-2xl font-bold">Leaderboard</h1>
-      {info_message && (
-        <p className="mb-6 text-sm text-zinc-600">{info_message}</p>
+      {subtitle && (
+        <p className="mb-6 text-sm text-zinc-600">{subtitle}</p>
       )}
       <LeaderboardTable
         rows={rows}

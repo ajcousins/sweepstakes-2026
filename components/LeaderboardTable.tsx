@@ -79,8 +79,22 @@ export function LeaderboardTable({
                 </td>
                 <td className={tdClass}>
                   <span className="flex items-center gap-3 sm:gap-4">
-                    <TeamFlag teamCode={row.team_a} showName size="sm" />
-                    <TeamFlag teamCode={row.team_b} showName size="sm" />
+                    <span className="inline-flex items-center gap-1">
+                      <TeamFlag teamCode={row.team_a} showName size="sm" />
+                      {winningTeam === row.team_a && (
+                        <span className="emoji" aria-label="World Cup winner">
+                          ⭐
+                        </span>
+                      )}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <TeamFlag teamCode={row.team_b} showName size="sm" />
+                      {winningTeam === row.team_b && (
+                        <span className="emoji" aria-label="World Cup winner">
+                          ⭐
+                        </span>
+                      )}
+                    </span>
                   </span>
                 </td>
                 <td className={`${tdClass} text-right tabular-nums font-semibold`}>
