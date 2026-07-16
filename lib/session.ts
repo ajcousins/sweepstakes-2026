@@ -16,7 +16,7 @@ export async function setLeagueSession(idLeague: string) {
   const token = await new SignJWT({ id_league: idLeague })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime('30d')
+    .setExpirationTime('90d')
     .sign(secretKey());
 
   const jar = await cookies();
@@ -25,7 +25,7 @@ export async function setLeagueSession(idLeague: string) {
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
     path: '/',
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: 60 * 60 * 24 * 90,
   });
 }
 
@@ -45,7 +45,7 @@ export async function setPlayerSession(idPlayer: string, idLeague: string) {
   const token = await new SignJWT({ id_player: idPlayer, id_league: idLeague })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime('30d')
+    .setExpirationTime('90d')
     .sign(secretKey());
 
   const jar = await cookies();
@@ -54,7 +54,7 @@ export async function setPlayerSession(idPlayer: string, idLeague: string) {
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
     path: '/',
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: 60 * 60 * 24 * 90,
   });
 }
 

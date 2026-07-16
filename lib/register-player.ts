@@ -5,6 +5,7 @@ import {
   normalisePair,
   pickBalancedPair,
 } from '@/lib/pairs';
+import { isCompetitionFinished } from '@/lib/competition-status';
 
 const MAX_REGISTER_ATTEMPTS = 8;
 
@@ -44,6 +45,17 @@ export async function registerPlayer(
   }
   if (league.is_locked) {
     return { ok: false, error: 'This league is not accepting new players' };
+  }
+
+  try {
+    if (await isCompetitionFinished()) {
+      return {
+        ok: false,
+        error: 'The competition has finished — new players cannot join',
+      };
+    }
+  } catch {
+    return { ok: false, error: 'Could not check competition status' };
   }
 
   const password_hash = await hashPassword(plainPassword);
