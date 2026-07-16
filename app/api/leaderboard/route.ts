@@ -10,7 +10,7 @@ export async function GET() {
     }
 
     const playerSession = await getPlayerSession();
-    const { rows, welcome_message, info_message } =
+    const { rows, welcome_message, info_message, winningTeam } =
       await fetchLeaderboard(idLeague);
 
     const highlight_player_id =
@@ -21,6 +21,7 @@ export async function GET() {
       welcome_message,
       info_message,
       highlight_player_id,
+      winningTeam,
     });
   } catch (e) {
     console.error(e);

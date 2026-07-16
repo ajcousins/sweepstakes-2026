@@ -15,7 +15,7 @@ export default async function TablePage() {
   const highlightPlayerId =
     playerSession?.id_league === idLeague ? playerSession.id_player : null;
 
-  const [{ rows, info_message }, matchResults] = await Promise.all([
+  const [{ rows, info_message, winningTeam }, matchResults] = await Promise.all([
     fetchLeaderboard(idLeague),
     fetchMatchResults(),
   ]);
@@ -33,7 +33,11 @@ export default async function TablePage() {
       {info_message && (
         <p className="mb-6 text-sm text-zinc-600">{info_message}</p>
       )}
-      <LeaderboardTable rows={rows} highlightPlayerId={highlightPlayerId} />
+      <LeaderboardTable
+        rows={rows}
+        highlightPlayerId={highlightPlayerId}
+        winningTeam={winningTeam}
+      />
       <h2 className="mt-12 mb-6 text-2xl font-bold">Match scores</h2>
       <MatchScoresList results={matchResults} />
     </main>

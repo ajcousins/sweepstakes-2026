@@ -9,6 +9,9 @@
   --primary-subtle: #fef2f2;
   --primary-border: #4c4f53;
   --primary-ink: #450505;
+  --champion: #c9a227;
+  --champion-subtle: #fbf3d5;
+  --champion-ink: #5c4813;
 }
 
 @theme inline {
@@ -21,6 +24,9 @@
   /* Literal hex so Tailwind utilities don't inherit a stale theme snapshot */
   --color-primary-border: #4c4f53;
   --color-primary-ink: var(--primary-ink);
+  --color-champion: var(--champion);
+  --color-champion-subtle: var(--champion-subtle);
+  --color-champion-ink: var(--champion-ink);
   --font-sans: var(--font-roboto);
   --font-mono: var(--font-roboto-mono);
 

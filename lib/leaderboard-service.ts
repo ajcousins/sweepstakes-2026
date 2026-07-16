@@ -6,6 +6,7 @@ import {
   playerGoalDifference,
   playerPoints,
   rankLeaderboard,
+  winningTeamFromResults,
   type LeaderboardRow,
 } from '@/lib/scoring';
 import { allTeamCodes } from '@/lib/pairs';
@@ -24,6 +25,7 @@ export async function fetchLeaderboard(idLeague: string): Promise<{
   rows: LeaderboardEntry[];
   welcome_message: string | null;
   info_message: string | null;
+  winningTeam: string | null;
 }> {
   const supabase = createAdminClient();
 
@@ -45,9 +47,11 @@ export async function fetchLeaderboard(idLeague: string): Promise<{
     throw new Error('League not found');
   }
 
+  const gameResults = (results ?? []) as GameResult[];
+
   const teamStats = accumulateTeamStats(
     emptyTeamStats(allTeamCodes()),
-    (results ?? []) as GameResult[],
+    gameResults,
   );
 
   const baseRows = ((players ?? []) as Player[]).map((p) => ({
@@ -79,5 +83,6 @@ export async function fetchLeaderboard(idLeague: string): Promise<{
     rows,
     welcome_message: league.welcome_message,
     info_message: league.info_message,
+    winningTeam: winningTeamFromResults(gameResults),
   };
 }

@@ -15,6 +15,16 @@ export function pointsForMatch(row: GameResult): MatchPoints {
   return { home: 1, away: 1 };
 }
 
+/** World Cup winner from a Final result, or null if no decisive Final exists. */
+export function winningTeamFromResults(results: GameResult[]): string | null {
+  const final = results.find((r) => r.stage === 'Final');
+  if (!final) return null;
+  const { home, away } = pointsForMatch(final);
+  if (home === 3) return final.home_team;
+  if (away === 3) return final.away_team;
+  return null;
+}
+
 export type TeamStats = Record<string, { points: number; gf: number; ga: number }>;
 
 export function emptyTeamStats(teamCodes: string[]): TeamStats {

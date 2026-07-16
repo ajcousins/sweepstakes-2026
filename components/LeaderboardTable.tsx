@@ -17,13 +17,18 @@ export type LeaderboardRowView = {
 type Props = {
   rows: LeaderboardRowView[];
   highlightPlayerId: string | null;
+  winningTeam: string | null;
 };
 
 const thClass =
   'sticky top-0 z-10 bg-zinc-100 px-2 py-2 font-medium shadow-[0_1px_0_0_rgb(228_228_231)] sm:px-4 sm:py-3';
 const tdClass = 'px-2 py-2 sm:px-4 sm:py-3';
 
-export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
+export function LeaderboardTable({
+  rows,
+  highlightPlayerId,
+  winningTeam,
+}: Props) {
   if (rows.length === 0) {
     return (
       <p className="border border-dashed border-zinc-300 px-4 py-8 text-center text-zinc-500">
@@ -31,6 +36,8 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
       </p>
     );
   }
+
+  const competitionFinished = winningTeam != null;
 
   return (
     <div className="border border-zinc-200">
@@ -53,15 +60,20 @@ export function LeaderboardTable({ rows, highlightPlayerId }: Props) {
         </thead>
         <tbody>
           {rows.map((row) => {
+            const isChampion = competitionFinished && row.rank === 1;
             const highlighted = row.id_player === highlightPlayerId;
+            const rowClass = isChampion
+              ? 'bg-champion-subtle text-champion-ink'
+              : highlighted
+                ? 'bg-primary-subtle'
+                : 'border-t border-zinc-100';
             return (
-              <tr
-                key={row.id_player}
-                className={
-                  highlighted ? 'bg-primary-subtle' : 'border-t border-zinc-100'
-                }
-              >
-                <td className={`${tdClass} tabular-nums`}>{row.rank}</td>
+              <tr key={row.id_player} className={rowClass}>
+                <td
+                  className={`${tdClass} tabular-nums ${isChampion ? 'font-bold' : ''}`}
+                >
+                  {isChampion ? 'C' : row.rank}
+                </td>
                 <td className={`${tdClass} text-xs sm:text-sm font-normal wrap-break-words`}>
                   {row.player_name}
                 </td>
