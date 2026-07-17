@@ -33,5 +33,5 @@ export function formatCompetitionFinishedMessage(
     return congrats;
   }
 
-  return `${congrats} Kudos also to ${formatNameList(teamHolders.map((r) => r.player_name))} ⭐!`;
+  return `${congrats} Kudos to ${formatNameList(teamHolders.map((r) => r.player_name))} for having the winning team ⭐!`;
 }
